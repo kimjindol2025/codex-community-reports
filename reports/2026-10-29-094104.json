@@ -1,0 +1,1560 @@
+{
+  "range_kst": {
+    "start": "2026-10-28T09:41:04+09:00",
+    "end": "2026-10-29T09:41:04+09:00",
+    "interval": "start inclusive/end exclusive"
+  },
+  "collection": {
+    "pages": [
+      {
+        "category": 37,
+        "page": 0,
+        "url": "https://community.openai.com/c/codex/37.json?page=0",
+        "listed": 30,
+        "recent_activity": 24
+      },
+      {
+        "category": 37,
+        "page": 1,
+        "url": "https://community.openai.com/c/codex/37.json?page=1",
+        "listed": 30,
+        "recent_activity": 0
+      },
+      {
+        "category": 42,
+        "page": 0,
+        "url": "https://community.openai.com/c/chatgpt-apps-sdk/42.json?page=0",
+        "listed": 30,
+        "recent_activity": 4
+      },
+      {
+        "category": 42,
+        "page": 1,
+        "url": "https://community.openai.com/c/chatgpt-apps-sdk/42.json?page=1",
+        "listed": 30,
+        "recent_activity": 0
+      }
+    ],
+    "candidate_threads": 28,
+    "included_threads": 28,
+    "included_bodies": 39,
+    "original_posts": 8,
+    "comments": 31,
+    "codex_threads": 24,
+    "apps_mcp_threads": 4,
+    "apps_originals": 0,
+    "apps_comments": 4,
+    "fetched_response_posts_all_dates": 269,
+    "errors": {},
+    "excluded": [],
+    "partial_streams": [
+      {
+        "category": 37,
+        "title": "Codex Rate Limit Discussion Thread",
+        "stream_ids": 978,
+        "fetched_posts": 60,
+        "id": 1409401,
+        "url": "https://community.openai.com/t/1409401",
+        "window_bodies": 3,
+        "complete_public_stream": false
+      }
+    ]
+  },
+  "method": {
+    "patterns": {
+      "작업·워크플로": "\\b(?:tasks?|workflows?|runs?)\\b",
+      "문맥·메모리": "\\b(?:context|memory|compaction|compacts|compacting)\\b",
+      "모델·추론": "\\b(?:models?|reasoning)\\b",
+      "권한·승인": "\\b(?:permissions?|approvals?|approve|approved|authorization|authorized|authorisation|authorised|authorize|consent|full access|denials?|denied)\\b",
+      "파일·폴더": "\\b(?:files?|folders?|directories|directory)\\b",
+      "버전·업데이트": "\\b(?:versions?|updates?|updated|updating|restart|restarting|restarted)\\b",
+      "에이전트": "\\b(?:agents?|sub-agents?|subagents?)\\b",
+      "로그인·인증": "\\b(?:login|log-in|sign-in|sign in|signing in|logged in|authentication|oauth|refresh[ _-]tokens?)\\b",
+      "도구·호출": "\\b(?:tools?|tools/list|tools/call|tool calls?)\\b",
+      "Windows": "\\bwindows\\b",
+      "샌드박스·격리": "\\b(?:sandbox(?:ed|es)?|bwrap|isolation|isolated)\\b",
+      "터미널·명령": "\\b(?:terminals?|consoles?|commands?|cli)\\b",
+      "Git·저장소": "\\b(?:git|repositories|repository|repos?|worktrees?|commits?|committed|push|pushed)\\b",
+      "브라우저": "\\bbrowsers?\\b",
+      "연결·네트워크": "\\b(?:connections?|connect|connected|connecting|network|websockets?|https?|sse)\\b",
+      "백업·복구": "\\b(?:backups?|backing up|restore|restored|restoring|recovery|recover|recovering)\\b",
+      "사용량·한도": "\\b(?:usage|quota|quotas|credits?|limits?|rate limits?)\\b",
+      "오류·실패": "\\b(?:errors?|fails?|failed|failing|failures?)\\b",
+      "로그·증거": "\\b(?:logs?|evidence|diagnostics?|timestamps?)\\b",
+      "스키마·설정": "\\b(?:schemas?|configuration|configurations?|settings?)\\b",
+      "검증·시험": "\\b(?:tests?|testing|tested|verification|verified|verify|validation|validate)\\b",
+      "MCP": "\\bmcp\\b"
+    },
+    "normalization_version": "2026-10-25-onebox-and-plain-quote-exclusion",
+    "description_ko": "NFKC·소문자·단복수·동의어 통합. HTML pre/code/blockquote/script/style/aside, 텍스트 quote 블록, URL, 인사말·일반 불용어, YAML 메타데이터·명백한 로그 및 게시물 내 동일 행 반복 제외. 일반 불용어는 사전 매치 대상 밖. 제목·태그는 빈도 제외. post_type1이고 삭제/숨김 아닌 게시물, global post ID 중복 제외. 주제 내 regex 비중복 매치, 주제 간 중복 허용. 글 수는 고유 thread ID, 동률은 글 수 내림차순 후 주제명순.",
+    "selection_ko": "Codex 최대4페이지/Apps SDK 최대2페이지, 최근활동0인 페이지에서 중단. 기본topic응답+최신20개씩최대160개, 오래된 배치에서 중단. Apps SDK는MCP/OAuth/tools/connector 관련만 포함.",
+    "script_sha256": "e3266fe8fa69b50b52e867370f2f511eecb9731ab2c18af68c7653cfebd650f2"
+  },
+  "top10": [
+    {
+      "topic": "사용량·한도",
+      "count": 28,
+      "threads": 9,
+      "source_post_ids": [
+        1982466,
+        1982550,
+        1983091,
+        1982615,
+        1982493,
+        1982575,
+        1982671,
+        1982555,
+        1982497
+      ],
+      "summary_ko": "고정된 사용량·초기화 일정과 감사 가능한 내역 제안",
+      "representative_url": "https://community.openai.com/t/1410326/1"
+    },
+    {
+      "topic": "문맥·메모리",
+      "count": 28,
+      "threads": 3,
+      "source_post_ids": [
+        1982497,
+        1982575,
+        1982715,
+        1982593
+      ],
+      "summary_ko": "문맥 압축과 디스크 저장량 감소는 별개라는 사용자 연구",
+      "representative_url": "https://community.openai.com/t/1410346/1"
+    },
+    {
+      "topic": "에이전트",
+      "count": 24,
+      "threads": 5,
+      "source_post_ids": [
+        1982575,
+        1982497,
+        1982715,
+        1982557,
+        1982466,
+        1982887,
+        1982593
+      ],
+      "summary_ko": "원래 요구사항을 외부에서 강제하는 Project Compass 구상",
+      "representative_url": "https://community.openai.com/t/1409425/11"
+    },
+    {
+      "topic": "모델·추론",
+      "count": 23,
+      "threads": 9,
+      "source_post_ids": [
+        1982497,
+        1982493,
+        1982466,
+        1982680,
+        1983091,
+        1982907,
+        1982575,
+        1982492,
+        1982824,
+        1982670,
+        1982553
+      ],
+      "summary_ko": "모델 수용량 오류가 초기화·새 모델 출시 무렵 심해진다는 제보",
+      "representative_url": "https://community.openai.com/t/1410344/2"
+    },
+    {
+      "topic": "파일·폴더",
+      "count": 22,
+      "threads": 5,
+      "source_post_ids": [
+        1982497,
+        1982887,
+        1982715,
+        1982907,
+        1982575,
+        1982593
+      ],
+      "summary_ko": "세션 파일·이미지 중복과 저장 구조 연구",
+      "representative_url": "https://community.openai.com/t/1410346/1"
+    },
+    {
+      "topic": "검증·시험",
+      "count": 16,
+      "threads": 11,
+      "source_post_ids": [
+        1982985,
+        1982497,
+        1982593,
+        1982951,
+        1982824,
+        1982715,
+        1982550,
+        1982466,
+        1983095,
+        1982972,
+        1982869
+      ],
+      "summary_ko": "iOS 선택 핸들 겹침을 독립 시험한 사용자 해결 보고",
+      "representative_url": "https://community.openai.com/t/1409136/2"
+    },
+    {
+      "topic": "작업·워크플로",
+      "count": 16,
+      "threads": 10,
+      "source_post_ids": [
+        1982715,
+        1982948,
+        1982575,
+        1982666,
+        1982985,
+        1982887,
+        1982824,
+        1982497,
+        1982466,
+        1982972,
+        1982869
+      ],
+      "summary_ko": "변경 경로 독립 검토·사용자 눈높이 수동 검증 제안",
+      "representative_url": "https://community.openai.com/t/1409425/12"
+    },
+    {
+      "topic": "버전·업데이트",
+      "count": 13,
+      "threads": 8,
+      "source_post_ids": [
+        1983095,
+        1982680,
+        1982985,
+        1982575,
+        1982715,
+        1982670,
+        1982493,
+        1982497,
+        1982869
+      ],
+      "summary_ko": "MCP ZIP 게시·업데이트 교착이 지속된다는 제보",
+      "representative_url": "https://community.openai.com/t/1409748/3"
+    },
+    {
+      "topic": "MCP",
+      "count": 13,
+      "threads": 4,
+      "source_post_ids": [
+        1982869,
+        1982972,
+        1983095,
+        1982575
+      ],
+      "summary_ko": "서버를 수정할 수 없는 Linear 문서 읽기 문제 지속",
+      "representative_url": "https://community.openai.com/t/1406893/10"
+    },
+    {
+      "topic": "오류·실패",
+      "count": 11,
+      "threads": 6,
+      "source_post_ids": [
+        1982887,
+        1982492,
+        1982466,
+        1982575,
+        1982670,
+        1982493,
+        1983095
+      ],
+      "summary_ko": "반복 오류를 규칙과 시험으로 관리하는 사용자 경험",
+      "representative_url": "https://community.openai.com/t/1383615/21"
+    }
+  ],
+  "all_topic_counts": [
+    {
+      "topic": "사용량·한도",
+      "count": 28,
+      "threads": 9,
+      "source_post_ids": [
+        1982466,
+        1982550,
+        1983091,
+        1982615,
+        1982493,
+        1982575,
+        1982671,
+        1982555,
+        1982497
+      ]
+    },
+    {
+      "topic": "문맥·메모리",
+      "count": 28,
+      "threads": 3,
+      "source_post_ids": [
+        1982497,
+        1982575,
+        1982715,
+        1982593
+      ]
+    },
+    {
+      "topic": "에이전트",
+      "count": 24,
+      "threads": 5,
+      "source_post_ids": [
+        1982575,
+        1982497,
+        1982715,
+        1982557,
+        1982466,
+        1982887,
+        1982593
+      ]
+    },
+    {
+      "topic": "모델·추론",
+      "count": 23,
+      "threads": 9,
+      "source_post_ids": [
+        1982497,
+        1982493,
+        1982466,
+        1982680,
+        1983091,
+        1982907,
+        1982575,
+        1982492,
+        1982824,
+        1982670,
+        1982553
+      ]
+    },
+    {
+      "topic": "파일·폴더",
+      "count": 22,
+      "threads": 5,
+      "source_post_ids": [
+        1982497,
+        1982887,
+        1982715,
+        1982907,
+        1982575,
+        1982593
+      ]
+    },
+    {
+      "topic": "검증·시험",
+      "count": 16,
+      "threads": 11,
+      "source_post_ids": [
+        1982985,
+        1982497,
+        1982593,
+        1982951,
+        1982824,
+        1982715,
+        1982550,
+        1982466,
+        1983095,
+        1982972,
+        1982869
+      ]
+    },
+    {
+      "topic": "작업·워크플로",
+      "count": 16,
+      "threads": 10,
+      "source_post_ids": [
+        1982715,
+        1982948,
+        1982575,
+        1982666,
+        1982985,
+        1982887,
+        1982824,
+        1982497,
+        1982466,
+        1982972,
+        1982869
+      ]
+    },
+    {
+      "topic": "버전·업데이트",
+      "count": 13,
+      "threads": 8,
+      "source_post_ids": [
+        1983095,
+        1982680,
+        1982985,
+        1982575,
+        1982715,
+        1982670,
+        1982493,
+        1982497,
+        1982869
+      ]
+    },
+    {
+      "topic": "MCP",
+      "count": 13,
+      "threads": 4,
+      "source_post_ids": [
+        1982869,
+        1982972,
+        1983095,
+        1982575
+      ]
+    },
+    {
+      "topic": "오류·실패",
+      "count": 11,
+      "threads": 6,
+      "source_post_ids": [
+        1982887,
+        1982492,
+        1982466,
+        1982575,
+        1982670,
+        1982493,
+        1983095
+      ]
+    },
+    {
+      "topic": "도구·호출",
+      "count": 8,
+      "threads": 6,
+      "source_post_ids": [
+        1982824,
+        1982575,
+        1982593,
+        1982492,
+        1982586,
+        1982497,
+        1982869
+      ]
+    },
+    {
+      "topic": "Git·저장소",
+      "count": 5,
+      "threads": 4,
+      "source_post_ids": [
+        1982497,
+        1982715,
+        1982593,
+        1982466
+      ]
+    },
+    {
+      "topic": "터미널·명령",
+      "count": 5,
+      "threads": 4,
+      "source_post_ids": [
+        1983091,
+        1982948,
+        1982715,
+        1982670
+      ]
+    },
+    {
+      "topic": "연결·네트워크",
+      "count": 5,
+      "threads": 3,
+      "source_post_ids": [
+        1982972,
+        1982824,
+        1983095
+      ]
+    },
+    {
+      "topic": "권한·승인",
+      "count": 4,
+      "threads": 2,
+      "source_post_ids": [
+        1982575,
+        1982557,
+        1982972
+      ]
+    },
+    {
+      "topic": "로그·증거",
+      "count": 4,
+      "threads": 2,
+      "source_post_ids": [
+        1982670,
+        1982497
+      ]
+    },
+    {
+      "topic": "백업·복구",
+      "count": 3,
+      "threads": 3,
+      "source_post_ids": [
+        1982985,
+        1982497,
+        1983095
+      ]
+    },
+    {
+      "topic": "로그인·인증",
+      "count": 2,
+      "threads": 2,
+      "source_post_ids": [
+        1982670,
+        1982972
+      ]
+    },
+    {
+      "topic": "스키마·설정",
+      "count": 2,
+      "threads": 2,
+      "source_post_ids": [
+        1982948,
+        1982824
+      ]
+    },
+    {
+      "topic": "브라우저",
+      "count": 2,
+      "threads": 1,
+      "source_post_ids": [
+        1982670
+      ]
+    },
+    {
+      "topic": "샌드박스·격리",
+      "count": 2,
+      "threads": 1,
+      "source_post_ids": [
+        1983091
+      ]
+    },
+    {
+      "topic": "Windows",
+      "count": 1,
+      "threads": 1,
+      "source_post_ids": [
+        1982907
+      ]
+    }
+  ],
+  "posts": [
+    {
+      "id": 1982680,
+      "thread_id": 1403897,
+      "post_number": 39,
+      "created_at": "2026-10-28T12:00:24.381Z",
+      "username": "aiguy247",
+      "staff": false,
+      "url": "https://community.openai.com/t/1403897/39",
+      "original": false,
+      "cleaned_sha256": "79701ba995606f4c37f4e1111f44111a54ec3e12a7d1f748363ada95ee0d40b2",
+      "counts": {
+        "모델·추론": 2,
+        "버전·업데이트": 2
+      }
+    },
+    {
+      "id": 1983091,
+      "thread_id": 1410570,
+      "post_number": 1,
+      "created_at": "2026-10-28T23:14:38.866Z",
+      "username": "mAE7777",
+      "staff": false,
+      "url": "https://community.openai.com/t/1410570/1",
+      "original": true,
+      "cleaned_sha256": "3bc8c048bed4a1ffa813c9caeee33a68e125c69b3e5d06228ea20d24d1262a0d",
+      "counts": {
+        "모델·추론": 2,
+        "샌드박스·격리": 2,
+        "터미널·명령": 2,
+        "사용량·한도": 3
+      }
+    },
+    {
+      "id": 1983066,
+      "thread_id": 1410560,
+      "post_number": 1,
+      "created_at": "2026-10-28T22:16:44.658Z",
+      "username": "dartveiga",
+      "staff": false,
+      "url": "https://community.openai.com/t/1410560/1",
+      "original": true,
+      "cleaned_sha256": "6d618cb476edfa8a172fabde508d0b0af588a1078d4b66cddef1bf8d6651bfde",
+      "counts": {}
+    },
+    {
+      "id": 1983065,
+      "thread_id": 1409655,
+      "post_number": 3,
+      "created_at": "2026-10-28T22:14:26.457Z",
+      "username": "diego.bellina",
+      "staff": false,
+      "url": "https://community.openai.com/t/1409655/3",
+      "original": false,
+      "cleaned_sha256": "75fa0493366cab44535d4f640d2724a5e262064c8bdc40339343c009eb3f7363",
+      "counts": {}
+    },
+    {
+      "id": 1982985,
+      "thread_id": 1409136,
+      "post_number": 2,
+      "created_at": "2026-10-28T19:32:23.412Z",
+      "username": "Waldi.N",
+      "staff": false,
+      "url": "https://community.openai.com/t/1409136/2",
+      "original": false,
+      "cleaned_sha256": "fe6d03ce883108cda429aa0469d707427482ebca7f7bf8bfec325c53f7ae9563",
+      "counts": {
+        "작업·워크플로": 1,
+        "버전·업데이트": 1,
+        "백업·복구": 1,
+        "검증·시험": 3
+      }
+    },
+    {
+      "id": 1982951,
+      "thread_id": 1386390,
+      "post_number": 21,
+      "created_at": "2026-10-28T18:59:59.254Z",
+      "username": "deafbeef",
+      "staff": false,
+      "url": "https://community.openai.com/t/1386390/21",
+      "original": false,
+      "cleaned_sha256": "3d577e8e295acb4e44735cc17cc7d8500e5b06707a3d152719a46fef3328e7f2",
+      "counts": {
+        "검증·시험": 1
+      }
+    },
+    {
+      "id": 1982948,
+      "thread_id": 1398835,
+      "post_number": 2,
+      "created_at": "2026-10-28T18:55:44.173Z",
+      "username": "OpenAI_Support",
+      "staff": true,
+      "url": "https://community.openai.com/t/1398835/2",
+      "original": false,
+      "cleaned_sha256": "19a6ab323157007150236dd6d8d75b452037812066c140c99e2975671e25869d",
+      "counts": {
+        "작업·워크플로": 2,
+        "터미널·명령": 1,
+        "스키마·설정": 1
+      }
+    },
+    {
+      "id": 1982850,
+      "thread_id": 1405708,
+      "post_number": 34,
+      "created_at": "2026-10-28T15:37:11.630Z",
+      "username": "Sssssssiao",
+      "staff": false,
+      "url": "https://community.openai.com/t/1405708/34",
+      "original": false,
+      "cleaned_sha256": "af7d30c79bedabea6fff2c43698a7d1ad130e5b173586cc9a31af07cf5feb059",
+      "counts": {}
+    },
+    {
+      "id": 1982933,
+      "thread_id": 1405708,
+      "post_number": 35,
+      "created_at": "2026-10-28T18:07:39.587Z",
+      "username": "kasalichikontwe",
+      "staff": false,
+      "url": "https://community.openai.com/t/1405708/35",
+      "original": false,
+      "cleaned_sha256": "bef0115b3d5595eefcd8b097ef798d72b56313694dbfc63ba5d6f9d49e5c0c02",
+      "counts": {}
+    },
+    {
+      "id": 1982907,
+      "thread_id": 1410513,
+      "post_number": 1,
+      "created_at": "2026-10-28T17:16:42.431Z",
+      "username": "simo3A",
+      "staff": false,
+      "url": "https://community.openai.com/t/1410513/1",
+      "original": true,
+      "cleaned_sha256": "655e7c299060c46fe474355588c8558985c4406b5d1fc60c1fd80c832fdfa04f",
+      "counts": {
+        "모델·추론": 2,
+        "파일·폴더": 1,
+        "Windows": 1
+      }
+    },
+    {
+      "id": 1982887,
+      "thread_id": 1383615,
+      "post_number": 21,
+      "created_at": "2026-10-28T16:32:00.429Z",
+      "username": "sparrow13501",
+      "staff": false,
+      "url": "https://community.openai.com/t/1383615/21",
+      "original": false,
+      "cleaned_sha256": "b30e094dce8089f770772e28ba261ca36e75df8f78181c42806784c45ed7dabb",
+      "counts": {
+        "작업·워크플로": 1,
+        "파일·폴더": 6,
+        "에이전트": 1,
+        "오류·실패": 3
+      }
+    },
+    {
+      "id": 1982824,
+      "thread_id": 1395391,
+      "post_number": 5,
+      "created_at": "2026-10-28T15:16:55.812Z",
+      "username": "OpenAI_Support",
+      "staff": true,
+      "url": "https://community.openai.com/t/1395391/5",
+      "original": false,
+      "cleaned_sha256": "75232e8ff892db971a045a4fb15684e22ec839ac19d708c675de20cfb35684bc",
+      "counts": {
+        "작업·워크플로": 1,
+        "모델·추론": 1,
+        "도구·호출": 2,
+        "연결·네트워크": 1,
+        "스키마·설정": 1,
+        "검증·시험": 1
+      }
+    },
+    {
+      "id": 1982749,
+      "thread_id": 1408172,
+      "post_number": 4,
+      "created_at": "2026-10-28T13:07:11.276Z",
+      "username": "Joshua_Gwamoiza",
+      "staff": false,
+      "url": "https://community.openai.com/t/1408172/4",
+      "original": false,
+      "cleaned_sha256": "6314eceeefb3393f6f6547297e1dc396d413f78435aa5de4150f44cb4de71708",
+      "counts": {}
+    },
+    {
+      "id": 1982557,
+      "thread_id": 1409425,
+      "post_number": 10,
+      "created_at": "2026-10-28T07:07:16.787Z",
+      "username": "nimrodfisher",
+      "staff": false,
+      "url": "https://community.openai.com/t/1409425/10",
+      "original": false,
+      "cleaned_sha256": "bc83fc40e96a847cf61a028d919cd66b8253048e1f32076103b869687809200b",
+      "counts": {
+        "권한·승인": 1,
+        "에이전트": 2
+      }
+    },
+    {
+      "id": 1982575,
+      "thread_id": 1409425,
+      "post_number": 11,
+      "created_at": "2026-10-28T08:03:27.299Z",
+      "username": "tonyfenwick8814121",
+      "staff": false,
+      "url": "https://community.openai.com/t/1409425/11",
+      "original": false,
+      "cleaned_sha256": "9ee18f57bc6d7fdc4df5d4aa80f8d6c141a27d4f7bffdae33b84549b91bdc299",
+      "counts": {
+        "작업·워크플로": 2,
+        "문맥·메모리": 2,
+        "모델·추론": 2,
+        "권한·승인": 2,
+        "파일·폴더": 1,
+        "버전·업데이트": 1,
+        "에이전트": 8,
+        "도구·호출": 1,
+        "사용량·한도": 1,
+        "오류·실패": 1,
+        "MCP": 1
+      }
+    },
+    {
+      "id": 1982715,
+      "thread_id": 1409425,
+      "post_number": 12,
+      "created_at": "2026-10-28T12:39:24.666Z",
+      "username": "yes.genius",
+      "staff": false,
+      "url": "https://community.openai.com/t/1409425/12",
+      "original": false,
+      "cleaned_sha256": "ceb6b8e2202326e7161931b05955a55d553a1324325530ab9a3323bb890d9536",
+      "counts": {
+        "작업·워크플로": 3,
+        "문맥·메모리": 1,
+        "파일·폴더": 4,
+        "버전·업데이트": 1,
+        "에이전트": 4,
+        "터미널·명령": 1,
+        "Git·저장소": 1,
+        "검증·시험": 1
+      }
+    },
+    {
+      "id": 1982670,
+      "thread_id": 1410432,
+      "post_number": 1,
+      "created_at": "2026-10-28T11:45:35.450Z",
+      "username": "superhansi",
+      "staff": false,
+      "url": "https://community.openai.com/t/1410432/1",
+      "original": true,
+      "cleaned_sha256": "f3ea8c517a1dfa351ae75bff9959a97b013134691bd528b60f6ca590d9e7047f",
+      "counts": {
+        "모델·추론": 1,
+        "버전·업데이트": 1,
+        "로그인·인증": 1,
+        "터미널·명령": 1,
+        "브라우저": 2,
+        "오류·실패": 1,
+        "로그·증거": 2
+      }
+    },
+    {
+      "id": 1982671,
+      "thread_id": 1410432,
+      "post_number": 2,
+      "created_at": "2026-10-28T11:49:35.207Z",
+      "username": "superhansi",
+      "staff": false,
+      "url": "https://community.openai.com/t/1410432/2",
+      "original": false,
+      "cleaned_sha256": "93e8121eab4d60f64a1f751a911a79fe5dfdca1dd7c2dcf55059fc3feb0b421d",
+      "counts": {
+        "사용량·한도": 1
+      }
+    },
+    {
+      "id": 1982666,
+      "thread_id": 1409716,
+      "post_number": 4,
+      "created_at": "2026-10-28T11:33:40.931Z",
+      "username": "2ctoo13",
+      "staff": false,
+      "url": "https://community.openai.com/t/1409716/4",
+      "original": false,
+      "cleaned_sha256": "16bb4f451ff76d12a9515b341302f42bee5ebe3796af657c9c005a8389d088fc",
+      "counts": {
+        "작업·워크플로": 2
+      }
+    },
+    {
+      "id": 1982615,
+      "thread_id": 1409401,
+      "post_number": 977,
+      "created_at": "2026-10-28T10:27:16.629Z",
+      "username": "pnom",
+      "staff": false,
+      "url": "https://community.openai.com/t/1409401/977",
+      "original": false,
+      "cleaned_sha256": "f93d8ca317a4dd5b5b97524414484d2bd16065fabacabac975365c7034753a37",
+      "counts": {
+        "사용량·한도": 2
+      }
+    },
+    {
+      "id": 1982620,
+      "thread_id": 1409401,
+      "post_number": 979,
+      "created_at": "2026-10-28T10:31:53.054Z",
+      "username": "pnom",
+      "staff": false,
+      "url": "https://community.openai.com/t/1409401/979",
+      "original": false,
+      "cleaned_sha256": "b646f9e0d2ca4fb4d4d148ede5d65c58f7e98b545770438010dcb2acda5a4115",
+      "counts": {}
+    },
+    {
+      "id": 1982633,
+      "thread_id": 1409401,
+      "post_number": 980,
+      "created_at": "2026-10-28T10:47:16.395Z",
+      "username": "jochenschultz",
+      "staff": false,
+      "url": "https://community.openai.com/t/1409401/980",
+      "original": false,
+      "cleaned_sha256": "b2f26ddc1edb49c923fa9fdc39e7c92af1b36be251ae5a21296af0b8f3d30ac9",
+      "counts": {}
+    },
+    {
+      "id": 1982593,
+      "thread_id": 1408279,
+      "post_number": 7,
+      "created_at": "2026-10-28T09:23:49.966Z",
+      "username": "yes.genius",
+      "staff": false,
+      "url": "https://community.openai.com/t/1408279/7",
+      "original": false,
+      "cleaned_sha256": "1dfcc942e5a64f930ba25f69a794b9edfead52c1a91213f4be7d9e43aa8601d6",
+      "counts": {
+        "문맥·메모리": 1,
+        "파일·폴더": 1,
+        "에이전트": 1,
+        "도구·호출": 1,
+        "Git·저장소": 1,
+        "검증·시험": 2
+      }
+    },
+    {
+      "id": 1982492,
+      "thread_id": 1410344,
+      "post_number": 1,
+      "created_at": "2026-10-28T03:17:39.465Z",
+      "username": "jinhui_xu",
+      "staff": false,
+      "url": "https://community.openai.com/t/1410344/1",
+      "original": true,
+      "cleaned_sha256": "e0de18df2170aa7e92f7b69c5191b72addc07be4e7d90478779f1a86589bf053",
+      "counts": {
+        "모델·추론": 2,
+        "도구·호출": 1,
+        "오류·실패": 2
+      }
+    },
+    {
+      "id": 1982493,
+      "thread_id": 1410344,
+      "post_number": 2,
+      "created_at": "2026-10-28T03:19:39.688Z",
+      "username": "jinhui_xu",
+      "staff": false,
+      "url": "https://community.openai.com/t/1410344/2",
+      "original": false,
+      "cleaned_sha256": "c07c903fa5379a93d14afb5b1f9eb593a6f44f7d559728822416f2b92783f1bf",
+      "counts": {
+        "모델·추론": 3,
+        "버전·업데이트": 1,
+        "사용량·한도": 2,
+        "오류·실패": 1
+      }
+    },
+    {
+      "id": 1982494,
+      "thread_id": 1410344,
+      "post_number": 3,
+      "created_at": "2026-10-28T03:26:08.274Z",
+      "username": "DIO",
+      "staff": false,
+      "url": "https://community.openai.com/t/1410344/3",
+      "original": false,
+      "cleaned_sha256": "76bd090be5199d0fd4a1f4d5fb6d867003be203fee08217be67198cf8c8a47ff",
+      "counts": {}
+    },
+    {
+      "id": 1982553,
+      "thread_id": 1410344,
+      "post_number": 4,
+      "created_at": "2026-10-28T06:40:14.599Z",
+      "username": "vincent82",
+      "staff": false,
+      "url": "https://community.openai.com/t/1410344/4",
+      "original": false,
+      "cleaned_sha256": "c5f684195fab993b1861e420c46373d04caf5951f645803057d612fdbd3c2870",
+      "counts": {
+        "모델·추론": 1
+      }
+    },
+    {
+      "id": 1982586,
+      "thread_id": 1410344,
+      "post_number": 5,
+      "created_at": "2026-10-28T08:49:57.362Z",
+      "username": "jinhui_xu",
+      "staff": false,
+      "url": "https://community.openai.com/t/1410344/5",
+      "original": false,
+      "cleaned_sha256": "4b210e8e5a8a8f9ffddb243c27b547cddb5f05291cb201f4d6621aef3e03f0d5",
+      "counts": {
+        "도구·호출": 1
+      }
+    },
+    {
+      "id": 1982556,
+      "thread_id": 1408691,
+      "post_number": 11,
+      "created_at": "2026-10-28T06:53:58.546Z",
+      "username": "dscds.1994",
+      "staff": false,
+      "url": "https://community.openai.com/t/1408691/11",
+      "original": false,
+      "cleaned_sha256": "bd312e23d3dd0ef41fea876aa2415db4fcb2c34692df35b0300ceb406cd21655",
+      "counts": {}
+    },
+    {
+      "id": 1982555,
+      "thread_id": 1410383,
+      "post_number": 1,
+      "created_at": "2026-10-28T06:51:03.308Z",
+      "username": "vikpy",
+      "staff": false,
+      "url": "https://community.openai.com/t/1410383/1",
+      "original": true,
+      "cleaned_sha256": "3c61f2d3e2cd46baa1c56a22fc9c9eb4cbbb4e5add83f6e866000136da48088c",
+      "counts": {
+        "사용량·한도": 1
+      }
+    },
+    {
+      "id": 1982550,
+      "thread_id": 1403680,
+      "post_number": 11,
+      "created_at": "2026-10-28T06:33:35.319Z",
+      "username": "R4wd0G",
+      "staff": false,
+      "url": "https://community.openai.com/t/1403680/11",
+      "original": false,
+      "cleaned_sha256": "57cf38214fb6fb34fb5f948736ae9c8102afc8a352a700dc26a01c90050f1244",
+      "counts": {
+        "사용량·한도": 4,
+        "검증·시험": 1
+      }
+    },
+    {
+      "id": 1982528,
+      "thread_id": 1410267,
+      "post_number": 3,
+      "created_at": "2026-10-28T05:48:58.025Z",
+      "username": "iammohsin",
+      "staff": false,
+      "url": "https://community.openai.com/t/1410267/3",
+      "original": false,
+      "cleaned_sha256": "15c8504cbc3af4a882e697c498ac085a96e5112b74e68da91e7bb1f6a8d10be8",
+      "counts": {}
+    },
+    {
+      "id": 1982497,
+      "thread_id": 1410346,
+      "post_number": 1,
+      "created_at": "2026-10-28T03:57:42.548Z",
+      "username": "techsoft.ye",
+      "staff": false,
+      "url": "https://community.openai.com/t/1410346/1",
+      "original": true,
+      "cleaned_sha256": "52d131dc7aa3804072726beee017560b05416bfd662d84101cf371d35678287a",
+      "counts": {
+        "작업·워크플로": 1,
+        "문맥·메모리": 24,
+        "모델·추론": 4,
+        "파일·폴더": 9,
+        "버전·업데이트": 1,
+        "에이전트": 6,
+        "도구·호출": 1,
+        "Git·저장소": 2,
+        "백업·복구": 1,
+        "사용량·한도": 1,
+        "로그·증거": 2,
+        "검증·시험": 3
+      }
+    },
+    {
+      "id": 1982466,
+      "thread_id": 1410326,
+      "post_number": 1,
+      "created_at": "2026-10-28T01:54:27.705Z",
+      "username": "canghai.wang",
+      "staff": false,
+      "url": "https://community.openai.com/t/1410326/1",
+      "original": true,
+      "cleaned_sha256": "32b3bf713d1e9207da5de4adbb62448cd2bb437d7da4c84bbcfa4b4eab1e5273",
+      "counts": {
+        "작업·워크플로": 1,
+        "모델·추론": 3,
+        "에이전트": 2,
+        "Git·저장소": 1,
+        "사용량·한도": 13,
+        "오류·실패": 2,
+        "검증·시험": 1
+      }
+    },
+    {
+      "id": 1982485,
+      "thread_id": 1410326,
+      "post_number": 2,
+      "created_at": "2026-10-28T02:45:25.879Z",
+      "username": "Lebron1",
+      "staff": false,
+      "url": "https://community.openai.com/t/1410326/2",
+      "original": false,
+      "cleaned_sha256": "26f02e5b3f141e8ed662546adff139b663fc174bbd7c1cbfceb01a8424a88264",
+      "counts": {}
+    },
+    {
+      "id": 1983095,
+      "thread_id": 1409748,
+      "post_number": 3,
+      "created_at": "2026-10-28T23:24:59.994Z",
+      "username": "fablamenas",
+      "staff": false,
+      "url": "https://community.openai.com/t/1409748/3",
+      "original": false,
+      "cleaned_sha256": "f2611d0966a82763b62f971420b25ce76c859477bff3ecb50257729653718c8b",
+      "counts": {
+        "버전·업데이트": 4,
+        "연결·네트워크": 1,
+        "백업·복구": 1,
+        "오류·실패": 1,
+        "검증·시험": 1,
+        "MCP": 3
+      }
+    },
+    {
+      "id": 1983076,
+      "thread_id": 1409169,
+      "post_number": 4,
+      "created_at": "2026-10-28T22:50:35.717Z",
+      "username": "max44",
+      "staff": false,
+      "url": "https://community.openai.com/t/1409169/4",
+      "original": false,
+      "cleaned_sha256": "0a5ac181bba6777da74095517dda24d7c89f4788f6344ff600fdbae3c44ff31d",
+      "counts": {}
+    },
+    {
+      "id": 1982972,
+      "thread_id": 1400692,
+      "post_number": 4,
+      "created_at": "2026-10-28T19:15:18.675Z",
+      "username": "OpenAI_Support",
+      "staff": true,
+      "url": "https://community.openai.com/t/1400692/4",
+      "original": false,
+      "cleaned_sha256": "a27cfe4dc6a469cd7d418f89a3ceb3e6857ddc13c7c93c775e7aa0827ddda96b",
+      "counts": {
+        "작업·워크플로": 1,
+        "권한·승인": 1,
+        "로그인·인증": 1,
+        "연결·네트워크": 3,
+        "검증·시험": 1,
+        "MCP": 4
+      }
+    },
+    {
+      "id": 1982869,
+      "thread_id": 1406893,
+      "post_number": 10,
+      "created_at": "2026-10-28T16:00:27.381Z",
+      "username": "mk12",
+      "staff": false,
+      "url": "https://community.openai.com/t/1406893/10",
+      "original": false,
+      "cleaned_sha256": "b237316e37e50ddd217a5c754599b1682bfad5f4cca8e84ad391bf858d8fca0d",
+      "counts": {
+        "작업·워크플로": 1,
+        "버전·업데이트": 1,
+        "도구·호출": 1,
+        "검증·시험": 1,
+        "MCP": 5
+      }
+    }
+  ],
+  "sources": [
+    {
+      "category": 37,
+      "title": "28 days of Shipping at OpenAI",
+      "stream_ids": 38,
+      "fetched_posts": 38,
+      "id": 1403897,
+      "url": "https://community.openai.com/t/1403897",
+      "window_bodies": 1,
+      "complete_public_stream": true
+    },
+    {
+      "category": 37,
+      "title": "Running Codex CLI with OpenAI's complimentary API tokens and budget guardrails",
+      "stream_ids": 1,
+      "fetched_posts": 1,
+      "id": 1410570,
+      "url": "https://community.openai.com/t/1410570",
+      "window_bodies": 1,
+      "complete_public_stream": true
+    },
+    {
+      "category": 37,
+      "title": "How to tell whether an old conversation is Codex, Work, or Regular Chat?",
+      "stream_ids": 1,
+      "fetched_posts": 1,
+      "id": 1410560,
+      "url": "https://community.openai.com/t/1410560",
+      "window_bodies": 1,
+      "complete_public_stream": true
+    },
+    {
+      "category": 37,
+      "title": "Bring Back the Alt+Tab-Style Recent Chat Switcher in Codex",
+      "stream_ids": 3,
+      "fetched_posts": 3,
+      "id": 1409655,
+      "url": "https://community.openai.com/t/1409655",
+      "window_bodies": 1,
+      "complete_public_stream": true
+    },
+    {
+      "category": 37,
+      "title": "Codex workflow advice for an unresolved native iOS text-selection rendering issue",
+      "stream_ids": 2,
+      "fetched_posts": 2,
+      "id": 1409136,
+      "url": "https://community.openai.com/t/1409136",
+      "window_bodies": 1,
+      "complete_public_stream": true
+    },
+    {
+      "category": 37,
+      "title": "\"Trusted Access cyber verification error\"",
+      "stream_ids": 21,
+      "fetched_posts": 21,
+      "id": 1386390,
+      "url": "https://community.openai.com/t/1386390",
+      "window_bodies": 1,
+      "complete_public_stream": true
+    },
+    {
+      "category": 37,
+      "title": "[ Flawless ] - Love The UI - OSX - Tahoe 26.3 M1",
+      "stream_ids": 3,
+      "fetched_posts": 3,
+      "id": 1398835,
+      "url": "https://community.openai.com/t/1398835",
+      "window_bodies": 1,
+      "complete_public_stream": true
+    },
+    {
+      "category": 37,
+      "title": "Codex Ambassador applications are open again",
+      "stream_ids": 31,
+      "fetched_posts": 31,
+      "id": 1405708,
+      "url": "https://community.openai.com/t/1405708",
+      "window_bodies": 2,
+      "complete_public_stream": true
+    },
+    {
+      "category": 37,
+      "title": "Choose model and section via deep links & Clickable app links in chat",
+      "stream_ids": 1,
+      "fetched_posts": 1,
+      "id": 1410513,
+      "url": "https://community.openai.com/t/1410513",
+      "window_bodies": 1,
+      "complete_public_stream": true
+    },
+    {
+      "category": 37,
+      "title": "Why does Codex repeat the same mistakes?",
+      "stream_ids": 21,
+      "fetched_posts": 21,
+      "id": 1383615,
+      "url": "https://community.openai.com/t/1383615",
+      "window_bodies": 1,
+      "complete_public_stream": true
+    },
+    {
+      "category": 37,
+      "title": "How does GPT-6 actually generate 3D models in Release Demo? Via Codex + Local Blender or MCPs/APIs?",
+      "stream_ids": 5,
+      "fetched_posts": 5,
+      "id": 1395391,
+      "url": "https://community.openai.com/t/1395391",
+      "window_bodies": 1,
+      "complete_public_stream": true
+    },
+    {
+      "category": 37,
+      "title": "CODEX BUG: Built-in browser access intermittently blocked by “Local browser use is disabled in Work settings”",
+      "stream_ids": 4,
+      "fetched_posts": 4,
+      "id": 1408172,
+      "url": "https://community.openai.com/t/1408172",
+      "window_bodies": 1,
+      "complete_public_stream": true
+    },
+    {
+      "category": 37,
+      "title": "Repeated scope drift in long Codex tasks: agent-generated assumptions become requirements",
+      "stream_ids": 12,
+      "fetched_posts": 12,
+      "id": 1409425,
+      "url": "https://community.openai.com/t/1409425",
+      "window_bodies": 3,
+      "complete_public_stream": true
+    },
+    {
+      "category": 37,
+      "title": "Annotations disappear when used in conjunction with /goal mode. Valuable work gets lost",
+      "stream_ids": 2,
+      "fetched_posts": 2,
+      "id": 1410432,
+      "url": "https://community.openai.com/t/1410432",
+      "window_bodies": 2,
+      "complete_public_stream": true
+    },
+    {
+      "category": 37,
+      "title": "Has anyone else noticed GPT getting worse over the past few days?",
+      "stream_ids": 4,
+      "fetched_posts": 4,
+      "id": 1409716,
+      "url": "https://community.openai.com/t/1409716",
+      "window_bodies": 1,
+      "complete_public_stream": true
+    },
+    {
+      "category": 37,
+      "title": "Codex Rate Limit Discussion Thread",
+      "stream_ids": 978,
+      "fetched_posts": 60,
+      "id": 1409401,
+      "url": "https://community.openai.com/t/1409401",
+      "window_bodies": 3,
+      "complete_public_stream": false
+    },
+    {
+      "category": 37,
+      "title": "What have you deleted from AGENTS.md?",
+      "stream_ids": 6,
+      "fetched_posts": 6,
+      "id": 1408279,
+      "url": "https://community.openai.com/t/1408279",
+      "window_bodies": 1,
+      "complete_public_stream": true
+    },
+    {
+      "category": 37,
+      "title": "Pro subscriber constantly getting “Selected model is at capacity” for the past two weeks",
+      "stream_ids": 5,
+      "fetched_posts": 5,
+      "id": 1410344,
+      "url": "https://community.openai.com/t/1410344",
+      "window_bodies": 5,
+      "complete_public_stream": true
+    },
+    {
+      "category": 37,
+      "title": "“Model is at capacity“ error despite usage quota availability",
+      "stream_ids": 10,
+      "fetched_posts": 10,
+      "id": 1408691,
+      "url": "https://community.openai.com/t/1408691",
+      "window_bodies": 1,
+      "complete_public_stream": true
+    },
+    {
+      "category": 37,
+      "title": "Codex usage icon updated!",
+      "stream_ids": 1,
+      "fetched_posts": 1,
+      "id": 1410383,
+      "url": "https://community.openai.com/t/1410383",
+      "window_bodies": 1,
+      "complete_public_stream": true
+    },
+    {
+      "category": 37,
+      "title": "New usage web ui page broken on Firefox in dark theme",
+      "stream_ids": 11,
+      "fetched_posts": 11,
+      "id": 1403680,
+      "url": "https://community.openai.com/t/1403680",
+      "window_bodies": 1,
+      "complete_public_stream": true
+    },
+    {
+      "category": 37,
+      "title": "Error in VS while connecting codex",
+      "stream_ids": 3,
+      "fetched_posts": 3,
+      "id": 1410267,
+      "url": "https://community.openai.com/t/1410267",
+      "window_bodies": 1,
+      "complete_public_stream": true
+    },
+    {
+      "category": 37,
+      "title": "When Context Compaction Expands Storage: What 52.49 GiB of Codex Sessions Revealed",
+      "stream_ids": 1,
+      "fetched_posts": 1,
+      "id": 1410346,
+      "url": "https://community.openai.com/t/1410346",
+      "window_bodies": 1,
+      "complete_public_stream": true
+    },
+    {
+      "category": 37,
+      "title": "A Proposal for Fair, Predictable, and Transparent ChatGPT Work & Codex Usage Limits",
+      "stream_ids": 2,
+      "fetched_posts": 2,
+      "id": 1410326,
+      "url": "https://community.openai.com/t/1410326",
+      "window_bodies": 2,
+      "complete_public_stream": true
+    },
+    {
+      "category": 42,
+      "title": "Plugin submission stuck in what looks like a migration bug",
+      "stream_ids": 3,
+      "fetched_posts": 3,
+      "id": 1409748,
+      "url": "https://community.openai.com/t/1409748",
+      "window_bodies": 1,
+      "complete_public_stream": true
+    },
+    {
+      "category": 42,
+      "title": "Automatic scans fail for app with OAuth connection",
+      "stream_ids": 4,
+      "fetched_posts": 4,
+      "id": 1409169,
+      "url": "https://community.openai.com/t/1409169",
+      "window_bodies": 1,
+      "complete_public_stream": true
+    },
+    {
+      "category": 42,
+      "title": "How can ChatGPT and an MCP tool executor mutually verify tool calls and results end-to-end?",
+      "stream_ids": 4,
+      "fetched_posts": 4,
+      "id": 1400692,
+      "url": "https://community.openai.com/t/1400692",
+      "window_bodies": 1,
+      "complete_public_stream": true
+    },
+    {
+      "category": 42,
+      "title": "ChatGPT MCP file reads return empty objects across Gitea and Nextcloud integrations",
+      "stream_ids": 10,
+      "fetched_posts": 10,
+      "id": 1406893,
+      "url": "https://community.openai.com/t/1406893",
+      "window_bodies": 1,
+      "complete_public_stream": true
+    }
+  ],
+  "collected_at": "2026-10-29T00:42:45.028169+00:00",
+  "mcp_findings": [
+    {
+      "area": "OAuth 만료·refresh token",
+      "classification": "새 직접 재현 없음 / 사용자 복구 언급·원인 추정",
+      "urls": [
+        "https://community.openai.com/t/1409169/4"
+      ],
+      "summary_ko": "새로운 토큰 만료·refresh grant의 직접 재현이나 공식 원인 확정은 없었다. 전일 OAuth 스캐너 글에 max44가 자신도 지원 티켓 없이 유사한 일을 겪었다며 해결을 언급했다. 스캐너가 정상화되는 데 시간이 걸렸을 수 있다는 것은 사용자 추정이며, Reconnect 메뉴가 유일한 해결책이거나 플랫폼 수정이 완료됐다는 증거는 아니다. 우리191 재현 없음."
+    },
+    {
+      "area": "tools/list·도구 갱신·사라짐",
+      "classification": "새 목록 갱신 완료 없음 / 사용자 미해결 보고",
+      "urls": [
+        "https://community.openai.com/t/1406893/10",
+        "https://community.openai.com/t/1409748/3"
+      ],
+      "summary_ko": "Linear 사용자가10월28일에도 검색·문서 메타데이터는 성공하지만 list_documents는첫500자, get_document/fetch는{}라고 보고했다. 새1000자 무작위 문서도 동일하며 Codex에서는 읽을 수 있었다는 사용자 시험이다. 내부 응답 처리 원인은 미확정. 전일 공식 field rename 우회는 서버를 변경할 수 없는 공식 connector 이용자에게 적용할 수 없다고 지적했다. Wignet의 scan findings0 뒤 ZIP upload/pub 교착도 새 사용자 제보이며, tool scan 통과=게시·도구 호출 성공은 아니다."
+    },
+    {
+      "area": "Codex App Server",
+      "classification": "새 직접 실행·복구 사례 없음",
+      "urls": [
+        "https://community.openai.com/t/1410346/1"
+      ],
+      "summary_ko": "수집 범위에서 App Server handshake/threads/approval 실행 또는 복구의 새 직접 사례는 없었다. 세션 저장 연구는 local session 저장 구조에 관한 사용자 연구이며 App Server 운영 안정성·191 실행 결과로 해석하지 않는다."
+    },
+    {
+      "area": "bwrap·/proc·sandbox",
+      "classification": "새 bwrap·/proc 사례 없음 / 사용자 Docker harness 소개",
+      "urls": [
+        "https://community.openai.com/t/1410570/1",
+        "https://community.openai.com/t/1408172/4"
+      ],
+      "summary_ko": "사용자가 Docker sandbox·분리된 API 자격·일일 예산을 갖춘 harness를 소개했으나 격리 검증 결과나 bwrap/proc 복구 증거는 없다. browser 차단 글의 새 댓글은 해결 후 화면 모양 변화만 언급한다. 재시작+새채팅으로 접근 복구했다는10월21일 옛 댓글을 오늘 새 시험으로 세지 않는다. 우리191 sandbox와 동일 원인 증거 없음."
+    },
+    {
+      "area": "Git worktree·commit·push",
+      "classification": "새 직접 실행·복구 사례 없음 / 사용자 운영 규칙",
+      "urls": [
+        "https://community.openai.com/t/1409425/12",
+        "https://community.openai.com/t/1408279/7"
+      ],
+      "summary_ko": "사용자는 범위 확대·push·삭제에 별도 승인, 변경 경로만 다른 reviewer가 검토, 깨진 규칙을 회귀 test로 만든다고 설명했다. 실제 새 worktree/commit/push의 성공·실패·복구 사례는 아니며 주장된86tests도 이번 조사에서 실행하지 않았다."
+    },
+    {
+      "area": "중계기 신뢰·MCP 호출/결과 무결성",
+      "classification": "공식 지원의 한계·대안 안내 / 구현 보증 아님",
+      "urls": [
+        "https://community.openai.com/t/1400692/4"
+      ],
+      "summary_ko": "OpenAI_Support는 중계기 자체를 신뢰하지 않는 경우 요청자가 원하는 정확한 양방향 검증을 제공하는 문서화된 OpenAI 수단을 찾지 못했다고 답했다. 비공개 MCP에는 실행기 옆 official tunnel-client와outboundHTTPS를 대안으로 소개하면서 OAuth는 유지하고, per-message서명 및 public plugin 배포를 제공하는 방식은 아니라고 명시했다. 기능이 절대 존재하지 않는다는 전면 부정이나 우리 연결 변경 권고가 아니다. 기존 SHA 파일 재읽기를 OpenAI발신 증명과 혼동하지 않는 것이 조사자 시사점이다."
+    },
+    {
+      "area": "실제 해결 보고와 추정 구분",
+      "classification": "사용자 개별 확인 / 공식 영구 수정 아님",
+      "urls": [
+        "https://community.openai.com/t/1410267/3",
+        "https://community.openai.com/t/1403680/11",
+        "https://community.openai.com/t/1409136/2"
+      ],
+      "summary_ko": "VS확장 시작 오류 질문자는 전일26.1021.22027→26.1007.21434 rollback 조언 뒤 now working이라고 답했으나 실제 적용명령/버전은 댓글에 없어 그대로 확정할 수 없다. Firefox dark usagebar는Tampermonkey CSS우회를 본인이 시험 성공했고 Greasemonkey호환은추정. iOS text선택겹침은 별도transparent non-keyUIWindow의 toolbar 합성으로시험범위에서해결했다고보고;UIKit전체수정아님.어느것도191재현/조치아님."
+    },
+    {
+      "area": "저장·문맥·요구사항 관리에서 배울 점",
+      "classification": "독립 사용자 연구·설계 제안 / 조사자 시사점",
+      "urls": [
+        "https://community.openai.com/t/1410346/1",
+        "https://community.openai.com/t/1409425/11",
+        "https://community.openai.com/t/1409425/12"
+      ],
+      "summary_ko": "52.49GiB/845sessions 연구는1~10월자료의새발표다. 문맥compaction과디스크중복제거,토큰비용은별도라고설명하며reference기반3.00GiB는시뮬레이션으로운영속도/복구지연개선증거가아니다. Project Compass의 user-owned requirements/bootstrap ticket/propose-only hardgate는설계중인제안이며단순AGENTS.md보다효과적이라는비교검증은없다.191에는승인요구사항·에이전트제안·실행증거를분리하고상태저장hash와실행성공증거를각각검증하는것이유용하다."
+    }
+  ],
+  "official_replies": [
+    {
+      "url": "https://community.openai.com/t/1398835/2",
+      "id": 1982948,
+      "created_at": "2026-10-28T18:55:44.173Z"
+    },
+    {
+      "url": "https://community.openai.com/t/1395391/5",
+      "id": 1982824,
+      "created_at": "2026-10-28T15:16:55.812Z"
+    },
+    {
+      "url": "https://community.openai.com/t/1400692/4",
+      "id": 1982972,
+      "created_at": "2026-10-28T19:15:18.675Z"
+    }
+  ],
+  "limitations": [
+    "두 게시판 각2페이지, 총120개목록 항목에서 후보28글을 수집한 공개 부분표본. 전체 날짜269응답 중 기간 안 정상 본문39개(새 원글8·댓글31)를 실제 읽고 집계. Apps SDK MCP는4글/새원글0·댓글4.",
+    "한도토론1409401은 공개stream978개 중60개만 읽었다. 기본응답+최신20개 배치, 오래된 배치에서 중단. 나머지27개 포함글은 반환된 공개stream전체를수집. 페이지밖·숨김·삭제·비공개자료와 읽지않은중간댓글 부재는 보장하지 않는다.",
+    "영문 중심22개고정주제사전이다. NFKC·소문자·단복수·동의어 통합. 포르투갈어댓글1개 등 비영문표현은 충분히 포착하지 못할 수 있다. 일반어휘 전체 순위가아니다.",
+    "제목·pre/code·blockquote·aside/onebox·URL·인사말·불용어·명백한log·동일행반복을제외. inlinecode는 사례 설명 정확성을 위해 추가로 읽었으나 빈도에서는제외. 같은저자의 별도 게시물은별개본문으로계산.",
+    "장문 연구1410346/1이 문맥24/28회·파일9/22회를 차지하고, 사용자요금제안1410326/1이 사용량13/28회다. 길이가중 빈도이며 사용자수·인기·실제장애건수와다르다.",
+    "OpenAI_Support계정+staff표시의 새 댓글3개만 공식지원으로분류. 사용자가 전한 지원답변이나 OpenAI가인정했다는주장은 별도 공식증거없으면공식판정하지않는다.",
+    "created_at으로만24h필터. 새본문에있는1~10월자료, 과거복구, 이전supportcase, 다른issue의 인용내용은오늘새발생·재현으로세지않음. 52.49GiB연구는연결된paper/code를별도로실행·감사한결과가아니라실제로읽은포럼본문의연구보고다.",
+    "지정 게시판 밖 자료는 집계·MCP 결론에 포함하지 않았다. 일부 검색 캐시가 최신 댓글을 누락하므로 직접 Discourse JSON을 본문·작성 시각 근거로 사용했다.",
+    "우리191의원인동일성이나새운영고침을검증한조사가아니다. 보고서2개외기존파일·DB·서비스변경,commit/push/배포없음. 전일표본과직접증감률비교안함."
+  ],
+  "PARENT_GOAL": "지정게시판 Codex·MCP 최근24시간 조사 및191 누적",
+  "CURRENT_WORK": "2026-10-29 09:41:04 KST 재조회 기록 2파일 추가",
+  "BLOCKER": "없음; 공개부분수집한계 명시",
+  "PASS_EVIDENCE": "실제본문·created_at·정규화사전·게시물별수치/hash/출처보존. 원본 저장PASS는apply후project_read 내용/SHA대조성공후확정.",
+  "storage": {
+    "task_id": "5d868dc8-1379-4b3d-87c1-81753f71c42f",
+    "project": "/home/kim/kim/ops/gptmcp-coding-191",
+    "directory": "ops/jarvis/codex-community",
+    "files": [
+      "2026-10-29-094104.md",
+      "2026-10-29-094104.json"
+    ],
+    "preflight": {
+      "agents_sha256": "0bc65aa7527cfb5237cd323d5a8b6a9c8a5ff9df7d584439bbffa574bcf7952c",
+      "readme_sha256": "d36e65437b692ac7ed447d4fb234a2cdb767c2e51289ccf5326996e33c438824",
+      "git_branch": "main",
+      "git_status_truncated": true,
+      "date_files_absent": false,
+      "suffixed_files_absent": true,
+      "existing_same_day_files_preserved": [
+        "2026-10-29.md",
+        "2026-10-29.json"
+      ]
+    },
+    "verification": "신규 2파일 전체 검토→apply→원본 내용/SHA-256 대조. 최종 성공 판정은 실제 도구 검증 결과로 남긴다. 기존 날짜 및 같은 날짜 기본 파일은 덮어쓰지 않는다."
+  },
+  "comparison_with_same_day_run": {
+    "previous_end_kst": "2026-10-29T09:33:11+09:00",
+    "new_included_ids": [],
+    "removed_included_ids": [],
+    "changed_cleaned_ids": [],
+    "changed_raw_body_ids": [],
+    "all_topic_counts_equal": true,
+    "statement": "재조회된 공개 표본에서는 직전 조사 이후 새 본문·수정 및 빈도 변화가 없다. 미수집 범위의 변경 부재를 보장하지 않는다."
+  }
+}

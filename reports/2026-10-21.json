@@ -1,0 +1,880 @@
+{
+  "range_kst": {
+    "start": "2026-10-20T09:16:42+09:00",
+    "end": "2026-10-21T09:16:42+09:00"
+  },
+  "scope": {
+    "category_first_page_topics": {
+      "codex": 30,
+      "apps": 30
+    },
+    "candidate_topics_fetched": 27,
+    "counted_threads": 11,
+    "original_posts": 5,
+    "comments": 15,
+    "partial": true,
+    "selection": "11개 기술 장애·운영 관련 스레드의 시간범위 내 본문. 카테고리 첫 페이지 후보를 조회했으나 다른 글 및 대형 스레드 미수집 후반은 빈도에서 제외. Apps SDK MCP는 OAuth 제출 오류 댓글 1건만 집계; 숨김 댓글 제외."
+  },
+  "method": {
+    "type": "정의한 20개 핵심 주제 사전 중 출현 합계 TOP10; 전체 어휘 빈도 TOP10 아님",
+    "exclusions": "제목/메타데이터/코드/인라인코드/인용/URL/인사말/삭제·숨김 글 제외. 일반 불용어는 사전 외이므로 제외. 코드·로그 반복 집계 안 함.",
+    "normalization": "대소문자 무시, 정규식으로 단복수·동의어 통합. 한 주제 안에서는 비중복 매치. 주제끼리는 겹칠 수 있음.",
+    "patterns": {
+      "파일·폴더": "\\b(?:files?|folders?|directories|directory)\\b",
+      "권한·승인": "\\b(?:permissions?|approvals?|approve|approved|authorization|authorized|authorize|consent|full access|access controls?)\\b",
+      "Windows": "\\bwindows\\b",
+      "버전·업데이트": "\\b(?:versions?|updates?|updated|updating|restart|restarting|restarted)\\b",
+      "백업·복구": "\\b(?:backups?|backing up|restore|restored|restoring|recovery|recovering|recoverable)\\b",
+      "작업·워크플로": "\\b(?:tasks?|workflows?)\\b",
+      "클라이언트": "\\bclients?\\b",
+      "로그인·인증": "\\b(?:login|log-in|sign-in|sign in|signing in|logged in|authentication|oauth)\\b",
+      "샌드박스": "\\bsandbox(?:ed|s|[- ]owned)?\\b",
+      "터미널·콘솔": "\\b(?:terminals?|consoles?)\\b",
+      "문맥·압축": "\\b(?:context|compaction|compacts|compacting)\\b",
+      "Git·저장소": "\\b(?:git|repositories|repository|worktrees?|commit(?:ted)?|push(?:ed)?)\\b",
+      "도구·탐색": "\\b(?:tools?|discovery|discoveries|scan|scanning)\\b",
+      "브라우저": "\\bbrowsers?\\b",
+      "모델·추론": "\\b(?:models?|reasoning)\\b",
+      "에이전트": "\\b(?:agents?|sub-agents?)\\b",
+      "지원·문의": "\\b(?:support|reports?|reporting)\\b",
+      "연결·접속": "\\b(?:connections?|connect|connected|connecting)\\b",
+      "링크·정션": "\\b(?:links?|junctions?)\\b",
+      "오류·실패": "\\b(?:errors?|fails?|failed|failing|failure|failures)\\b"
+    }
+  },
+  "top10": [
+    {
+      "topic": "파일·폴더",
+      "occurrences": 44,
+      "thread_count": 5,
+      "source_urls": [
+        "https://community.openai.com/t/codex-bug-built-in-browser-access-intermittently-blocked-by-local-browser-use-is-disabled-in-work-settings/1408172",
+        "https://community.openai.com/t/full-access-should-finish-authorized-tasks-unattended-including-final-cleanup/1408139",
+        "https://community.openai.com/t/codex-on-windows-how-are-you-backing-up-dependency-trees-junctions-and-sandbox-owned-files/1408035",
+        "https://community.openai.com/t/cybersecurity-warning-blocks-ordinary-python-to-typescript-migration-work/1407676",
+        "https://community.openai.com/t/issue-where-chatgpt-codex-sub-agents-inherit-the-parent-model-instead-of-using-the-model-specified-in-the-agent-configuration/1386539"
+      ],
+      "summary_ko": "파일·폴더 처리와 복구 범위 논의"
+    },
+    {
+      "topic": "백업·복구",
+      "occurrences": 38,
+      "thread_count": 2,
+      "source_urls": [
+        "https://community.openai.com/t/codex-bug-built-in-browser-access-intermittently-blocked-by-local-browser-use-is-disabled-in-work-settings/1408172",
+        "https://community.openai.com/t/codex-on-windows-how-are-you-backing-up-dependency-trees-junctions-and-sandbox-owned-files/1408035"
+      ],
+      "summary_ko": "백업·복원 및 의존성 보존"
+    },
+    {
+      "topic": "오류·실패",
+      "occurrences": 34,
+      "thread_count": 7,
+      "source_urls": [
+        "https://community.openai.com/t/premature-auto-compaction-in-codex/1408178",
+        "https://community.openai.com/t/codex-bug-built-in-browser-access-intermittently-blocked-by-local-browser-use-is-disabled-in-work-settings/1408172",
+        "https://community.openai.com/t/workspace-routing-discovery-failed/1408110",
+        "https://community.openai.com/t/codex-on-windows-how-are-you-backing-up-dependency-trees-junctions-and-sandbox-owned-files/1408035",
+        "https://community.openai.com/t/codex-loses-pc-control-after-overheating-shutdown/1389234",
+        "https://community.openai.com/t/codex-not-working-on-windows/1388555",
+        "https://community.openai.com/t/plugins-submission-oauth-secret-field-disappears-connect-rejects-imported-clientid/1405803"
+      ],
+      "summary_ko": "접속 실패·오류 진단"
+    },
+    {
+      "topic": "권한·승인",
+      "occurrences": 33,
+      "thread_count": 3,
+      "source_urls": [
+        "https://community.openai.com/t/codex-bug-built-in-browser-access-intermittently-blocked-by-local-browser-use-is-disabled-in-work-settings/1408172",
+        "https://community.openai.com/t/full-access-should-finish-authorized-tasks-unattended-including-final-cleanup/1408139",
+        "https://community.openai.com/t/codex-on-windows-how-are-you-backing-up-dependency-trees-junctions-and-sandbox-owned-files/1408035"
+      ],
+      "summary_ko": "Full Access와 파일 권한"
+    },
+    {
+      "topic": "버전·업데이트",
+      "occurrences": 26,
+      "thread_count": 9,
+      "source_urls": [
+        "https://community.openai.com/t/premature-auto-compaction-in-codex/1408178",
+        "https://community.openai.com/t/codex-bug-built-in-browser-access-intermittently-blocked-by-local-browser-use-is-disabled-in-work-settings/1408172",
+        "https://community.openai.com/t/full-access-should-finish-authorized-tasks-unattended-including-final-cleanup/1408139",
+        "https://community.openai.com/t/workspace-routing-discovery-failed/1408110",
+        "https://community.openai.com/t/cybersecurity-warning-blocks-ordinary-python-to-typescript-migration-work/1407676",
+        "https://community.openai.com/t/codex-loses-pc-control-after-overheating-shutdown/1389234",
+        "https://community.openai.com/t/codex-not-working-on-windows/1388555",
+        "https://community.openai.com/t/issue-where-chatgpt-codex-sub-agents-inherit-the-parent-model-instead-of-using-the-model-specified-in-the-agent-configuration/1386539",
+        "https://community.openai.com/t/new-update-new-bug-codex-termnial-is-opening-many-terminals-and-closing-them-while-agent-working/1401580"
+      ],
+      "summary_ko": "업데이트·재시작 안내와 미해결 사례"
+    },
+    {
+      "topic": "Windows",
+      "occurrences": 23,
+      "thread_count": 8,
+      "source_urls": [
+        "https://community.openai.com/t/premature-auto-compaction-in-codex/1408178",
+        "https://community.openai.com/t/codex-bug-built-in-browser-access-intermittently-blocked-by-local-browser-use-is-disabled-in-work-settings/1408172",
+        "https://community.openai.com/t/full-access-should-finish-authorized-tasks-unattended-including-final-cleanup/1408139",
+        "https://community.openai.com/t/workspace-routing-discovery-failed/1408110",
+        "https://community.openai.com/t/codex-on-windows-how-are-you-backing-up-dependency-trees-junctions-and-sandbox-owned-files/1408035",
+        "https://community.openai.com/t/codex-loses-pc-control-after-overheating-shutdown/1389234",
+        "https://community.openai.com/t/codex-not-working-on-windows/1388555",
+        "https://community.openai.com/t/new-update-new-bug-codex-termnial-is-opening-many-terminals-and-closing-them-while-agent-working/1401580"
+      ],
+      "summary_ko": "Windows 환경 제보 중심"
+    },
+    {
+      "topic": "문맥·압축",
+      "occurrences": 18,
+      "thread_count": 2,
+      "source_urls": [
+        "https://community.openai.com/t/premature-auto-compaction-in-codex/1408178",
+        "https://community.openai.com/t/codex-on-windows-how-are-you-backing-up-dependency-trees-junctions-and-sandbox-owned-files/1408035"
+      ],
+      "summary_ko": "조기 자동 압축 현상"
+    },
+    {
+      "topic": "로그인·인증",
+      "occurrences": 16,
+      "thread_count": 5,
+      "source_urls": [
+        "https://community.openai.com/t/premature-auto-compaction-in-codex/1408178",
+        "https://community.openai.com/t/codex-bug-built-in-browser-access-intermittently-blocked-by-local-browser-use-is-disabled-in-work-settings/1408172",
+        "https://community.openai.com/t/workspace-routing-discovery-failed/1408110",
+        "https://community.openai.com/t/codex-not-working-on-windows/1388555",
+        "https://community.openai.com/t/plugins-submission-oauth-secret-field-disappears-connect-rejects-imported-clientid/1405803"
+      ],
+      "summary_ko": "로그인 성공 뒤 실패·OAuth 설정"
+    },
+    {
+      "topic": "링크·정션",
+      "occurrences": 15,
+      "thread_count": 2,
+      "source_urls": [
+        "https://community.openai.com/t/codex-on-windows-how-are-you-backing-up-dependency-trees-junctions-and-sandbox-owned-files/1408035",
+        "https://community.openai.com/t/plugins-submission-oauth-secret-field-disappears-connect-rejects-imported-clientid/1405803"
+      ],
+      "summary_ko": "정션·하드링크와 링크 이동"
+    },
+    {
+      "topic": "Git·저장소",
+      "occurrences": 14,
+      "thread_count": 2,
+      "source_urls": [
+        "https://community.openai.com/t/workspace-routing-discovery-failed/1408110",
+        "https://community.openai.com/t/codex-on-windows-how-are-you-backing-up-dependency-trees-junctions-and-sandbox-owned-files/1408035"
+      ],
+      "summary_ko": "worktree 백업과 Git의 범위"
+    }
+  ],
+  "posts": [
+    {
+      "topic_id": 1408178,
+      "post_number": 1,
+      "created_at": "2026-10-20T20:07:49.961Z",
+      "author": "10basetom",
+      "url": "https://community.openai.com/t/premature-auto-compaction-in-codex/1408178/1",
+      "cleaned_sha256": "5d3a55b3da9c9ccf5f82693cf7a2de8ebf82739207574b71cd82ab551156bfba",
+      "counts": {
+        "파일·폴더": 0,
+        "권한·승인": 0,
+        "Windows": 1,
+        "버전·업데이트": 1,
+        "백업·복구": 0,
+        "작업·워크플로": 0,
+        "클라이언트": 0,
+        "로그인·인증": 1,
+        "샌드박스": 0,
+        "터미널·콘솔": 0,
+        "문맥·압축": 15,
+        "Git·저장소": 0,
+        "도구·탐색": 0,
+        "브라우저": 1,
+        "모델·추론": 3,
+        "에이전트": 0,
+        "지원·문의": 1,
+        "연결·접속": 0,
+        "링크·정션": 0,
+        "오류·실패": 2
+      }
+    },
+    {
+      "topic_id": 1408172,
+      "post_number": 1,
+      "created_at": "2026-10-20T19:41:31.909Z",
+      "author": "Joshua_Gwamoiza",
+      "url": "https://community.openai.com/t/codex-bug-built-in-browser-access-intermittently-blocked-by-local-browser-use-is-disabled-in-work-settings/1408172/1",
+      "cleaned_sha256": "c5841fb037abbf5401c8140dc89e432403c4702e94e82b1f25f2037f9249bb35",
+      "counts": {
+        "파일·폴더": 1,
+        "권한·승인": 2,
+        "Windows": 3,
+        "버전·업데이트": 2,
+        "백업·복구": 1,
+        "작업·워크플로": 0,
+        "클라이언트": 0,
+        "로그인·인증": 1,
+        "샌드박스": 0,
+        "터미널·콘솔": 0,
+        "문맥·압축": 0,
+        "Git·저장소": 0,
+        "도구·탐색": 1,
+        "브라우저": 9,
+        "모델·추론": 0,
+        "에이전트": 0,
+        "지원·문의": 0,
+        "연결·접속": 0,
+        "링크·정션": 0,
+        "오류·실패": 6
+      }
+    },
+    {
+      "topic_id": 1408139,
+      "post_number": 1,
+      "created_at": "2026-10-20T18:05:21.593Z",
+      "author": "Taylorwtqinthesun",
+      "url": "https://community.openai.com/t/full-access-should-finish-authorized-tasks-unattended-including-final-cleanup/1408139/1",
+      "cleaned_sha256": "9d281af4daf055254934f233c5ddc0061ba162a856f40c9b90448c884abaa21a",
+      "counts": {
+        "파일·폴더": 2,
+        "권한·승인": 19,
+        "Windows": 4,
+        "버전·업데이트": 3,
+        "백업·복구": 0,
+        "작업·워크플로": 8,
+        "클라이언트": 0,
+        "로그인·인증": 0,
+        "샌드박스": 0,
+        "터미널·콘솔": 1,
+        "문맥·압축": 0,
+        "Git·저장소": 0,
+        "도구·탐색": 0,
+        "브라우저": 0,
+        "모델·추론": 0,
+        "에이전트": 0,
+        "지원·문의": 1,
+        "연결·접속": 0,
+        "링크·정션": 0,
+        "오류·실패": 0
+      }
+    },
+    {
+      "topic_id": 1408110,
+      "post_number": 1,
+      "created_at": "2026-10-20T15:35:18.145Z",
+      "author": "DarkDev",
+      "url": "https://community.openai.com/t/workspace-routing-discovery-failed/1408110/1",
+      "cleaned_sha256": "59734ca4eb18440b32aedf0096ed78e7671a28b579d3266ffc7abbf3bd525081",
+      "counts": {
+        "파일·폴더": 0,
+        "권한·승인": 0,
+        "Windows": 2,
+        "버전·업데이트": 2,
+        "백업·복구": 0,
+        "작업·워크플로": 0,
+        "클라이언트": 1,
+        "로그인·인증": 8,
+        "샌드박스": 0,
+        "터미널·콘솔": 0,
+        "문맥·압축": 0,
+        "Git·저장소": 1,
+        "도구·탐색": 3,
+        "브라우저": 2,
+        "모델·추론": 2,
+        "에이전트": 0,
+        "지원·문의": 1,
+        "연결·접속": 0,
+        "링크·정션": 0,
+        "오류·실패": 11
+      }
+    },
+    {
+      "topic_id": 1408110,
+      "post_number": 2,
+      "created_at": "2026-10-20T15:56:46.114Z",
+      "author": "Diet",
+      "url": "https://community.openai.com/t/workspace-routing-discovery-failed/1408110/2",
+      "cleaned_sha256": "2293773c0c79b2b0256ed79c5c3909958ee72ca7e3cc0957481e159a2626856d",
+      "counts": {
+        "파일·폴더": 0,
+        "권한·승인": 0,
+        "Windows": 0,
+        "버전·업데이트": 2,
+        "백업·복구": 0,
+        "작업·워크플로": 0,
+        "클라이언트": 1,
+        "로그인·인증": 0,
+        "샌드박스": 0,
+        "터미널·콘솔": 0,
+        "문맥·압축": 0,
+        "Git·저장소": 0,
+        "도구·탐색": 0,
+        "브라우저": 0,
+        "모델·추론": 0,
+        "에이전트": 0,
+        "지원·문의": 1,
+        "연결·접속": 0,
+        "링크·정션": 0,
+        "오류·실패": 0
+      }
+    },
+    {
+      "topic_id": 1408110,
+      "post_number": 3,
+      "created_at": "2026-10-20T16:39:14.970Z",
+      "author": "DarkDev",
+      "url": "https://community.openai.com/t/workspace-routing-discovery-failed/1408110/3",
+      "cleaned_sha256": "606e9c729748b8443aad435fa4d3239098da62298e16f010b23152bbfe1e646a",
+      "counts": {
+        "파일·폴더": 0,
+        "권한·승인": 0,
+        "Windows": 1,
+        "버전·업데이트": 5,
+        "백업·복구": 0,
+        "작업·워크플로": 0,
+        "클라이언트": 2,
+        "로그인·인증": 1,
+        "샌드박스": 0,
+        "터미널·콘솔": 0,
+        "문맥·압축": 0,
+        "Git·저장소": 0,
+        "도구·탐색": 1,
+        "브라우저": 0,
+        "모델·추론": 0,
+        "에이전트": 0,
+        "지원·문의": 0,
+        "연결·접속": 0,
+        "링크·정션": 0,
+        "오류·실패": 4
+      }
+    },
+    {
+      "topic_id": 1408110,
+      "post_number": 4,
+      "created_at": "2026-10-20T17:22:44.567Z",
+      "author": "Diet",
+      "url": "https://community.openai.com/t/workspace-routing-discovery-failed/1408110/4",
+      "cleaned_sha256": "d7b65feea7b752c1e3de59a4ed50cccf555920d619620700918824b032099eb1",
+      "counts": {
+        "파일·폴더": 0,
+        "권한·승인": 0,
+        "Windows": 0,
+        "버전·업데이트": 0,
+        "백업·복구": 0,
+        "작업·워크플로": 0,
+        "클라이언트": 0,
+        "로그인·인증": 0,
+        "샌드박스": 0,
+        "터미널·콘솔": 0,
+        "문맥·압축": 0,
+        "Git·저장소": 0,
+        "도구·탐색": 0,
+        "브라우저": 0,
+        "모델·추론": 0,
+        "에이전트": 0,
+        "지원·문의": 1,
+        "연결·접속": 0,
+        "링크·정션": 0,
+        "오류·실패": 0
+      }
+    },
+    {
+      "topic_id": 1408110,
+      "post_number": 5,
+      "created_at": "2026-10-20T17:44:12.701Z",
+      "author": "DarkDev",
+      "url": "https://community.openai.com/t/workspace-routing-discovery-failed/1408110/5",
+      "cleaned_sha256": "83caa7935deb26f86110fbfec6aa1ff341fb333efc7f726f167cf978fab95419",
+      "counts": {
+        "파일·폴더": 0,
+        "권한·승인": 0,
+        "Windows": 0,
+        "버전·업데이트": 0,
+        "백업·복구": 0,
+        "작업·워크플로": 0,
+        "클라이언트": 0,
+        "로그인·인증": 0,
+        "샌드박스": 0,
+        "터미널·콘솔": 0,
+        "문맥·압축": 0,
+        "Git·저장소": 0,
+        "도구·탐색": 0,
+        "브라우저": 0,
+        "모델·추론": 0,
+        "에이전트": 0,
+        "지원·문의": 0,
+        "연결·접속": 0,
+        "링크·정션": 0,
+        "오류·실패": 0
+      }
+    },
+    {
+      "topic_id": 1408035,
+      "post_number": 1,
+      "created_at": "2026-10-20T11:32:12.482Z",
+      "author": "BlueSky123",
+      "url": "https://community.openai.com/t/codex-on-windows-how-are-you-backing-up-dependency-trees-junctions-and-sandbox-owned-files/1408035/1",
+      "cleaned_sha256": "e512dc75e69d0e1e38022339400ff130e0f9112aaac60dfa689bcd43d80e1210",
+      "counts": {
+        "파일·폴더": 34,
+        "권한·승인": 8,
+        "Windows": 5,
+        "버전·업데이트": 0,
+        "백업·복구": 33,
+        "작업·워크플로": 1,
+        "클라이언트": 0,
+        "로그인·인증": 0,
+        "샌드박스": 4,
+        "터미널·콘솔": 0,
+        "문맥·압축": 2,
+        "Git·저장소": 5,
+        "도구·탐색": 0,
+        "브라우저": 0,
+        "모델·추론": 0,
+        "에이전트": 0,
+        "지원·문의": 1,
+        "연결·접속": 0,
+        "링크·정션": 10,
+        "오류·실패": 4
+      }
+    },
+    {
+      "topic_id": 1408035,
+      "post_number": 3,
+      "created_at": "2026-10-20T13:58:18.905Z",
+      "author": "Diet",
+      "url": "https://community.openai.com/t/codex-on-windows-how-are-you-backing-up-dependency-trees-junctions-and-sandbox-owned-files/1408035/3",
+      "cleaned_sha256": "cdb85521a8b9d0c8531f31fe90a965b7b8ba64c4f019054ab1947058aa0c8248",
+      "counts": {
+        "파일·폴더": 0,
+        "권한·승인": 0,
+        "Windows": 0,
+        "버전·업데이트": 0,
+        "백업·복구": 0,
+        "작업·워크플로": 0,
+        "클라이언트": 0,
+        "로그인·인증": 0,
+        "샌드박스": 0,
+        "터미널·콘솔": 0,
+        "문맥·압축": 0,
+        "Git·저장소": 2,
+        "도구·탐색": 0,
+        "브라우저": 0,
+        "모델·추론": 0,
+        "에이전트": 0,
+        "지원·문의": 0,
+        "연결·접속": 0,
+        "링크·정션": 0,
+        "오류·실패": 0
+      }
+    },
+    {
+      "topic_id": 1408035,
+      "post_number": 4,
+      "created_at": "2026-10-20T16:04:31.811Z",
+      "author": "BlueSky123",
+      "url": "https://community.openai.com/t/codex-on-windows-how-are-you-backing-up-dependency-trees-junctions-and-sandbox-owned-files/1408035/4",
+      "cleaned_sha256": "004e18f927a2a9fff7f5691f916b7ec096b3f981e70ecce651287638f8ecd181",
+      "counts": {
+        "파일·폴더": 3,
+        "권한·승인": 1,
+        "Windows": 1,
+        "버전·업데이트": 0,
+        "백업·복구": 4,
+        "작업·워크플로": 0,
+        "클라이언트": 0,
+        "로그인·인증": 0,
+        "샌드박스": 1,
+        "터미널·콘솔": 0,
+        "문맥·압축": 0,
+        "Git·저장소": 4,
+        "도구·탐색": 0,
+        "브라우저": 0,
+        "모델·추론": 0,
+        "에이전트": 0,
+        "지원·문의": 0,
+        "연결·접속": 0,
+        "링크·정션": 1,
+        "오류·실패": 1
+      }
+    },
+    {
+      "topic_id": 1408035,
+      "post_number": 5,
+      "created_at": "2026-10-20T17:19:02.433Z",
+      "author": "Diet",
+      "url": "https://community.openai.com/t/codex-on-windows-how-are-you-backing-up-dependency-trees-junctions-and-sandbox-owned-files/1408035/5",
+      "cleaned_sha256": "658b480672c024a7433e7caa8d3a3db986b461c868edceebdd493cbb5d7d5eec",
+      "counts": {
+        "파일·폴더": 0,
+        "권한·승인": 3,
+        "Windows": 0,
+        "버전·업데이트": 0,
+        "백업·복구": 0,
+        "작업·워크플로": 0,
+        "클라이언트": 0,
+        "로그인·인증": 0,
+        "샌드박스": 0,
+        "터미널·콘솔": 0,
+        "문맥·압축": 1,
+        "Git·저장소": 2,
+        "도구·탐색": 1,
+        "브라우저": 0,
+        "모델·추론": 0,
+        "에이전트": 0,
+        "지원·문의": 0,
+        "연결·접속": 0,
+        "링크·정션": 3,
+        "오류·실패": 0
+      }
+    },
+    {
+      "topic_id": 1408035,
+      "post_number": 6,
+      "created_at": "2026-10-20T17:26:22.742Z",
+      "author": "PaulBellow",
+      "url": "https://community.openai.com/t/codex-on-windows-how-are-you-backing-up-dependency-trees-junctions-and-sandbox-owned-files/1408035/6",
+      "cleaned_sha256": "10a8db679fd83f6ae7e07e920d401062aa7eb1d77297da1b0351c770989a836f",
+      "counts": {
+        "파일·폴더": 0,
+        "권한·승인": 0,
+        "Windows": 0,
+        "버전·업데이트": 0,
+        "백업·복구": 0,
+        "작업·워크플로": 0,
+        "클라이언트": 0,
+        "로그인·인증": 0,
+        "샌드박스": 0,
+        "터미널·콘솔": 0,
+        "문맥·압축": 0,
+        "Git·저장소": 0,
+        "도구·탐색": 0,
+        "브라우저": 0,
+        "모델·추론": 0,
+        "에이전트": 0,
+        "지원·문의": 0,
+        "연결·접속": 0,
+        "링크·정션": 0,
+        "오류·실패": 0
+      }
+    },
+    {
+      "topic_id": 1407676,
+      "post_number": 2,
+      "created_at": "2026-10-20T15:58:28.469Z",
+      "author": "OpenAI_Support",
+      "url": "https://community.openai.com/t/cybersecurity-warning-blocks-ordinary-python-to-typescript-migration-work/1407676/2",
+      "cleaned_sha256": "e6597de57d7357f26ecd9f8331ce1c58a3b9448e2678440be7075d4dd8b47a9e",
+      "counts": {
+        "파일·폴더": 1,
+        "권한·승인": 0,
+        "Windows": 0,
+        "버전·업데이트": 0,
+        "백업·복구": 0,
+        "작업·워크플로": 0,
+        "클라이언트": 0,
+        "로그인·인증": 0,
+        "샌드박스": 0,
+        "터미널·콘솔": 0,
+        "문맥·압축": 0,
+        "Git·저장소": 0,
+        "도구·탐색": 0,
+        "브라우저": 0,
+        "모델·추론": 0,
+        "에이전트": 0,
+        "지원·문의": 5,
+        "연결·접속": 0,
+        "링크·정션": 0,
+        "오류·실패": 0
+      }
+    },
+    {
+      "topic_id": 1407676,
+      "post_number": 3,
+      "created_at": "2026-10-20T16:58:57.481Z",
+      "author": "Darren_Roberts",
+      "url": "https://community.openai.com/t/cybersecurity-warning-blocks-ordinary-python-to-typescript-migration-work/1407676/3",
+      "cleaned_sha256": "925bae6d03416011bdcac6e3b0d99f8b4f165a58842ba25c9c6f5e02e9d4be10",
+      "counts": {
+        "파일·폴더": 2,
+        "권한·승인": 0,
+        "Windows": 0,
+        "버전·업데이트": 1,
+        "백업·복구": 0,
+        "작업·워크플로": 0,
+        "클라이언트": 0,
+        "로그인·인증": 0,
+        "샌드박스": 0,
+        "터미널·콘솔": 0,
+        "문맥·압축": 0,
+        "Git·저장소": 0,
+        "도구·탐색": 0,
+        "브라우저": 0,
+        "모델·추론": 0,
+        "에이전트": 0,
+        "지원·문의": 0,
+        "연결·접속": 0,
+        "링크·정션": 0,
+        "오류·실패": 0
+      }
+    },
+    {
+      "topic_id": 1389234,
+      "post_number": 6,
+      "created_at": "2026-10-20T16:50:08.081Z",
+      "author": "OpenAI_Support",
+      "url": "https://community.openai.com/t/codex-loses-pc-control-after-overheating-shutdown/1389234/6",
+      "cleaned_sha256": "0aeebaec03f08c257b731e7a9138d683db523c2cd84c435700a6c26829106b3b",
+      "counts": {
+        "파일·폴더": 0,
+        "권한·승인": 0,
+        "Windows": 1,
+        "버전·업데이트": 2,
+        "백업·복구": 0,
+        "작업·워크플로": 0,
+        "클라이언트": 0,
+        "로그인·인증": 0,
+        "샌드박스": 0,
+        "터미널·콘솔": 0,
+        "문맥·압축": 0,
+        "Git·저장소": 0,
+        "도구·탐색": 0,
+        "브라우저": 0,
+        "모델·추론": 0,
+        "에이전트": 0,
+        "지원·문의": 1,
+        "연결·접속": 0,
+        "링크·정션": 0,
+        "오류·실패": 2
+      }
+    },
+    {
+      "topic_id": 1388555,
+      "post_number": 4,
+      "created_at": "2026-10-20T14:39:18.566Z",
+      "author": "OpenAI_Support",
+      "url": "https://community.openai.com/t/codex-not-working-on-windows/1388555/4",
+      "cleaned_sha256": "fe32b0f90371cd879d0579feb6458040e8e7f897fb5af0d4c844740c28bbb5a9",
+      "counts": {
+        "파일·폴더": 0,
+        "권한·승인": 0,
+        "Windows": 1,
+        "버전·업데이트": 2,
+        "백업·복구": 0,
+        "작업·워크플로": 0,
+        "클라이언트": 0,
+        "로그인·인증": 3,
+        "샌드박스": 0,
+        "터미널·콘솔": 0,
+        "문맥·압축": 0,
+        "Git·저장소": 0,
+        "도구·탐색": 0,
+        "브라우저": 1,
+        "모델·추론": 0,
+        "에이전트": 0,
+        "지원·문의": 0,
+        "연결·접속": 1,
+        "링크·정션": 0,
+        "오류·실패": 2
+      }
+    },
+    {
+      "topic_id": 1386539,
+      "post_number": 4,
+      "created_at": "2026-10-20T13:16:20.721Z",
+      "author": "OpenAI_Support",
+      "url": "https://community.openai.com/t/issue-where-chatgpt-codex-sub-agents-inherit-the-parent-model-instead-of-using-the-model-specified-in-the-agent-configuration/1386539/4",
+      "cleaned_sha256": "dff063d8edcc8b5fbcc23d8b923511aa4ee204575687547d7717baece4217fe4",
+      "counts": {
+        "파일·폴더": 1,
+        "권한·승인": 0,
+        "Windows": 0,
+        "버전·업데이트": 2,
+        "백업·복구": 0,
+        "작업·워크플로": 0,
+        "클라이언트": 0,
+        "로그인·인증": 0,
+        "샌드박스": 0,
+        "터미널·콘솔": 0,
+        "문맥·압축": 0,
+        "Git·저장소": 0,
+        "도구·탐색": 0,
+        "브라우저": 0,
+        "모델·추론": 3,
+        "에이전트": 2,
+        "지원·문의": 1,
+        "연결·접속": 0,
+        "링크·정션": 0,
+        "오류·실패": 0
+      }
+    },
+    {
+      "topic_id": 1401580,
+      "post_number": 9,
+      "created_at": "2026-10-20T13:15:57.049Z",
+      "author": "OpenAI_Support",
+      "url": "https://community.openai.com/t/new-update-new-bug-codex-termnial-is-opening-many-terminals-and-closing-them-while-agent-working/1401580/9",
+      "cleaned_sha256": "cca6fccb0a9b2d68fde3b305c5f6577ae10e8f576729a036df9fa507a31d63d0",
+      "counts": {
+        "파일·폴더": 0,
+        "권한·승인": 0,
+        "Windows": 4,
+        "버전·업데이트": 4,
+        "백업·복구": 0,
+        "작업·워크플로": 1,
+        "클라이언트": 0,
+        "로그인·인증": 0,
+        "샌드박스": 0,
+        "터미널·콘솔": 2,
+        "문맥·압축": 0,
+        "Git·저장소": 0,
+        "도구·탐색": 0,
+        "브라우저": 0,
+        "모델·추론": 0,
+        "에이전트": 0,
+        "지원·문의": 0,
+        "연결·접속": 0,
+        "링크·정션": 0,
+        "오류·실패": 0
+      }
+    },
+    {
+      "topic_id": 1405803,
+      "post_number": 11,
+      "created_at": "2026-10-20T12:18:09.397Z",
+      "author": "altFINS",
+      "url": "https://community.openai.com/t/plugins-submission-oauth-secret-field-disappears-connect-rejects-imported-clientid/1405803/11",
+      "cleaned_sha256": "5a96dbe75c999d26b59ded9ac4781998b2b4a4f6707277883acf0dc9f634006d",
+      "counts": {
+        "파일·폴더": 0,
+        "권한·승인": 0,
+        "Windows": 0,
+        "버전·업데이트": 0,
+        "백업·복구": 0,
+        "작업·워크플로": 0,
+        "클라이언트": 3,
+        "로그인·인증": 2,
+        "샌드박스": 0,
+        "터미널·콘솔": 0,
+        "문맥·압축": 0,
+        "Git·저장소": 0,
+        "도구·탐색": 0,
+        "브라우저": 0,
+        "모델·추론": 0,
+        "에이전트": 0,
+        "지원·문의": 0,
+        "연결·접속": 1,
+        "링크·정션": 1,
+        "오류·실패": 2
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": 1408178,
+      "title": "Premature auto-compaction in Codex",
+      "url": "https://community.openai.com/t/premature-auto-compaction-in-codex/1408178"
+    },
+    {
+      "id": 1408172,
+      "title": "CODEX BUG: Built-in browser access intermittently blocked by “Local browser use is disabled in Work settings”",
+      "url": "https://community.openai.com/t/codex-bug-built-in-browser-access-intermittently-blocked-by-local-browser-use-is-disabled-in-work-settings/1408172"
+    },
+    {
+      "id": 1408139,
+      "title": "Full Access should finish authorized tasks unattended, including final cleanup",
+      "url": "https://community.openai.com/t/full-access-should-finish-authorized-tasks-unattended-including-final-cleanup/1408139"
+    },
+    {
+      "id": 1408110,
+      "title": "Workspace routing discovery failed",
+      "url": "https://community.openai.com/t/workspace-routing-discovery-failed/1408110"
+    },
+    {
+      "id": 1408035,
+      "title": "Codex on Windows: how are you backing up dependency trees, junctions, and sandbox-owned files?",
+      "url": "https://community.openai.com/t/codex-on-windows-how-are-you-backing-up-dependency-trees-junctions-and-sandbox-owned-files/1408035"
+    },
+    {
+      "id": 1407676,
+      "title": "Cybersecurity warning blocks ordinary Python-to-TypeScript migration work",
+      "url": "https://community.openai.com/t/cybersecurity-warning-blocks-ordinary-python-to-typescript-migration-work/1407676"
+    },
+    {
+      "id": 1389234,
+      "title": "Codex loses PC control after overheating shutdown?",
+      "url": "https://community.openai.com/t/codex-loses-pc-control-after-overheating-shutdown/1389234"
+    },
+    {
+      "id": 1388555,
+      "title": "Codex not working on windows",
+      "url": "https://community.openai.com/t/codex-not-working-on-windows/1388555"
+    },
+    {
+      "id": 1386539,
+      "title": "Issue where ChatGPT Codex sub-agents inherit the parent model instead of using the model specified in the agent configuration",
+      "url": "https://community.openai.com/t/issue-where-chatgpt-codex-sub-agents-inherit-the-parent-model-instead-of-using-the-model-specified-in-the-agent-configuration/1386539"
+    },
+    {
+      "id": 1401580,
+      "title": "New Update new bug? Codex termnial is opening many terminals and closing them while agent working",
+      "url": "https://community.openai.com/t/new-update-new-bug-codex-termnial-is-opening-many-terminals-and-closing-them-while-agent-working/1401580"
+    },
+    {
+      "id": 1405803,
+      "title": "Plugins submission: OAuth secret field disappears; Connect rejects imported clientId",
+      "url": "https://community.openai.com/t/plugins-submission-oauth-secret-field-disappears-connect-rejects-imported-clientid/1405803"
+    }
+  ],
+  "mcp_findings": [
+    {
+      "area": "OAuth 만료·refresh token",
+      "status": "UNVERIFIED",
+      "finding": "집계 표본에서 새 만료·refresh 성공 사례를 확인하지 못했다. OAuth 제출 설정 문제는 토큰 만료와 별개다."
+    },
+    {
+      "area": "tools/list·도구 갱신·사라짐",
+      "status": "USER_REPORT",
+      "finding": "10월20일12:18 UTC(21:18 KST) 새 댓글: 가져온 OAuth 설정은 보이지만 Client ID/secret 입력 필드가 없고 Connect가 실패한다고 보고. 과거 editor 링크는 현재 plugin management로 이동한다고 보고. 신규 해결 성공 증거 없음.",
+      "url": "https://community.openai.com/t/1405803/11"
+    },
+    {
+      "area": "Codex App Server",
+      "status": "USER_REPORT",
+      "finding": "workspace routing discovery failed 글 작성자는 로그인 성공 뒤 CLI·앱·확장에서 404 발생, daemon 재시작도 효과 없다고 보고. 계정 측 원인이라는 판단은 사용자 추정이며 확정 원인 아님.",
+      "url": "https://community.openai.com/t/1408110"
+    },
+    {
+      "area": "bwrap·/proc·sandbox",
+      "status": "USER_REPORT",
+      "finding": "Windows 백업 글에서 sandbox 소유 폴더 접근 제한과 복구 helper 시험을 보고. Linux bwrap·/proc 문제의 해결 근거가 아님. 표본 내 신규 bwrap·/proc 해결은 확인 못함.",
+      "url": "https://community.openai.com/t/1408035"
+    },
+    {
+      "area": "Git worktree·commit·push",
+      "status": "USER_REPORT",
+      "finding": "2개 저장소·13개 worktree의 백업 조사. Git만으로 의존성·정션·권한·애플리케이션 상태 전체를 복구할 수 없다는 사용자 설명. 커밋·push 연동 성공 검증 사례로 볼 수 없음.",
+      "url": "https://community.openai.com/t/1408035"
+    },
+    {
+      "area": "OpenAI 공식 답변",
+      "status": "OFFICIAL_SUPPORT",
+      "finding": "표본의 OpenAI_Support 댓글은 최소 재현·현재 버전·로그인 완료 여부 확인 등을 요청. 터미널 팝업 관련 0.159.2 수정 및 이전 background server 재시작 사용자 보고를 안내. 모든 환경에서 해결됐다는 선언 아님.",
+      "url": "https://community.openai.com/t/1401580/9"
+    }
+  ],
+  "limitations": [
+    "카테고리 첫 페이지 각30개만 후보 탐색. 시간 범위에 맞는 후보27개 응답을 수집하고 기술 장애·운영 관련11개 스레드20개 본문으로 집계 표본을 한정했다.",
+    "일부 장문 스레드의 후반 댓글은 수집하지 않았으며 빈도에서 제외. Apps SDK MCP 표본은 OAuth 스레드 신규 댓글1건으로 작다.",
+    "Discourse JSON created_at UTC를 KST로 변환해 범위를 판정. 수정 시각·목록 Activity 날짜로 신규 작성 판정하지 않았다.",
+    "숨김/삭제 내용, 이미지 내부 글자, 코드/인용은 미집계. 일반 불용어는 20개 주제 사전 외이므로 제외했다. 빈도는 문제 발생 건수나 사용자 수가 아니다.",
+    "Windows 백업 장문이 파일·백업 관련 합계를 크게 높인다. 전체 커뮤니티 추세나 191 서버 동일 원인으로 일반화할 수 없다.",
+    "본문 전체를 재게시하지 않고 게시물별 정규화 주제 수치·시각·해시와 출처를 보존한다."
+  ],
+  "PARENT_GOAL": "Codex 및 Apps SDK MCP 최근24시간 조사 누적",
+  "CURRENT_WORK": "부분 표본 집계 및 출처 검토",
+  "BLOCKER": "조사·저장 없음; 전수 수집 및 누락 댓글은 미수행",
+  "PASS_EVIDENCE": "Discourse JSON 작성시각 및 본문에서 정규식 집계. 저장 검증은 MCP write/review/apply/reread 응답으로 별도 확인."
+}

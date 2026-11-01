@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "migration_date": "2026-11-01",
+  "source": "191 Coding MCP: ops/jarvis/codex-community/",
+  "destination": "kimjindol2025/codex-community-reports",
+  "report_file_count": 28,
+  "content_policy": "Original UTF-8 text preserved exactly; no retrospective promotion of historical verification claims.",
+  "verification_method": "Compare each remote file content against the project_read source. Exact UTF-8 content equality establishes the source SHA-256 is preserved; record branch commit in final execution response.",
+  "files": [
+    {
+      "source_path": "ops/jarvis/codex-community/2026-10-21-7days.json",
+      "path": "reports/2026-10-21-7days.json",
+      "sha256": "76b94ccf189fce7a0dab2f8ad779f3bfe780bc7685d223f9ecad111b1eeb94fb"
+    },
+    {
+      "source_path": "ops/jarvis/codex-community/2026-10-21-7days.md",
+      "path": "reports/2026-10-21-7days.md",
+      "sha256": "6fe5dd1d9366283deb31bd225925346cfe723babbe3e234dda5c22322972ef0a"
+    },
+    {
+      "source_path": "ops/jarvis/codex-community/2026-10-21.json",
+      "path": "reports/2026-10-21.json",
+      "sha256": "b28334c6f7b4addc2e03c7817d022aee5cf30e777012a9a0144a13853aeede41"
+    },
+    {
+      "source_path": "ops/jarvis/codex-community/2026-10-21.md",
+      "path": "reports/2026-10-21.md",
+      "sha256": "34ea893f818498c2db426e3538ef5261a8fdeae7c0b1be329959d2075973b747"
+    },
+    {
+      "source_path": "ops/jarvis/codex-community/2026-10-22.json",
+      "path": "reports/2026-10-22.json",
+      "sha256": "59595aa872d1eb93e6b7854aaaf9ea5fb505980ab54702e1a7c7ffb1b61c9482"
+    },
+    {
+      "source_path": "ops/jarvis/codex-community/2026-10-22.md",
+      "path": "reports/2026-10-22.md",
+      "sha256": "54238e6e8b21b119c560a1a50e710f2296f26d23e89518749fb3cbb89e1af693"
+    },
+    {
+      "source_path": "ops/jarvis/codex-community/2026-10-23.json",
+      "path": "reports/2026-10-23.json",
+      "sha256": "354b55c7754b0cf17e871b13f114aab77f8409b681ecb8c0877982e2b36e01a0"
+    },
+    {
+      "source_path": "ops/jarvis/codex-community/2026-10-23.md",
+      "path": "reports/2026-10-23.md",
+      "sha256": "5e0a7e5f81cdd3d870a987964c480b3dc8ad369dad9d4d4da53c5871856e622c"
+    },
+    {
+      "source_path": "ops/jarvis/codex-community/2026-10-24.json",
+      "path": "reports/2026-10-24.json",
+      "sha256": "e679e2442413f97924d4e42921b20c5b1c546cc628744062115368d5dd615db0"
+    },
+    {
+      "source_path": "ops/jarvis/codex-community/2026-10-24.md",
+      "path": "reports/2026-10-24.md",
+      "sha256": "4d425de14608597fbe4dfcbc5bd613d71138a2856ef44346b3dc2fa0f325ee54"
+    },
+    {
+      "source_path": "ops/jarvis/codex-community/2026-10-25.json",
+      "path": "reports/2026-10-25.json",
+      "sha256": "7959721eae20a97ad95915577d6e30328637e7930155b6ff27be59d2d9ac006b"
+    },
+    {
+      "source_path": "ops/jarvis/codex-community/2026-10-25.md",
+      "path": "reports/2026-10-25.md",
+      "sha256": "c3d3e1afbbc8713aeb2822a44414d0b979c15ea548711f0de6f7058fada5ec9a"
+    },
+    {
+      "source_path": "ops/jarvis/codex-community/2026-10-26.json",
+      "path": "reports/2026-10-26.json",
+      "sha256": "90812f8e10b2191eff94a24f816c4157e02399921fb23db5c5c532ebc7e10b80"
+    },
+    {
+      "source_path": "ops/jarvis/codex-community/2026-10-26.md",
+      "path": "reports/2026-10-26.md",
+      "sha256": "ab21b618f3b0a62e88ddcd2fe84074117e78a9860dee37cc1a223194c83cf47b"
+    },
+    {
+      "source_path": "ops/jarvis/codex-community/2026-10-27.json",
+      "path": "reports/2026-10-27.json",
+      "sha256": "99e253501b64dbc6e130e1903b3f7cf9f480151c80794134e20022cb73fe37e8"
+    },
+    {
+      "source_path": "ops/jarvis/codex-community/2026-10-27.md",
+      "path": "reports/2026-10-27.md",
+      "sha256": "76b75d99ebdffef4eb357f2c63e29ce5b5430a4c70cde8b963c406e164c43a1f"
+    },
+    {
+      "source_path": "ops/jarvis/codex-community/2026-10-28.json",
+      "path": "reports/2026-10-28.json",
+      "sha256": "4c414920e7f703654122dd420e947c389c391cd0095d18841deb0fd0a0399c10"
+    },
+    {
+      "source_path": "ops/jarvis/codex-community/2026-10-28.md",
+      "path": "reports/2026-10-28.md",
+      "sha256": "c9a5cc1f29afafda6b3c1de56805251f76195801ef6ad680be9f4e9bbeedf3c6"
+    },
+    {
+      "source_path": "ops/jarvis/codex-community/2026-10-29-094104.json",
+      "path": "reports/2026-10-29-094104.json",
+      "sha256": "a46cdd2422456f05308482fbe21b798e4c09ec7dcb26ed4a346ff5eeeb0baf64"
+    },
+    {
+      "source_path": "ops/jarvis/codex-community/2026-10-29-094104.md",
+      "path": "reports/2026-10-29-094104.md",
+      "sha256": "028104634e326848e45650ffcf8e8132a2d59cb0f282f74cad585a0412a18b98"
+    },
+    {
+      "source_path": "ops/jarvis/codex-community/2026-10-29.json",
+      "path": "reports/2026-10-29.json",
+      "sha256": "cde4b1224be01729e5c507c9bc7718a3f277191cb443e59e37154ea6ee7f8c63"
+    },
+    {
+      "source_path": "ops/jarvis/codex-community/2026-10-29.md",
+      "path": "reports/2026-10-29.md",
+      "sha256": "1eeb0b7ea7b1d3d1247d37226c776ba1ca0e85b98c9a0c686ed7b0f969d19416"
+    },
+    {
+      "source_path": "ops/jarvis/codex-community/2026-10-30.json",
+      "path": "reports/2026-10-30.json",
+      "sha256": "41cee160ba890fb75243a40a8a4148c4ab31845b3c330fc166b9399b097e8583"
+    },
+    {
+      "source_path": "ops/jarvis/codex-community/2026-10-30.md",
+      "path": "reports/2026-10-30.md",
+      "sha256": "37432a0288ef9236c9e6d67eb0d8d657243f7784e363ca37072e1f7bd59e2b2a"
+    },
+    {
+      "source_path": "ops/jarvis/codex-community/2026-10-31.json",
+      "path": "reports/2026-10-31.json",
+      "sha256": "ad70ece61f1e2017116358b287895c3ceb6bde93c7048db9f18eac376eda06b6"
+    },
+    {
+      "source_path": "ops/jarvis/codex-community/2026-10-31.md",
+      "path": "reports/2026-10-31.md",
+      "sha256": "722382206db02d30ec0c9eaeef6159a90da7180337f04ad1d5f16f8a942d439f"
+    },
+    {
+      "source_path": "ops/jarvis/codex-community/2026-11-01.json",
+      "path": "reports/2026-11-01.json",
+      "sha256": "954c4f5465c4e54a15a1f392ece7235c5d6e2846e1f8a9926b5367aebb07ac79"
+    },
+    {
+      "source_path": "ops/jarvis/codex-community/2026-11-01.md",
+      "path": "reports/2026-11-01.md",
+      "sha256": "7343ef8e56a08cc0b8f0a036920ec6fc1174de3ebb8a3e76b22fffcabb404e9d"
+    }
+  ]
+}
