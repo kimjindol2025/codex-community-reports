@@ -33,3 +33,13 @@ OpenAI Developer Community의 Codex 및 ChatGPT Apps SDK MCP 관련 글을 조�
 새 작업 전에 AGENTS.md와 이 README를 읽습니다. 원본 보고서는 덮어쓰거나 삭제하지 않습니다. 보고서의 출처·범위·한계·본문별 수치와 저장 증거를 보존합니다. 새 보고서와 목록을 검토한 뒤 이 보고서 전용 저장소에 커밋합니다. 원격 재읽기·내용 및 SHA-256 대조가 성공한 경우에만 저장 PASS로 표시합니다.
 
 기존 기록28개의 원본 SHA-256과 경로는 [이관 명세](manifests/migration-2026-11-01.json)에 보존합니다. 이관은 내용의 재검증이나 과거 판정의 승격을 뜻하지 않습니다.
+
+
+## JARVIS Morning Radar 보관
+
+JARVIS 외부 기술 레이더와 작업 복귀(PARENT_GOAL, PASS_GATE, TODAY_ONE_JOB 등) 기록을 한국시간 기준 매일 별도로 보관합니다. 이 공개 저장소에는 비밀값·내부 IP·비공개 로그를 저장하지 않습니다. 검증되지 않은 단계는 PASS로 표시하지 않습니다.
+
+- [JARVIS 일별 보고서 폴더](reports/jarvis/)
+- [2026-11-01 JARVIS 보고서](reports/jarvis/2026-11-01.md) · [근거 JSON](reports/jarvis/2026-11-01.json)
+
+기존 Codex 커뮤니티 보고서 목록과 파일은 별도로 유지합니다.
