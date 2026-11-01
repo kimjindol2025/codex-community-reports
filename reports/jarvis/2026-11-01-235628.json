@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "report_type": "JARVIS_MORNING_RADAR_FOLLOWUP",
+  "kst_date": "2026-11-01",
+  "kst_check_time": "2026-11-01T23:56:28+09:00",
+  "source_prior_report": "reports/jarvis/2026-11-01.md",
+  "external_radar": {
+    "applicable_new_change": false,
+    "official_releases_reviewed": [
+      {
+        "url": "https://github.com/livekit/agents/releases",
+        "latest": "livekit-agents@1.8.10",
+        "published_at": "2026-10-29T17:00:12Z"
+      },
+      {
+        "url": "https://github.com/pipecat-ai/pipecat/releases",
+        "latest": "v1.15.0",
+        "published_at": "2026-10-29T05:50:54Z"
+      },
+      {
+        "url": "https://github.com/langchain-ai/langgraphjs/releases",
+        "latest": "@langchain/langgraph@1.6.0",
+        "published_at": "2026-10-30T22:26:02Z"
+      },
+      {
+        "url": "https://github.com/home-assistant/core/releases",
+        "latest": "2026.11.0b2 (prerelease)",
+        "published_at": "2026-10-30T23:07:21Z"
+      },
+      {
+        "url": "https://github.com/leon-ai/leon/releases",
+        "latest": "tcp-server_v2.0.0 (prerelease)",
+        "published_at": "2026-02-19T09:08:01Z"
+      },
+      {
+        "url": "https://github.com/modelcontextprotocol/typescript-sdk/releases",
+        "latest": "v2.4.0",
+        "published_at": "2026-10-23T18:32:25Z"
+      },
+      {
+        "url": "https://github.com/openai/openai-agents-python/releases",
+        "latest": "v0.24.0",
+        "published_at": "2026-10-15T02:20:12Z"
+      },
+      {
+        "url": "https://github.com/openai/openai-agents-js/releases",
+        "latest": "@openai/agents@0.21.0",
+        "published_at": "2026-10-20T22:07:29Z"
+      }
+    ],
+    "scope_note": "latest public GitHub release collections; not a complete security audit"
+  },
+  "work_return": {
+    "PARENT_GOAL": "웹 GPT가 191 서버에서 앱을 개발·배포·독립 검증하여 JARVIS의 실제 업무 수행 기반을 완성",
+    "CURRENT_WORK": "191 Runner를 통한 Hello World 공개 HTTPS 배포 E2E 검증",
+    "BLOCKER": "기존 Hello World 태스크 status=stopped; 공개 HTTP 200 및 실제 HTML 본문에 대한 독립 증거 없음",
+    "WHY_WE_CAME_HERE": "기존 HTTP 502/404가 앱 문제인지 Runner/프록시 문제인지 분리하기 위한 최소 배포 시험",
+    "YESTERDAY_RESULT": "10월 31일 공개 E2E 미완료; 11월 1일 오전 보고에서 Runner 0/6 및 소스 불일치 관측(현재 실행과 구분)",
+    "PASS_GATE": "Runner 도구 노출 하위 게이트 CLOSED(6/6 직접 확인); 공개 HTTPS E2E 상위 게이트 OPEN / EVIDENCE_MISSING",
+    "PASS_EVIDENCE": "2026-11-01 23:55 KST codex_status READY, toolCount=41, runner 6/6 등록 및 6개 도구명 노출; runner_health status=ok; runner_status 기존 태스크 stopped; 공개 HTTP 200/본문 없음",
+    "CURRENT_STATUS": "MCP 인증/준비 정상, Runner API 건강 정상, 기존 테스트 앱은 정지. 시작/디스크 소스 해시 드리프트 없음; loadedSourceVerified=false",
+    "RETURN_TO": "191 Runner 공개 HTTPS 배포 E2E를 닫고 JARVIS Worker 연결",
+    "STOP_DOING": "기본 배포 게이트와 무관한 FreeLang/FX/AFJ/AFL-DB/새 음성 엔진의 기능 확장을 우선 작업으로 삼지 않기",
+    "NEW_BRANCH_RISK": "배포 게이트가 미종료인 상황에서 신규 엔진 기능 개발·다중 파일 배포 확장이 본래 blocker 검증을 지연시킬 위험",
+    "TODAY_ONE_JOB": "기존 Hello World의 격리 테스트 배포 E2E를 한 번 실행해 공개 HTTPS HTTP 200과 실제 `Hello World!` 본문 증거를 확보"
+  },
+  "verification": {
+    "runner_registration": {
+      "status": "PASS",
+      "registered": 6,
+      "expected": 6,
+      "advertised_tools": [
+        "runner_health",
+        "runner_status",
+        "runner_logs",
+        "runner_browser_test",
+        "runner_deploy",
+        "runner_stop"
+      ],
+      "source": "direct codex_status"
+    },
+    "runner_health": {
+      "status": "PASS",
+      "response_status": "ok",
+      "execution_id": "9e35a17b-b4ce-4126-8f2a-fb87780b3235",
+      "source": "direct runner_health"
+    },
+    "runner_task": {
+      "status": "stopped",
+      "task_id": "8f14de66-d9c2-465d-9783-a73026c42ddb",
+      "execution_id": "a405e66f-18d4-4ee0-8426-eb1ca41ffd91",
+      "source": "direct runner_status"
+    },
+    "public_https": {
+      "status": "EVIDENCE_MISSING",
+      "http_200_verified": false,
+      "body_verified": false,
+      "independent_access": "tool unavailable"
+    },
+    "runtime_source": {
+      "status": "UNVERIFIED_LOADED_BYTES",
+      "disk_drift_detected": false,
+      "loaded_source_verified": false
+    },
+    "gpt191": {
+      "main_sha": "029249e55b1f631b4f1981cbd227929892eb9a80",
+      "pr3_state": "open",
+      "pr3_merged": false
+    },
+    "safety": {
+      "server_changes": false,
+      "deployments_triggered": false,
+      "secrets_recorded": false
+    }
+  },
+  "pass_gate_closed": false,
+  "pass_gate_detail": "Runner registry gate CLOSED, public HTTPS E2E OPEN",
+  "today_one_job": "기존 Hello World의 격리 테스트 배포 E2E를 한 번 실행해 공개 HTTPS HTTP 200과 실제 `Hello World!` 본문 증거를 확보"
+}
