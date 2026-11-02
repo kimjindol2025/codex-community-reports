@@ -43,5 +43,6 @@ JARVIS 외부 기술 레이더와 작업 복귀(PARENT_GOAL, PASS_GATE, TODAY_ON
 - [JARVIS 일별 보고서 폴더](reports/jarvis/)
 - [2026-11-01 JARVIS 보고서](reports/jarvis/2026-11-01.md) · [근거 JSON](reports/jarvis/2026-11-01.json)
 - [2026-11-01 야간 Runner 추가 검증](reports/jarvis/2026-11-01-235628.md) · [근거 JSON](reports/jarvis/2026-11-01-235628.json)
+- [2026-11-03 JARVIS 보안·복귀 레이더](reports/jarvis/2026-11-03.md) · [근거 JSON](reports/jarvis/2026-11-03.json)
 
 기존 Codex 커뮤니티 보고서 목록과 파일은 별도로 유지합니다.
