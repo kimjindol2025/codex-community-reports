@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "date_kst": "2026-11-03",
+  "source": "JARVIS Morning Radar scheduled run",
+  "capture_time_kst": "2026-11-03T00:35+09:00 (report date anchored to time tool; archive write later in run)",
+  "verdict": "IMPORTANT_SECURITY_SIGNAL_AND_VERIFICATION_BLOCKER",
+  "external_radar": [
+    {
+      "project": "MCP official servers",
+      "version": "v2.2.0",
+      "published_at_utc": "2026-10-28T20:57:13Z",
+      "published_date_kst": "2026-10-29",
+      "source": "https://github.com/modelcontextprotocol/servers/releases/tag/v2.2.0",
+      "finding": "eMudhra 중간 CA 키 노출 대응: Node.js CA 업데이트와 Python certifi 2026.10.23 권고. MCP TypeScript 서버는 실행 중인 Node 런타임의 CA 신뢰 설정을 사용하며, 기존 fetch 가상환경은 certifi가 오래됐을 수 있음.",
+      "relevance": "BIGWASH JARVIS/191 Runner의 Node 기반 MCP HTTPS 연결 신뢰 및 입력 URL 처리",
+      "risk_migration": "Node.js 22.x는 22.23.4 이상, 24.x는 24.22.1 이상, 26.x는 26.12.1 이상으로 패치된 런타임 버전 여부를 확인. 기존 기록의 Runner Node v22.19.0은 패치 전이나 현재 버전은 UNVERIFIED. 관련 MCP 패키지 사용 여부도 UNVERIFIED. 운영 업그레이드·서비스 재시작은 승인되지 않아 미실시."
+    },
+    {
+      "project": "Node.js",
+      "version": "2026-10-21 security releases",
+      "published_at_utc": "2026-10-21",
+      "published_date_kst": "2026-10-22 or earlier KST (timezone of release not independently normalized)",
+      "source": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases",
+      "finding": "고위험 DNS NUL truncation, TLS hostname validation, Brotli OOB 및 eMudhra CA 대응 포함.",
+      "relevance": "MCP Runner 보안, 외부 URL/DNS/TLS 검증",
+      "risk_migration": "런타임 실제 사용 경로와 패치 여부 미검증; 현재 운영 취약 노출을 확정할 수 없음."
+    }
+  ],
+  "official_releases_checked": [
+    {
+      "repo": "livekit/agents",
+      "latest": "1.8.10",
+      "published_at_utc": "2026-10-29T17:00:12Z",
+      "new_critical_this_run": false
+    },
+    {
+      "repo": "pipecat-ai/pipecat",
+      "latest": "v1.15.0",
+      "published_at_utc": "2026-10-29T05:50:54Z",
+      "new_critical_this_run": false
+    },
+    {
+      "repo": "langchain-ai/langgraph",
+      "latest": "1.2.19",
+      "published_at_utc": "2026-10-30T22:23:43Z",
+      "new_critical_this_run": false
+    },
+    {
+      "repo": "modelcontextprotocol/typescript-sdk",
+      "latest": "v2.4.0",
+      "published_at_utc": "2026-10-23T18:32:25Z",
+      "new_critical_this_run": false
+    },
+    {
+      "repo": "leon-ai/leon",
+      "latest": "tcp-server_v2.0.0",
+      "published_at_utc": "2026-02-19T09:08:01Z",
+      "new_critical_this_run": false
+    },
+    {
+      "repo": "home-assistant/core",
+      "latest": "2026.11.0b2",
+      "published_at_utc": "2026-10-30T23:07:21Z",
+      "new_critical_this_run": false,
+      "remark": "pre-release; no independently verified JARVIS-critical feature"
+    }
+  ],
+  "work_return": {
+    "PARENT_GOAL": "BIGWASH JARVIS가 실제 업무를 처리하도록 GPT-191 코딩·배포·독립 검증 경로를 완성 (과거 사용자 대화에 따른 상위 목표; 최신 운영 승인 범위 재확인은 UNVERIFIED)",
+    "CURRENT_WORK": "191 Runner 공개 HTTPS Hello World E2E 검증",
+    "BLOCKER": "191 Coding 조회에서 연결 승인 필요(BLOCKED); 공개 URL HTTP 200/본문 증거 없음",
+    "WHY_WE_CAME_HERE": "배포 단계의 HTTP 502/404 오류를 앱 문제와 인프라 문제로 분리하기 위한 최소 Hello World 검증",
+    "YESTERDAY_RESULT": "2026-11-02 KST JARVIS GitHub MD·JSON 보관 파일 미발견; 해당 날짜의 완료된 테스트/Evidence는 이번 실행에서 확인 불가",
+    "PASS_GATE": "UNVERIFIED — Runner 실시간 상태; EVIDENCE_MISSING — 외부 공개 HTTP 200/본문. CLOSED 판정 금지",
+    "PASS_EVIDENCE": "2026-11-01 야간 보고: Runner 6/6·health OK·기존 Hello World STOPPED(과거 기록). 이번 실행 직접 조회는 승인 요청으로 BLOCKED; gpt191 main 029249e(2026-10-25 KST), PR #3 OPEN; 공개 URL 외부 조회 불가",
+    "CURRENT_STATUS": "과거 Runner 등록 복구 증거는 있으나 현재 실행 상태 UNVERIFIED; 공개 배포 게이트는 열려 있음",
+    "RETURN_TO": "191 Runner 공개 HTTPS 배포 E2E 검증 완료 경로",
+    "STOP_DOING": "배포 blocker와 직접 무관한 FreeLang·FX·AFJ·AFL-DB·AI OS·새 음성 엔진 확장을 우선순위로 끌어올리지 않기(강제 중단 아님)",
+    "NEW_BRANCH_RISK": "Agent Memory/Workspace·Codex/Grok/Jev 등 하위 개발이 191 Runner 배포 증거 확보에서 분기할 가능성; 개별 기술 작업의 실제 blocker 관련성은 UNVERIFIED",
+    "TODAY_ONE_JOB": "191 Coding 연결 인증을 복구하여 Runner 상태 조회 경로를 재확보한다."
+  },
+  "independent_evidence": {
+    "github_repo_main_commit": "029249e55b1f631b4f1981cbd227929892eb9a80",
+    "github_pr_3": "OPEN, not merged",
+    "runner_codex_status": "BLOCKED_USER_AUTH_NONINTERACTIVE",
+    "runner_health": "BLOCKED_USER_AUTH_NONINTERACTIVE",
+    "prior_2026_11_01_runner_6_of_6": "REPORTED_PREVIOUSLY_NOT_REVERIFIED",
+    "public_url_http200": "EVIDENCE_MISSING",
+    "public_url_html_body": "EVIDENCE_MISSING",
+    "missing_2026_11_02_archive": "FILE_NOT_PRESENT_ON_MAIN_AT_CHECK",
+    "pass_gate_closed": false
+  },
+  "sources": [
+    "https://github.com/kimjindol2025/gpt191/commit/029249e55b1f631b4f1981cbd227929892eb9a80",
+    "https://github.com/kimjindol2025/gpt191/pull/3",
+    "https://p8f14de66d9c2.gpt.akl.kr/",
+    "https://github.com/kimjindol2025/codex-community-reports/tree/main/reports/jarvis",
+    "https://github.com/modelcontextprotocol/servers/releases/tag/v2.2.0",
+    "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases"
+  ],
+  "privacy": "No credentials, tokens, private IP addresses or private logs committed"
+}
