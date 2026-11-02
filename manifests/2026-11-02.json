@@ -1,0 +1,36 @@
+{
+  "report_date_kst": "2026-11-02",
+  "created_at_utc": "2026-11-02T00:42:36.917653+00:00",
+  "base_head": "02665d40ff984ba18fade8d53ff6078fc32915e4",
+  "files": [
+    {
+      "path": "reports/2026-11-02.md",
+      "bytes": 11246,
+      "sha256": "3f056e7a99ae318635222e35943f115d5628457b5f970c698ba20e4903786e48"
+    },
+    {
+      "path": "reports/2026-11-02.json",
+      "bytes": 35877,
+      "sha256": "95c3ac6f2185379499508a29a027bf4ea2bd0febdf7a87c1228cf0f3fa367231"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3669,
+      "sha256": "bb6499a6b89ab6a4b0f4eff3b2f5e7672592b65dd3c3b926c063c254b614a4d7"
+    }
+  ],
+  "allowed_changes": [
+    "reports/2026-11-02.md",
+    "reports/2026-11-02.json",
+    "README.md",
+    "manifests/2026-11-02.json"
+  ],
+  "verification_policy": "Expected hashes of reviewed generated UTF-8 bytes. Remote readback equality and fresh SHA-256 must pass before storage PASS. This manifest is not itself proof of remote verification.",
+  "research": {
+    "posts": 36,
+    "texts_counted": 34,
+    "threads": 21,
+    "partial": true
+  },
+  "server191_task": "c5de6282-b5a5-475f-bde9-b1fe99f4a2fe"
+}
