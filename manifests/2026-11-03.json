@@ -1,0 +1,21 @@
+{
+  "base_head": "2ce1bf84001e7161af96d3f3d5f87f204a7abaa9",
+  "files": [
+    {
+      "path": "reports/2026-11-03.md",
+      "sha256": "85763dc182aed673c26f8e06a0302091dcfa27e514ceed0539da4fcc25e8bdf8",
+      "bytes": 8113
+    },
+    {
+      "path": "reports/2026-11-03.json",
+      "sha256": "e42c8cc8fd2c0e37815bea7345035d155e793d9b17c40461d515789cfde34f02",
+      "bytes": 24651
+    },
+    {
+      "path": "README.md",
+      "sha256": "3e4d72fa81ebe3bbd0a94a6eb11d41ab5a74804e89acb76bdfa997266e9e545b",
+      "bytes": 3997
+    }
+  ],
+  "verification_policy": "Expected UTF-8 hashes; remote re-read required before PASS."
+}

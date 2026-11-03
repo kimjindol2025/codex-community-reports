@@ -28,6 +28,7 @@ OpenAI Developer Community의 Codex 및 ChatGPT Apps SDK MCP 관련 글을 조�
 | 2026-10-31 | [읽기](reports/2026-10-31.md) | [JSON](reports/2026-10-31.json) |
 | 2026-11-01 | [읽기](reports/2026-11-01.md) | [JSON](reports/2026-11-01.json) |
 | 2026-11-02 | [읽기](reports/2026-11-02.md) | [JSON](reports/2026-11-02.json) |
+| 2026-11-03 | [읽기](reports/2026-11-03.md) | [JSON](reports/2026-11-03.json) |
 
 ## 운영 및 검증
 
