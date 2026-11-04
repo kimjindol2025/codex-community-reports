@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "report_type": "JARVIS_MORNING_RADAR",
+  "run_date_kst": "2026-11-04",
+  "run_started_at_kst": "2026-11-04T23:48:07+09:00",
+  "run_type": "same_day_additional_verified_radar",
+  "status": "SIGNIFICANT_EXTERNAL_CHANGE",
+  "external_radar": [
+    {
+      "package": "@langchain/langgraph-checkpoint-redis",
+      "version": "1.1.1",
+      "release_date": "2026-11-04",
+      "change": "RedisSaver가 채널(messages 등)을 잃을 수 있던 문제 수정. 이전 릴리스 1.1.0의 채널 버전 숫자가 RedisJSON에서 부정확하게 반올림되면서 대응 blob을 읽지 못하던 문제.",
+      "why": "JARVIS Agent Memory의 과거 대화 상태·스레드 복원 데이터 유실 가능성과 직접 관련(해당 라이브러리 사용 시).",
+      "location": "LangGraph 기반 Agent Memory/Workspace의 Redis checkpoint 저장·복원 계층.",
+      "risk": "이미 잘못된 버전으로 저장된 체크포인트는 소급 복구되지 않는다. 기존 데이터 백업 및 사용 버전 확인 뒤 회귀 테스트. 실제 BIGWASH 사용 여부 UNVERIFIED.",
+      "source": "https://github.com/langchain-ai/langgraphjs/releases"
+    },
+    {
+      "package": "@langchain/langgraph-sdk",
+      "version": "1.12.10",
+      "release_date": "2026-11-04",
+      "change": "스레드 전환 뒤 이전 스레드 도구 결과가 새 스레드에 삽입되는 문제, 중간에서 끊긴 스트림을 정상 종료로 오인하는 문제 수정.",
+      "why": "JARVIS 여러 작업 공간/스레드 간 결과 혼선과 중단된 작업 답변의 조기 종결을 막는 데 가치(해당 SDK 사용 시).",
+      "location": "Agent Workspace의 thread 전환·도구 반환·스트리밍 복구 계층.",
+      "risk": "현재 사용 여부 UNVERIFIED. 스트림 종료 후 상태 조회가 추가될 수 있어 기존 연결/백오프 동작을 시험해야 함.",
+      "source": "https://github.com/langchain-ai/langgraphjs/releases"
+    }
+  ],
+  "work_return": {
+    "PARENT_GOAL": "BIGWASH JARVIS가 실제 업무를 수행하도록 GPT ↔ 191 Coding/Runner ↔ 앱 배포·독립 검증 경로를 확보한다. 과거 사용자 지시와 일치하나 최신 상위 요구사항 문서는 별도 재검증하지 않음.",
+    "CURRENT_WORK": "191 Runner Hello World 공개 HTTPS 배포 E2E 검증.",
+    "BLOCKER": "외부 독립 환경에서 HTTP 200 및 Hello World 실제 HTML 본문 증거가 없음(DNS temporary failure).",
+    "WHY_WE_CAME_HERE": "기존 502/404의 원인이 앱인지 Runner/프록시/공개 네트워크인지 최소 배포로 분리하려고.",
+    "YESTERDAY_RESULT": "2026-11-03 KST 보고: 191 인증 요구로 실시간 Runner 조회 BLOCKED, 외부 E2E OPEN. 11월 4일 00:30 보고에서 연결 복구·Runner 6/6 및 health ok 직접 검증.",
+    "PASS_GATE": "TOOL_REGISTRATION_CLOSED (이번 실행 직접 확인); PUBLIC_HTTPS_E2E_OPEN / EVIDENCE_MISSING.",
+    "PASS_EVIDENCE": "2026-11-04 23:48 KST codex_status ready/authenticated/41 tools/Runner 6-of-6, runner_health status=ok executionId=b344a3e9-5ffc-441d-98e8-6fd685da450e. gpt191 main=029249e55b1f631b4f1981cbd227929892eb9a80, PR #3 OPEN. URL DNS gaierror; HTTP 200 및 본문 증거 없음.",
+    "CURRENT_STATUS": "191 MCP/Runner 제어계층 정상 응답. 실행 중 Node v22.19.0(이전 보안 점검 사항 유지). 소스 시작·디스크 fingerprint 일치, loadedSourceVerified=false. 프로젝트에 다수 미커밋 변경 보존, 운영 변경 미실시.",
+    "RETURN_TO": "191 공개 배포 E2E를 검증한 뒤 JARVIS Worker의 실제 업무 호출 경로에 복귀.",
+    "STOP_DOING": "공개 배포 blocker와 무관한 신규 FreeLang/FX/AFJ/AFL-DB/AI OS/음성 엔진 기능 확장을 배포보다 우선하는 일(강제 중단 아님).",
+    "NEW_BRANCH_RISK": "Agent Memory/Workspace, Codex/Grok/Jev 별도 확장이 공개 배포 E2E를 지연할 위험. 다만 LangGraph 변경의 실제 적용성은 사용 의존성 확인 전 UNVERIFIED.",
+    "TODAY_ONE_JOB": "기존 Hello World 공개 HTTPS URL의 HTTP 200과 실제 HTML 본문을 독립 외부 네트워크에서 확인하는 증거 한 건을 확보한다."
+  },
+  "verification": [
+    {
+      "name": "191 codex_status",
+      "result": "PASS",
+      "observed_at_kst": "2026-11-04 23:48:42",
+      "details": {
+        "ready": true,
+        "authenticated": true,
+        "tools": 41,
+        "runner_registered": 6,
+        "runner_expected": 6,
+        "node_version": "v22.19.0",
+        "source_drift": false,
+        "loaded_source_verified": false
+      }
+    },
+    {
+      "name": "191 runner_health",
+      "result": "PASS",
+      "observed_at_kst": "2026-11-04 23:48:44",
+      "details": {
+        "status": "ok",
+        "execution_id": "b344a3e9-5ffc-441d-98e8-6fd685da450e"
+      }
+    },
+    {
+      "name": "independent public hello-world probe",
+      "result": "EVIDENCE_MISSING",
+      "details": {
+        "dns": "gaierror: temporary failure in name resolution",
+        "http_status": null,
+        "hello_world_body": null,
+        "tool": "Python urllib/socket in separate runtime"
+      }
+    },
+    {
+      "name": "gpt191 main",
+      "result": "VERIFIED_READ",
+      "details": {
+        "commit": "029249e55b1f631b4f1981cbd227929892eb9a80"
+      }
+    },
+    {
+      "name": "gpt191 PR #3",
+      "result": "VERIFIED_READ",
+      "details": {
+        "state": "open",
+        "merged": false
+      }
+    },
+    {
+      "name": "191 working tree",
+      "result": "OBSERVED",
+      "details": {
+        "dirty": true,
+        "note": "multiple tracked modifications and untracked files; left unchanged"
+      }
+    }
+  ],
+  "storage": {
+    "repo": "kimjindol2025/codex-community-reports",
+    "base_path": "reports/jarvis/2026-11-04-234807",
+    "overwrite": false
+  },
+  "public_scope": "sanitized, no secrets or private source code",
+  "sources": [
+    "https://github.com/langchain-ai/langgraphjs/releases",
+    "https://github.com/kimjindol2025/gpt191/pull/3",
+    "https://github.com/kimjindol2025/gpt191/commit/029249e55b1f631b4f1981cbd227929892eb9a80",
+    "https://p8f14de66d9c2.gpt.akl.kr/",
+    "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases"
+  ]
+}
