@@ -50,4 +50,6 @@ JARVIS 외부 기술 레이더와 작업 복귀(PARENT_GOAL, PASS_GATE, TODAY_ON
 
 - [2026-11-04 23:48 JARVIS LangGraph 메모리 추가 레이더](reports/jarvis/2026-11-04-234807.md) · [근거 JSON](reports/jarvis/2026-11-04-234807.json)
 
+- [2026-11-05 JARVIS MCP·LangGraph·Home Assistant 복귀 레이더](reports/jarvis/2026-11-05.md) · [근거 JSON](reports/jarvis/2026-11-05.json)
+
 기존 Codex 커뮤니티 보고서 목록과 파일은 별도로 유지합니다.
