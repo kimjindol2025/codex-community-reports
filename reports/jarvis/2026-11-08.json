@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "report_type": "JARVIS_MORNING_RADAR",
+  "date_kst": "2026-11-08",
+  "observed_at_kst": "2026-11-08T00:26:37+09:00",
+  "comparison_window": {
+    "start_kst": "2026-11-07T00:26:37+09:00",
+    "end_kst": "2026-11-08T00:26:37+09:00"
+  },
+  "notification_signal": "NO_CHANGE",
+  "external_radar": [],
+  "external_review": {
+    "result": "NO_CHANGE",
+    "meaning": "No newly confirmed materially applicable official releases in the reviewed time window; not an exhaustive audit",
+    "checked": [
+      {
+        "system": "LiveKit Agents",
+        "release": "1.8.11",
+        "published_at_utc": "2026-11-05T19:48:29Z",
+        "source": "https://github.com/livekit/agents/releases/tag/livekit-agents%401.8.11"
+      },
+      {
+        "system": "LangGraph",
+        "release": "sdk==0.4.14",
+        "published_at_utc": "2026-11-06T03:03:34Z",
+        "source": "https://github.com/langchain-ai/langgraph/releases/tag/sdk%3D%3D0.4.14"
+      },
+      {
+        "system": "Pipecat",
+        "release": "v1.15.0",
+        "published_at_utc": "2026-10-29T05:50:54Z",
+        "source": "https://github.com/pipecat-ai/pipecat/releases/tag/v1.15.0"
+      },
+      {
+        "system": "MCP Official Servers",
+        "release": "v2.3.0",
+        "published_at_utc": "2026-11-04T21:28:41Z",
+        "source": "https://github.com/modelcontextprotocol/servers/releases/tag/v2.3.0"
+      },
+      {
+        "system": "Home Assistant Core",
+        "release": "2026.11.0",
+        "published_at_utc": "2026-11-04T17:32:55Z",
+        "source": "https://github.com/home-assistant/core/releases/tag/2026.11.0"
+      },
+      {
+        "system": "OpenAI Agents Python",
+        "release": "v0.24.0-alpha.6",
+        "published_at_utc": "2026-11-03T16:44:27Z",
+        "source": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.6"
+      },
+      {
+        "system": "Leon",
+        "release": "tcp-server_v2.0.0",
+        "published_at_utc": "2026-02-19T09:08:01Z",
+        "source": "https://github.com/leon-ai/leon/releases/tag/tcp-server_v2.0.0"
+      }
+    ]
+  },
+  "return_fields": {
+    "PARENT_GOAL": "GPT·191·JARVIS Worker가 연결되어 JARVIS가 실제 업무를 수행하는 구조 완성(사용자의 장기 목표 기준, 종속성은 검증 필요)",
+    "CURRENT_WORK": "191 Runner 최소 Hello World 공개 HTTPS 배포 E2E 검증",
+    "BLOCKER": "비대화형 자동 실행에서 191 Coding 실시간 인증 승인이 필요함. 공개 HTTP 200/HTML 본문 검증 증거도 없음",
+    "WHY_WE_CAME_HERE": "기존 Runner HTTP 502/404의 발생 구간을 구분하고 최소 공개 배포 경로를 먼저 입증하기 위해",
+    "YESTERDAY_RESULT": "2026-11-07 JARVIS 보고서 MD/JSON 존재. 당시 191 직접 조회 BLOCKED_AUTH, 공개 E2E UNVERIFIED",
+    "PASS_GATE": "UNVERIFIED / EVIDENCE_MISSING. Runner 공개 배포 게이트 CLOSED 판정 불가",
+    "PASS_EVIDENCE": "오늘 191 codex_status·runner_health·project_git_status 3건 모두 BLOCKED_AUTH; GitHub gpt191/main 029249e 유지, PR #3 OPEN; 공개 HTTP 200/본문 실행 증거 없음",
+    "CURRENT_STATUS": "GitHub 읽기 정상. 191 런타임 직접 조회 BLOCKED_AUTH. Runner 서비스 상태 및 공개 HTTPS 동작 현재 UNVERIFIED",
+    "RETURN_TO": "191 Runner 최소 Hello World 공개 HTTPS 배포 E2E 증거 확보 후 JARVIS Worker 연결",
+    "STOP_DOING": "배포 문제 해결과 무관한 신규 FX 문법·음성 엔진·Agent Memory 기능 확대를 이 배포 게이트의 선행조건으로 추가하지 않음",
+    "NEW_BRANCH_RISK": "AFJ 상용 DB 안정화는 별도의 정당한 상위 목표. 이번 Runner E2E 장애를 해결한다는 직접 증거가 없으므로 JARVIS 배포 게이트와 혼동하면 분기 위험",
+    "TODAY_ONE_JOB": "191 Coding 자동 실행의 인증 승인 차단을 해소하여 Runner 상태 조회를 복구한다"
+  },
+  "evidence": [
+    {
+      "kind": "DIRECT",
+      "target": "191 Coding codex_status",
+      "result": "BLOCKED_AUTH",
+      "detail": "User input required but current turn is running in a non-interactive mode."
+    },
+    {
+      "kind": "DIRECT",
+      "target": "191 Coding runner_health",
+      "result": "BLOCKED_AUTH",
+      "detail": "User input required but current turn is running in a non-interactive mode."
+    },
+    {
+      "kind": "DIRECT",
+      "target": "191 Coding project_git_status",
+      "result": "BLOCKED_AUTH",
+      "detail": "User input required but current turn is running in a non-interactive mode."
+    },
+    {
+      "kind": "DIRECT",
+      "target": "gpt191/main GitHub",
+      "result": "READ_OK",
+      "commit": "029249e55b1f631b4f1981cbd227929892eb9a80",
+      "source": "https://github.com/kimjindol2025/gpt191/commit/029249e55b1f631b4f1981cbd227929892eb9a80"
+    },
+    {
+      "kind": "DIRECT",
+      "target": "gpt191 pull request #3",
+      "result": "OPEN",
+      "commit": "8c24186264b2523817a5e47b79fefa403bb4a415",
+      "source": "https://github.com/kimjindol2025/gpt191/pull/3"
+    },
+    {
+      "kind": "NOT_TESTED",
+      "target": "Hello World public HTTPS HTTP 200 and HTML body",
+      "result": "EVIDENCE_MISSING",
+      "note": "No independent external HTTP E2E measurement this run; lack of evidence does not imply outage"
+    }
+  ],
+  "pass_gate": "UNVERIFIED",
+  "pass_gate_closed": false,
+  "previous_day_report": "https://github.com/kimjindol2025/codex-community-reports/blob/main/reports/jarvis/2026-11-07.md",
+  "access": {
+    "github": "READ_OK",
+    "coding191": "BLOCKED_AUTH",
+    "public_https": "EVIDENCE_MISSING"
+  },
+  "archive_policy": {
+    "non_sensitive_public_summary": true,
+    "existing_files_preserved": true,
+    "operating_service_changes": false
+  }
+}
