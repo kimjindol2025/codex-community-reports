@@ -54,4 +54,6 @@ JARVIS 외부 기술 레이더와 작업 복귀(PARENT_GOAL, PASS_GATE, TODAY_ON
 
 - [2026-11-07 JARVIS 외부 레이더·작업 복귀](reports/jarvis/2026-11-07.md) · [근거 JSON](reports/jarvis/2026-11-07.json)
 
+- [2026-11-08 JARVIS 복귀 레이더 (NO_CHANGE)](reports/jarvis/2026-11-08.md) · [근거 JSON](reports/jarvis/2026-11-08.json)
+
 기존 Codex 커뮤니티 보고서 목록과 파일은 별도로 유지합니다.
