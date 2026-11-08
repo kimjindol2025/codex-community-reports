@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "report_type": "JARVIS_MORNING_RADAR",
+  "date_kst": "2026-11-08",
+  "run_observed_at_kst": "2026-11-08T23:44:40+09:00",
+  "compared_to": "reports/jarvis/2026-11-08.md",
+  "notification_signal": "NEW_EXTERNAL_RELEASE",
+  "external_radar": [
+    {
+      "name": "OpenAI Agents SDK Python",
+      "version": "v0.24.0-alpha.7",
+      "published_at_utc": "2026-11-08T07:05:11Z",
+      "published_at_kst": "2026-11-08T16:05:11+09:00",
+      "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.7",
+      "change": "Native root Session에 사용자 보유 CustomStorage/SQLiteSessionStore 추가, 불확실한 도구 부작용을 수동으로 대조한 뒤 재개하도록 설계. voice Session 통합, MCP 재연결/도구 범위 제어 포함.",
+      "value": "JARVIS 장기 실행 작업의 대화 보존·재시작 후 재개·중복 도구 실행 방지 설계 참고. 현재 Runner 인증 차단 자체를 해결하는 패치는 아님.",
+      "location": "Agent Memory/Workspace/승인/Worker 재개 설계 후보",
+      "risks": "alpha pre-release, 기본 실행 환경 write_policy strict로 변경(Linux/macOS), Windows legacy 별도 설정, MCP approval_mode auto→native / approve→preapproved 이전 값 거부, 저장 지원 범위 root history 및 일부 자동 Python 도구 결과로 제한. 현재 JARVIS 의존성 UNVERIFIED; 제품/운영 적용 없음."
+    }
+  ],
+  "return_fields": {
+    "PARENT_GOAL": "JARVIS가 실제 업무를 수행하도록 GPT·191 실행/배포 경로와 JARVIS Worker를 연결하는 구조. 과거 작업 흐름에 근거하며 전체 종속성은 UNVERIFIED",
+    "CURRENT_WORK": "191 Runner 최소 Hello World 공개 HTTPS 배포 E2E 검증",
+    "BLOCKER": "191 Coding MCP 비대화형 호출 인증 승인이 요구되어 실시간 Runner 상태 조회 차단. 공개 HTTP 200/실제 HTML 본문 검증 증거 부족",
+    "WHY_WE_CAME_HERE": "기존 502/404 현상의 발생 구간을 분리하고 JARVIS Worker 운영 전 최소 공개 배포 경로를 입증하기 위해",
+    "YESTERDAY_RESULT": "2026-11-07 보고: 191 인증 BLOCKED_AUTH 및 공개 E2E UNVERIFIED. 2026-11-08 00:26 기존 보관에서도 동일 차단 기록",
+    "PASS_GATE": "UNVERIFIED / EVIDENCE_MISSING (PUBLIC_HTTPS_E2E NOT_CLOSED)",
+    "PASS_EVIDENCE": "2026-11-08 23:44 KST 191 codex_status, runner_health, project_git_status 실제 호출 모두 BLOCKED_AUTH. 191 읽기 전용 Git MCP 접근 429. GitHub gpt191/main 029249e55b1f631b4f1981cbd227929892eb9a80, PR #3 OPEN. HTTP 200/본문 확인 로그 없음",
+    "CURRENT_STATUS": "GitHub 원격 증거 조회 가능, 191 런타임 및 Runner 현재 상태 UNVERIFIED. 외부 사이트 배포 정상/장애 여부 모두 판정 보류",
+    "RETURN_TO": "191 Runner Hello World 공개 HTTPS E2E를 검증한 뒤 JARVIS Worker 호출 경로 연결",
+    "STOP_DOING": "공개 배포 게이트와 직접 관련 없는 FreeLang 새 문법·음성 엔진·Agent Memory 확장을 이번 게이트의 필수 선행 작업으로 추가하지 않음",
+    "NEW_BRANCH_RISK": "AFJ 상용 데이터베이스 무결성/복구는 독립 상위 목표. DB95 내부 검증 결과를 JARVIS 공개 배포 게이트 PASS로 승격하면 목표 혼동 위험. 새 Agents SDK 프리릴리스 도입도 현재 인증 차단 해결과 무관",
+    "TODAY_ONE_JOB": "191 Coding 자동 실행의 인증 승인 차단을 해소하여 Runner 실시간 상태 조회 경로를 확보한다"
+  },
+  "pass_gate": "UNVERIFIED",
+  "pass_gate_closed": false,
+  "evidence": [
+    {
+      "type": "DIRECT",
+      "resource": "191 Coding codex_status",
+      "result": "BLOCKED_AUTH"
+    },
+    {
+      "type": "DIRECT",
+      "resource": "191 Coding runner_health",
+      "result": "BLOCKED_AUTH"
+    },
+    {
+      "type": "DIRECT",
+      "resource": "191 Coding project_git_status",
+      "result": "BLOCKED_AUTH"
+    },
+    {
+      "type": "DIRECT",
+      "resource": "191 readonly git_status",
+      "result": "UNAVAILABLE_429"
+    },
+    {
+      "type": "DIRECT",
+      "resource": "GitHub gpt191/main",
+      "result": "READ_OK",
+      "commit": "029249e55b1f631b4f1981cbd227929892eb9a80"
+    },
+    {
+      "type": "DIRECT",
+      "resource": "GitHub gpt191 PR#3",
+      "result": "OPEN",
+      "commit": "8c24186264b2523817a5e47b79fefa403bb4a415"
+    },
+    {
+      "type": "DIRECT",
+      "resource": "GitHub freelang-ai/main",
+      "result": "READ_OK",
+      "commit": "44a1b36a5b1c8ec8751c03f2d1c3ff6601dd43e9"
+    },
+    {
+      "type": "NOT_TESTED",
+      "resource": "Public HTTPS Hello World HTTP 200 and body",
+      "result": "EVIDENCE_MISSING"
+    }
+  ],
+  "access": {
+    "github": "READ_OK",
+    "coding191": "BLOCKED_AUTH",
+    "readonly191": "UNAVAILABLE_429",
+    "public_https": "EVIDENCE_MISSING"
+  },
+  "limitations": [
+    "Alpha prerelease not adopted",
+    "Public GitHub, confidential information omitted",
+    "No changes to live services or product repositories"
+  ],
+  "sources": [
+    "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.7",
+    "https://github.com/kimjindol2025/gpt191/pull/3",
+    "https://github.com/kimjindol2025/codex-community-reports/blob/main/reports/jarvis/2026-11-08.md"
+  ]
+}
