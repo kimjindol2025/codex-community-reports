@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "kind": "JARVIS_MORNING_RADAR_EXTRA",
+  "date_kst": "2026-11-10",
+  "as_of_kst": "2026-11-10T23:49:54+09:00",
+  "scan_window_kst": {
+    "start": "2026-11-09T23:49:54+09:00",
+    "end": "2026-11-10T23:49:54+09:00"
+  },
+  "comparison_previous_report_kst": "2026-11-10T00:25:09+09:00",
+  "external_radar": {
+    "status": "NEW_CONDITIONAL_CANDIDATES",
+    "important_changes": [
+      {
+        "project": "LangGraph JavaScript",
+        "tag": "@langchain/langgraph@1.7.3",
+        "published_utc": "2026-11-09T23:58:59Z",
+        "published_kst": "2026-11-10 08:58:59 KST",
+        "url": "https://github.com/langchain-ai/langgraphjs/releases/tag/%40langchain/langgraph%401.7.3",
+        "change": "graph.stream()/streamEvents() 소비자가 for-await 루프를 중단하거나 reader를 취소하면 그래프 실행도 중단. getSubgraphs namespace는 구간 단위로 정확하게 매칭.",
+        "importance": "음성 대화 취소·사용자 중단 시 백그라운드 Worker가 남아 명령을 계속 실행하는 위험을 줄이는 구현 패턴.",
+        "apply_to": "JARVIS Agent Workspace의 스트림 취소·중복 실행 방지 설계 참고.",
+        "risk": "JS 런타임/패키지 실제 사용 미확인. 사용자 Node/JS/TS 제거 방향이므로 신규 채택 권고가 아닌 참조·검증 포인트다.",
+        "deployment_verified": false
+      },
+      {
+        "project": "Home Assistant Core",
+        "tag": "2026.11.1",
+        "published_utc": "2026-11-09T18:52:28Z",
+        "published_kst": "2026-11-10 03:52:28 KST",
+        "url": "https://github.com/home-assistant/core/releases/tag/2026.11.1",
+        "change": "MQTT 수신 payload 인코딩을 검증하고 알 수 없는 인코딩을 안전하게 처리하도록 수정; 복원된 일부 Shelly 장치 엔터티 처리 등 보완.",
+        "importance": "Home Assistant 기반 센서/설비 연결을 쓰면 비정상 MQTT 메시지 처리와 장치 상태 복원이 안정적으로 동작할 가능성.",
+        "apply_to": "향후 JARVIS–Home Assistant/MQTT 게이트웨이.",
+        "risk": "실제 Home Assistant/MQTT 사용 및 설치 버전 미확인. 즉시 업그레이드·현장 제어 적용 금지.",
+        "deployment_verified": false
+      }
+    ],
+    "checked_repositories": [
+      {
+        "project": "Leon",
+        "repo": "leon-ai/leon",
+        "latest_tag": "tcp-server_v2.0.0",
+        "latest_utc": "2026-02-19T09:08:01Z"
+      },
+      {
+        "project": "LiveKit Agents",
+        "repo": "livekit/agents",
+        "latest_tag": "livekit-agents@1.8.11",
+        "latest_utc": "2026-11-05T19:48:29Z"
+      },
+      {
+        "project": "Pipecat",
+        "repo": "pipecat-ai/pipecat",
+        "latest_tag": "v1.15.0",
+        "latest_utc": "2026-10-29T05:50:54Z"
+      },
+      {
+        "project": "LangGraph Python",
+        "repo": "langchain-ai/langgraph",
+        "latest_tag": "sdk==0.4.14",
+        "latest_utc": "2026-11-06T03:03:34Z"
+      },
+      {
+        "project": "LangGraph JS",
+        "repo": "langchain-ai/langgraphjs",
+        "latest_tag": "@langchain/langgraph@1.7.3",
+        "latest_utc": "2026-11-09T23:58:59Z"
+      },
+      {
+        "project": "MCP official servers",
+        "repo": "modelcontextprotocol/servers",
+        "latest_tag": "v2.3.0",
+        "latest_utc": "2026-11-04T21:28:41Z"
+      },
+      {
+        "project": "OpenAI Agents Python",
+        "repo": "openai/openai-agents-python",
+        "latest_tag": "v0.24.0-alpha.7",
+        "latest_utc": "2026-11-08T07:05:11Z"
+      },
+      {
+        "project": "OpenAI Agents JS",
+        "repo": "openai/openai-agents-js",
+        "latest_tag": "v0.22.0-alpha.2",
+        "latest_utc": "2026-11-08T08:27:27Z"
+      },
+      {
+        "project": "Home Assistant Core",
+        "repo": "home-assistant/core",
+        "latest_tag": "2026.11.1",
+        "latest_utc": "2026-11-09T18:52:28Z"
+      }
+    ],
+    "limitations": [
+      "Official GitHub releases only; not exhaustive commit/advisory monitoring",
+      "Installed runtime/package versions unverified",
+      "No server changes or upgrade performed"
+    ]
+  },
+  "return_to_work": {
+    "PARENT_GOAL": "GPT·191 Runner·JARVIS Worker 연결을 통해 실제 업무를 안전하게 실행·검증하는 JARVIS 구축. AFJ 상용 DB 신뢰성 확보는 별도의 유효 목표다.",
+    "CURRENT_WORK": "191 Runner Hello World 공개 HTTPS E2E 증거 확보를 위한 연결·Runner 읽기 경로 점검.",
+    "BLOCKER": "191 Coding 비대화형 자동 실행에서 읽기 호출이 사용자 승인을 요구하여 인증 단계에서 차단됨(BLOCKED_AUTH). 독립 HTTP 200 및 HTML 본문 증거 없음.",
+    "WHY_WE_CAME_HERE": "기존 HTTP 502/404 공개 배포 장애를 앱·Runner·DNS/네트워크 등 구간별로 구분 검증하기 위해.",
+    "YESTERDAY_RESULT": "2026-11-09 KST JARVIS 보관 파일 없음(원격 목록 재확인). 그 날짜 자동화 실행 여부·원인은 UNVERIFIED. 오늘 오전 기록에서 읽기 3종 BLOCKED_AUTH.",
+    "PASS_GATE": "UNVERIFIED / EVIDENCE_MISSING — 공개 HTTPS E2E CLOSED 판정 불가. 과거 Runner health OK를 오늘 증거로 승격하지 않음.",
+    "PASS_EVIDENCE": "오늘 23:47~23:49 KST 직접 시도한 codex_status, runner_health, project_git_status 모두 'User input required but current turn is running in a non-interactive mode.' 인증 차단. 공개 GitHub gpt191/main=029249e55b1f631b4f1981cbd227929892eb9a80, PR #3 OPEN 재확인. 공개 HTTP 200·HTML 응답 미확인.",
+    "CURRENT_STATUS": "GitHub 쓰기 권한/메타데이터 읽기 정상. 191 Runner와 서비스 런타임은 이번 실행 실시간 재검증 불가. 소스·서버·배포 변경 없음.",
+    "RETURN_TO": "191 Runner 공개 HTTPS E2E 독립 검증 완료 후 JARVIS Worker 호출 경로 연결.",
+    "STOP_DOING": "배포 차단과 무관한 신규 언어/엔진/Agent Memory·AI OS 확장을 JARVIS 배포의 필수 선행조건으로 삼지 않는다.",
+    "NEW_BRANCH_RISK": "LangGraph JS 및 Home Assistant 업데이트를 검증 전 새 하위 프로젝트로 확장하면 Runner 인증·배포 게이트 해결이 지연될 위험. AFJ 상용 DB는 독립 목표이며 이 게이트의 증거가 아님.",
+    "TODAY_ONE_JOB": "191 Coding 비대화형 인증 승인 차단을 해소하여 runner_health 읽기 조회 경로를 복구한다."
+  },
+  "evidence": {
+    "server_tools": {
+      "codex_status": "BLOCKED_AUTH",
+      "runner_health": "BLOCKED_AUTH",
+      "project_git_status": "BLOCKED_AUTH",
+      "auth_error_summary": "User input required in non-interactive mode"
+    },
+    "github": {
+      "gpt191_main_sha": "029249e55b1f631b4f1981cbd227929892eb9a80",
+      "gpt191_pr3_state": "open",
+      "gpt191_pr3_url": "https://github.com/kimjindol2025/gpt191/pull/3",
+      "prior_report_md": "reports/jarvis/2026-11-10.md",
+      "date_2026_11_09_report_present": false
+    },
+    "runner_e2e_public_http_200": "EVIDENCE_MISSING",
+    "runner_e2e_public_html": "EVIDENCE_MISSING",
+    "pass_gate": "UNVERIFIED",
+    "github_archive_procedure": "remote_readback_sha256_after_create",
+    "server_change_performed": false
+  },
+  "privacy": {
+    "public_repo": true,
+    "sensitive_info_excluded": true
+  }
+}
