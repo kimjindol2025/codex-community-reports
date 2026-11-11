@@ -1,0 +1,83 @@
+{
+  "date_kst": "2026-11-12",
+  "observed_at_kst": "2026-11-12 00:09 KST",
+  "comparison_start_kst": "2026-11-10 23:49 KST",
+  "radar": {
+    "status": "SIGNIFICANT_CHANGE",
+    "checked": [
+      "Leon",
+      "Home Assistant Assist/Core",
+      "LiveKit Agents/Wake Word",
+      "OpenAI Agents",
+      "Pipecat",
+      "LangGraph",
+      "MCP official servers"
+    ],
+    "changes": [
+      {
+        "project": "modelcontextprotocol/servers",
+        "release": "v2.4.0",
+        "published_date": "2026-11-11",
+        "security_fixes": 6,
+        "packages": {
+          "@modelcontextprotocol/server-filesystem": "2.3.0",
+          "mcp-server-git": "2026.11.11",
+          "mcp-server-fetch": "2026.11.11"
+        },
+        "impact": "JARVIS/191 file, Git and fetch MCP permission boundary",
+        "risk": "Installed package versions UNVERIFIED; Node 24+ package requirement vs observed Node 22.19.0; Windows caveats",
+        "sources": [
+          "https://github.com/modelcontextprotocol/servers/releases/tag/v2.4.0",
+          "https://github.com/modelcontextprotocol/servers/security/advisories/GHSA-p9cv-8g75-4xcg",
+          "https://github.com/modelcontextprotocol/servers/security/advisories/GHSA-6hqx-gqrx-c5r2",
+          "https://github.com/modelcontextprotocol/servers/security/advisories/GHSA-q74p-4wrc-q7w6",
+          "https://github.com/modelcontextprotocol/servers/security/advisories/GHSA-3rxj-6jhw-qfv7"
+        ]
+      }
+    ]
+  },
+  "return_to_work": {
+    "PARENT_GOAL": "GPT·191 Runner·JARVIS Worker를 연결해 검증 가능한 실제 업무를 수행하는 JARVIS 구축. 최근 사용자 지시와 191 자료 기준이며 독립된 AFJ 상용 DB 목표와 구분.",
+    "CURRENT_WORK": "191 Runner Hello World 공개 HTTPS E2E의 독립 증거 확보 전 단계.",
+    "BLOCKER": "외부 공개 URL의 HTTP 200과 실제 HTML 본문을 확인한 독립 E2E 증거 없음. 191 Coding 인증 문제는 이번 실시간 읽기에서 재현되지 않음.",
+    "WHY_WE_CAME_HERE": "기존 공개 배포 HTTP 502/404의 발생 구간을 분리해 JARVIS Worker 연결에 필요한 기본 배포 경로를 신뢰할 수 있도록 하기 위해.",
+    "YESTERDAY_RESULT": "2026-11-11 기본 JARVIS 보관 파일은 원격 404. 11월 11일 실제 작업 성공·실패는 UNVERIFIED. 직전 확인 가능한 11월 10일 야간 보고는 191 읽기 BLOCKED_AUTH.",
+    "PASS_GATE": "191 인증/Runner 읽기 경로: 이번 실행 DIRECT_READ_PASS. 공개 Hello World HTTPS E2E: OPEN / EVIDENCE_MISSING; CLOSED 아님.",
+    "PASS_EVIDENCE": "2026-11-12 00:09 KST 직접 codex_status ready/authenticated, Runner 등록 6/6, runner_health status=ok. project_git_status 읽기 가능(미커밋 변경 존재). GitHub gpt191 main=029249e55b1f631b4f1981cbd227929892eb9a80; git ls_remote PASS. 독립 HTTP 200/HTML 본문은 없음. 런타임의 실제 loaded-source 바이트 일치는 UNVERIFIED.",
+    "CURRENT_STATUS": "191 Coding 읽기 인증 회복 및 Runner 헬스 응답 확인; 공개 배포·소스 로딩 동일성은 미검증. 현재 서비스 Node.js v22.19.0 관측; 변경 수행하지 않음.",
+    "RETURN_TO": "191 공개 HTTPS Hello World E2E 검증을 완료한 후 JARVIS Worker 실제 호출 경로 연결.",
+    "STOP_DOING": "공개 배포 E2E와 무관한 FreeLang 문법·FX 최적화·Agent Memory·AI OS 신규 구현을 이 게이트의 필수 선행조건으로 만들지 않음.",
+    "NEW_BRANCH_RISK": "MCP 새 릴리스 자체 도입을 별도 개발 갈래로 확장하면 공개 배포 확인이 지연될 수 있음. AFJ DB 내구성 검증은 별도 상위 목표이므로 여기의 PASS 근거로 섞지 않음.",
+    "TODAY_ONE_JOB": "191 Runner의 기존 Hello World 공개 HTTPS 주소에서 HTTP 200 및 실제 HTML 본문에 대한 독립 E2E 증거 한 건을 확보한다."
+  },
+  "evidence": {
+    "access_to_191_coding": "DIRECT_READ_PASS",
+    "codex_status": "ready; authenticated; Runner 6/6",
+    "runner_health": "ok",
+    "project_git_status": "read PASS; uncommitted files present",
+    "remote_git_head": "029249e55b1f631b4f1981cbd227929892eb9a80",
+    "git_remote_check": "PASS",
+    "runtime_node": "v22.19.0",
+    "loaded_source_bytes": "UNVERIFIED",
+    "public_https_e2e": "EVIDENCE_MISSING",
+    "yesterday_base_report": "404 for reports/jarvis/2026-11-11.md",
+    "source_urls": [
+      "https://github.com/kimjindol2025/gpt191/commit/029249e55b1f631b4f1981cbd227929892eb9a80",
+      "https://github.com/kimjindol2025/codex-community-reports/blob/main/reports/jarvis/2026-11-10-234954.md"
+    ]
+  },
+  "repository_preflight": {
+    "agents_md_read": true,
+    "readme_md_read": true,
+    "default_branch": "main",
+    "reports_and_jarvis_directories_exist": true,
+    "today_md_exists": false,
+    "today_json_exists": false
+  },
+  "operation_scope": {
+    "production_changed": false,
+    "other_repositories_changed": false,
+    "read_only_observations": true
+  },
+  "visibility": "public metadata only"
+}
