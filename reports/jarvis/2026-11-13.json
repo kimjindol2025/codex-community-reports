@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-13",
+  "kst_observed_at": "2026-11-13T00:28:32+09:00",
+  "comparison_baseline": "2026-11-12T00:09:00+09:00",
+  "change_status": "IMPORTANT_CHANGE",
+  "external_radar": [
+    {
+      "name": "Pipecat",
+      "version": "1.16.0",
+      "published_at_utc": "2026-11-12T00:45:00Z",
+      "source_url": "https://github.com/pipecat-ai/pipecat/releases/tag/v1.16.0",
+      "important_changes": [
+        "OpenAI Realtime truncation behavior configuration",
+        "OpenAI input STT transcription language/keyword hints",
+        "STT speaker diarization in transcription frames"
+      ],
+      "application": "JARVIS voice Worker and Agent Memory handoff",
+      "installed_in_jarvis": "UNVERIFIED",
+      "risk": "context truncation; diarization is not identity; privacy and regression testing",
+      "action": "NO_INSTALL_OR_UPGRADE"
+    }
+  ],
+  "return_to_work": {
+    "PARENT_GOAL": "GPT·191 Runner·JARVIS Worker를 연결해 검증 가능한 실제 업무를 수행하는 JARVIS 구축. 사용자 지시·기존 보관 기록으로 확인하며 운영 구현 완료 주장은 아님.",
+    "CURRENT_WORK": "기존 Hello World Runner의 공개 HTTPS E2E 증거 확보.",
+    "BLOCKER": "기존 Hello World Runner preview 직접 조회 결과 status=stopped; 외부 DNS 해석 실패 및 HTTP 200/HTML 본문 증거 없음. stopped 원인은 UNVERIFIED.",
+    "WHY_WE_CAME_HERE": "기존 HTTP 502/404가 애플리케이션·Runner·공개 프록시 어느 구간에서 발생하는지 최소 Hello World로 분리하기 위해.",
+    "YESTERDAY_RESULT": "2026-11-12 00:09 KST 직접 codex_status ready/authenticated, Runner 등록 6/6, runner_health=ok. 공개 E2E는 EVIDENCE_MISSING.",
+    "PASS_GATE": "191 인증·Runner 읽기 경로 DIRECT_READ_PASS(이번 실행). 기존 Hello World 상태 STOPPED. 공개 HTTPS E2E OPEN / EVIDENCE_MISSING; CLOSED 아님.",
+    "PASS_EVIDENCE": "2026-11-13 00:25~00:28 KST codex_status authenticated/ready, Runner 6/6, runner_health status=ok; 기존 Hello World runner_status=stopped, runner_logs의 과거 preview ready는 현재 가동 증거 아님; web 외부 접근 불가, 독립 curl HTTP 000/DNS resolution 실패. 프로젝트 git status에 다수 미커밋 변경. loadedSourceVerified=false.",
+    "CURRENT_STATUS": "191 Coding 읽기 인증 정상 및 Runner API health OK, 기존 Hello World 정지. 공개 사이트 200/HTML 미확인. 191 런타임 Node v22.19.0 관측; 실제 로딩 소스 바이트 UNVERIFIED. 운영 변경 없음.",
+    "RETURN_TO": "191 Runner Hello World 공개 HTTPS E2E 검증을 완료한 뒤 JARVIS Worker 실제 호출 연결로 복귀.",
+    "STOP_DOING": "Pipecat 신규 버전 도입·FreeLang 문법/FX 확장·Agent Memory/AI OS 개선을 현재 Runner 공개 E2E의 필수 선행 작업으로 추가하지 않음.",
+    "NEW_BRANCH_RISK": "Pipecat 음성 기능 추적과 독립적인 AFJ/DB95 내구성 목표가 현재 Runner 배포 장애와 혼합될 위험. 직접 blocker 연계 증거 없으면 분기 작업으로 관리.",
+    "TODAY_ONE_JOB": "기존 Hello World 공개 HTTPS 주소의 HTTP 200과 실제 HTML 본문을 독립 검증한 E2E 증거 한 건을 확보한다."
+  },
+  "field_count": 12,
+  "evidence": {
+    "github": {
+      "repository": "kimjindol2025/codex-community-reports",
+      "default_branch": "main",
+      "AGENTS_read": true,
+      "README_read": true,
+      "today_md_preexisting": false,
+      "today_json_preexisting": false
+    },
+    "direct_191": {
+      "codex_status": "READY_AUTHENTICATED",
+      "runner_tools": "6/6",
+      "runner_health": "ok",
+      "existing_hello_world": "stopped",
+      "project_git": "modified_and_untracked_present",
+      "node_version": "v22.19.0",
+      "loaded_source_verified": false
+    },
+    "public_e2e": {
+      "url": "https://p8f14de66d9c2.gpt.akl.kr/",
+      "web": "UNREACHABLE_FROM_TOOL",
+      "independent_curl": "DNS_LOOKUP_FAILED_HTTP_000",
+      "HTTP_200": false,
+      "HTML_body_verified": false,
+      "pass_gate": "EVIDENCE_MISSING"
+    },
+    "limitations": [
+      "Stopped reason UNVERIFIED",
+      "Readiness/health != E2E pass",
+      "No production state mutated",
+      "Public reporting excludes private logs/paths and credentials"
+    ],
+    "source_urls": [
+      "https://github.com/pipecat-ai/pipecat/releases/tag/v1.16.0",
+      "https://github.com/pipecat-ai/pipecat/releases",
+      "https://github.com/kimjindol2025/codex-community-reports/blob/main/reports/jarvis/2026-11-12.md"
+    ]
+  },
+  "report_md_sha256": "6cc50fada77d66ac84abc21330bfd90b99b58870bc2a169338037d3032f4bf5b"
+}
