@@ -1,0 +1,96 @@
+{
+  "date": "2026-11-14",
+  "observed_at_kst": "2026-11-14T00:05:35+09:00",
+  "comparison_baseline": "2026-11-13T00:28:32+09:00",
+  "change_status": "IMPORTANT_CHANGE",
+  "external_radar": [
+    {
+      "project": "LangGraph Python",
+      "version": "1.2.21",
+      "published_at_utc": "2026-11-12T18:06:43Z",
+      "source_url": "https://github.com/langchain-ai/langgraph/releases/tag/1.2.21",
+      "changes": [
+        "get_subgraphs() whole namespace segment match",
+        "undeclared subgraph namespace reads via parent graph"
+      ],
+      "application": "JARVIS Agent Workspace nested subgraph status lookup (conditional)",
+      "installed": "UNVERIFIED",
+      "production_change": false
+    }
+  ],
+  "return_to_work": {
+    "PARENT_GOAL": "GPT·191 Runner·JARVIS Worker를 연결해 검증 가능한 실제 업무를 수행하는 JARVIS 구축. 기존 작업 목표에 기반하며 현재 완성 증거는 없음.",
+    "CURRENT_WORK": "191 Hello World Runner의 공개 HTTPS HTTP 200 및 실제 HTML 응답 E2E 검증.",
+    "BLOCKER": "191 Coding 두 연결 모두 비대화형 읽기 시 사용자 승인 요구(BLOCKED_AUTH); 공개 URL DNS 조회 실패 및 HTTP 200·본문 증거 부재. 실제 Runner 상태는 이번 실행 미조회.",
+    "WHY_WE_CAME_HERE": "기존 502/404 배포 장애가 앱·Runner·프록시 어느 계층에서 발생하는지 최소 Hello World로 분리하기 위해.",
+    "YESTERDAY_RESULT": "2026-11-13 기록에는 191 인증·health 직접 PASS, 기존 Hello World runner_status=stopped, 공개 E2E EVIDENCE_MISSING. 이는 어제 증거이며 오늘 상태 증명이 아님.",
+    "PASS_GATE": "191 직접 읽기 BLOCKED_AUTH(이번 실행); 공개 E2E OPEN/EVIDENCE_MISSING. CLOSED 아님.",
+    "PASS_EVIDENCE": "오늘 191 Coding 두 연결에서 codex_status·runner_health 읽기 호출 모두 'User input required in non-interactive mode'; 첫 연결 project_git_status도 동일. 외부 URL getent DNS 결과 없음, curl HTTP 000/resolve host failed. GitHub gpt191/main 029249e55b1f631b4f1981cbd227929892eb9a80, PR #3 OPEN(읽기 확인). 성공적인 HTTPS 본문 증거 없음.",
+    "CURRENT_STATUS": "191 Runner 실시간 상태 UNVERIFIED; 이번 실행은 승인 단계에서 차단됨(서비스 장애 확정 아님). GitHub 조회 정상, 공개 URL DNS 실패. 어제 STOPPED 상태를 오늘 상태로 승격하지 않음.",
+    "RETURN_TO": "191 비대화형 읽기 승인 경로가 복구되는 즉시 기존 Hello World 공개 HTTPS E2E 검증으로 돌아가고, 게이트 증거 확보 후 JARVIS Worker 실제 호출 연결.",
+    "STOP_DOING": "FreeLang/FX 문법 확장, AFJ/AFL-DB 내부 개선, Agent Memory/AI OS 신규 기능을 이 배포 게이트의 확인되지 않은 필수 선행조건으로 추가하지 않음.",
+    "NEW_BRANCH_RISK": "LangGraph 패치 도입이나 음성/에이전트 프레임워크 교체가 현재 인증·공개 배포 검증을 지연시킬 위험. AFJ 상용 안정화는 독립 목표로 유지하며 JARVIS 배포 blocker 해결 증거는 미확인.",
+    "TODAY_ONE_JOB": "191 Coding 비대화형 runner_health 읽기 조회의 인증 승인 차단을 해소한다."
+  },
+  "field_count": 12,
+  "evidence": {
+    "github_report_repo": {
+      "repository": "kimjindol2025/codex-community-reports",
+      "default_branch": "main",
+      "agents_read": true,
+      "readme_read": true,
+      "jarvis_folder_checked": true,
+      "existing_target_files": false
+    },
+    "direct_191": {
+      "connection_1": "BLOCKED_AUTH_USER_INPUT_REQUIRED",
+      "connection_2": "BLOCKED_AUTH_USER_INPUT_REQUIRED",
+      "methods_attempted": [
+        "codex_status",
+        "runner_health",
+        "project_git_status"
+      ],
+      "runner_current_status": "UNVERIFIED"
+    },
+    "github_project": {
+      "repository": "kimjindol2025/gpt191",
+      "main_commit": "029249e55b1f631b4f1981cbd227929892eb9a80",
+      "pr_3": "OPEN",
+      "source_urls": [
+        "https://github.com/kimjindol2025/gpt191/commit/029249e55b1f631b4f1981cbd227929892eb9a80",
+        "https://github.com/kimjindol2025/gpt191/pull/3"
+      ]
+    },
+    "public_e2e": {
+      "url": "https://p8f14de66d9c2.gpt.akl.kr/",
+      "web": "UNREACHABLE_FROM_TOOL",
+      "dns": "RESOLUTION_FAILED",
+      "curl_http_code": "000",
+      "http_200_verified": false,
+      "html_body_verified": false,
+      "gate": "EVIDENCE_MISSING"
+    },
+    "previous_observation": {
+      "date": "2026-11-13",
+      "runner_status": "stopped",
+      "current_state_inferred": false,
+      "source_url": "https://github.com/kimjindol2025/codex-community-reports/blob/main/reports/jarvis/2026-11-13.md"
+    },
+    "sources_checked": [
+      "https://github.com/livekit/agents/releases",
+      "https://github.com/pipecat-ai/pipecat/releases",
+      "https://github.com/openai/openai-agents-python/releases",
+      "https://github.com/home-assistant/core/releases",
+      "https://github.com/langchain-ai/langgraph/releases",
+      "https://github.com/langchain-ai/langgraphjs/releases",
+      "https://github.com/modelcontextprotocol/servers/releases",
+      "https://github.com/leon-ai/leon/releases"
+    ],
+    "limitations": [
+      "Read tool auth requires interaction; service state unknown",
+      "DNS failure in checking environment is not proof of service outage",
+      "No production change made",
+      "Public-safe metadata only"
+    ]
+  }
+}
