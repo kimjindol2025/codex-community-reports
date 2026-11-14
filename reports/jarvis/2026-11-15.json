@@ -1,0 +1,101 @@
+{
+  "date_kst": "2026-11-15",
+  "checked_at_kst": "2026-11-15T00:11:00+09:00",
+  "previous_report_kst": "2026-11-14T00:05:35+09:00",
+  "radar_status": "APPLICABLE_UPDATES",
+  "release_findings": [
+    {
+      "project": "LiveKit Agents",
+      "version": "1.8.12",
+      "published_utc": "2026-11-13T17:37:00Z",
+      "published_kst": "2026-11-14T02:37:00+09:00",
+      "feature": "GPT-Live delegation recovery",
+      "application": "voice to Worker delegation",
+      "risk": "changed delegation_created events; idempotency and approvals",
+      "installed": "UNVERIFIED",
+      "url": "https://github.com/livekit/agents/releases"
+    },
+    {
+      "project": "LangGraph Python",
+      "version": "1.2.22",
+      "published_utc": "2026-11-14T01:43:00Z",
+      "published_kst": "2026-11-14T10:43:00+09:00",
+      "feature": "child graph stream on its own thread; performance improvements",
+      "application": "nested Agent Workspace streaming tests",
+      "risk": "deployment compatibility and installed version UNVERIFIED",
+      "installed": "UNVERIFIED",
+      "url": "https://github.com/langchain-ai/langgraph/releases"
+    }
+  ],
+  "release_sources_checked": [
+    "https://github.com/livekit/agents/releases",
+    "https://github.com/langchain-ai/langgraph/releases",
+    "https://github.com/pipecat-ai/pipecat/releases",
+    "https://github.com/home-assistant/core/releases",
+    "https://github.com/modelcontextprotocol/servers/releases",
+    "https://github.com/openai/openai-agents-python/releases",
+    "https://github.com/leon-ai/leon/releases"
+  ],
+  "site_access": {
+    "github": "PASS",
+    "coding_connector": "BLOCKED_AUTH",
+    "public_hello_world": "EVIDENCE_MISSING",
+    "http_code": "000",
+    "dns": "FAILED",
+    "state_conclusion": "UNVERIFIED"
+  },
+  "direct_evidence": [
+    {
+      "kind": "mcp_191_coding",
+      "links_checked": 2,
+      "tools": [
+        "codex_status",
+        "runner_health"
+      ],
+      "read_attempts": 4,
+      "result": "BLOCKED_AUTH",
+      "message": "User input required but current turn is running in a non-interactive mode."
+    },
+    {
+      "kind": "https",
+      "result": "HTTP_000_DNS_FAILED",
+      "http_200": false,
+      "html_body": false
+    },
+    {
+      "kind": "github_commit_search",
+      "result": "PASS_READ_ONLY",
+      "sha": "029249e55b1f631b4f1981cbd227929892eb9a80",
+      "not_evidence_of": "runner_health_or_deployment",
+      "url": "https://github.com/kimjindol2025/gpt191/commit/029249e55b1f631b4f1981cbd227929892eb9a80"
+    }
+  ],
+  "parent_goal_confidence": "CONSISTENT_WITH_PRIOR_REPORT_NOT_INDEPENDENT_ORIGIN_VERIFIED",
+  "fields": {
+    "PARENT_GOAL": "GPT·191 Runner·JARVIS Worker를 연결해 실제 업무를 수행하는 JARVIS 구축. 11월 14일 기존 보고서와 일치하나 최초 기획 원문 독립 조회는 UNVERIFIED.",
+    "CURRENT_WORK": "기존 Hello World의 공개 HTTPS HTTP 200 및 실제 HTML 본문 E2E 검증.",
+    "BLOCKER": "191 Coding 두 연결 모두 비대화형 읽기 사용자 승인 요구(BLOCKED_AUTH). 독립 DNS 조회도 실패하여 공개 HTTP 200/본문 증거 부재.",
+    "WHY_WE_CAME_HERE": "과거 HTTP 502/404 배포 장애 원인을 앱·Runner·프록시 단계로 분리하기 위한 최소 Hello World 검증.",
+    "YESTERDAY_RESULT": "2026-11-14 보고서에 191 읽기 BLOCKED_AUTH, 공개 E2E EVIDENCE_MISSING으로 기록; 오늘 상태는 재검증.",
+    "PASS_GATE": "OPEN / UNVERIFIED / EVIDENCE_MISSING. 통과 증거 없이 CLOSED 처리하지 않음.",
+    "PASS_EVIDENCE": "2026-11-15 00시 KST 직접 조회: 191 coding 및 191서버 각 codex_status/runner_health 합계 4건 모두 'User input required but current turn is running in a non-interactive mode'; curl DNS resolve failed, HTTP 000. 공개 GitHub gpt191 커밋 029249e 조회는 가능하나 Runner PASS 근거 아님.",
+    "CURRENT_STATUS": "191 인증 조회 BLOCKED_AUTH, Runner 실시간 상태 UNVERIFIED; 독립 공개 HTTPS 응답 미확인. 실제 서비스 중단으로 단정 불가.",
+    "RETURN_TO": "191 읽기 승인 경로 정상화 → 기존 Hello World 공개 HTTPS E2E 검증 → 증거 확보 시 JARVIS Worker 실제 호출 연결.",
+    "STOP_DOING": "FreeLang/FX 문법 추가, AFJ/AFL-DB 내부 확장, 신규 Agent Memory·음성 SDK 도입을 현재 502/404 게이트의 입증되지 않은 선행조건으로 삼지 않음.",
+    "NEW_BRANCH_RISK": "LiveKit/LangGraph 새 기능을 지금 설치하면 191 접근·배포 blocker 확인 대신 기술 분기로 빠질 위험. AFJ 상용 안정화는 별도 독립 목표이며 이 Runner blocker와 직접 연관 확인 없음.",
+    "TODAY_ONE_JOB": "191 Coding의 비대화형 runner_health 읽기 인증 승인 차단을 해소한다."
+  },
+  "sources": {
+    "livekit": "https://github.com/livekit/agents/releases",
+    "langgraph": "https://github.com/langchain-ai/langgraph/releases",
+    "pipecat": "https://github.com/pipecat-ai/pipecat/releases",
+    "homeassistant": "https://github.com/home-assistant/core/releases",
+    "mcp": "https://github.com/modelcontextprotocol/servers/releases",
+    "openai": "https://github.com/openai/openai-agents-python/releases",
+    "leon": "https://github.com/leon-ai/leon/releases",
+    "yesterday": "https://github.com/kimjindol2025/codex-community-reports/blob/main/reports/jarvis/2026-11-14.md",
+    "git": "https://github.com/kimjindol2025/gpt191/commit/029249e55b1f631b4f1981cbd227929892eb9a80"
+  },
+  "code_or_deployment_changed": false,
+  "report_saved_status": "requires_post_write_remote_verification"
+}
