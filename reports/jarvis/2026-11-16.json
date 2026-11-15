@@ -1,0 +1,91 @@
+{
+  "date_kst": "2026-11-16",
+  "checked_at_kst": "2026-11-16T00:09:20+09:00",
+  "comparison_start_kst": "2026-11-15T00:11:00+09:00",
+  "status": "NO_CHANGE",
+  "notification_relevant_change": false,
+  "external_radar": {
+    "status": "NO_CHANGE",
+    "scope": "7 official GitHub release feeds, latest publication dates vs 2026-11-15 report; not all commits or LiveKit Wake Word",
+    "feeds": [
+      {
+        "project": "LiveKit Agents",
+        "tag": "livekit-agents@1.8.12",
+        "published_at_utc": "2026-11-13T17:37:40Z",
+        "url": "https://github.com/livekit/agents/releases"
+      },
+      {
+        "project": "Pipecat",
+        "tag": "v1.16.0",
+        "published_at_utc": "2026-11-12T00:45:03Z",
+        "url": "https://github.com/pipecat-ai/pipecat/releases"
+      },
+      {
+        "project": "LangGraph",
+        "tag": "1.2.22",
+        "published_at_utc": "2026-11-14T01:43:55Z",
+        "url": "https://github.com/langchain-ai/langgraph/releases"
+      },
+      {
+        "project": "Home Assistant Core",
+        "tag": "2026.11.1",
+        "published_at_utc": "2026-11-09T18:52:28Z",
+        "url": "https://github.com/home-assistant/core/releases"
+      },
+      {
+        "project": "MCP Servers",
+        "tag": "v2.4.0",
+        "published_at_utc": "2026-11-11T07:07:16Z",
+        "url": "https://github.com/modelcontextprotocol/servers/releases"
+      },
+      {
+        "project": "OpenAI Agents Python",
+        "tag": "v0.24.0-alpha.7",
+        "published_at_utc": "2026-11-08T07:05:11Z",
+        "url": "https://github.com/openai/openai-agents-python/releases"
+      },
+      {
+        "project": "Leon",
+        "tag": "tcp-server_v2.0.0",
+        "published_at_utc": "2026-02-19T09:08:01Z",
+        "url": "https://github.com/leon-ai/leon/releases"
+      }
+    ]
+  },
+  "site_access": {
+    "github": "PASS_READ",
+    "runner": "BLOCKED_AUTH",
+    "runner_attempts": 4,
+    "runner_error": "User input required but current turn is running in a non-interactive mode.",
+    "public_http_e2e": "NOT_TESTED / EVIDENCE_MISSING"
+  },
+  "repo_evidence": {
+    "report_repo_default_branch": "main",
+    "read_AGENTS": true,
+    "read_README": true,
+    "checked_jarvis_folder": true,
+    "target_md_preexisting": false,
+    "target_json_preexisting": false,
+    "gpt191_latest_commit": "029249e55b1f631b4f1981cbd227929892eb9a80",
+    "gpt191_commit_date_utc": "2026-10-24T20:51:10Z",
+    "gpt191_url": "https://github.com/kimjindol2025/gpt191/commit/029249e55b1f631b4f1981cbd227929892eb9a80",
+    "previous_report": "https://github.com/kimjindol2025/codex-community-reports/blob/main/reports/jarvis/2026-11-15.md"
+  },
+  "fields": {
+    "PARENT_GOAL": "JARVIS의 실제 업무 수행을 위한 GPT·191 Runner·Worker 연결 (기존 보고 근거, 원본 목표 UNVERIFIED)",
+    "CURRENT_WORK": "Hello World 공개 HTTPS 200+실제 본문 E2E 검증",
+    "BLOCKER": "191 Coding 비대화형 읽기 BLOCKED_AUTH, 공개 E2E 증거 부재",
+    "WHY_WE_CAME_HERE": "기존 502/404 배포 장애를 최소 Hello World 경로로 분리 (기존 보고 근거; 최초 지시 원본 UNVERIFIED)",
+    "YESTERDAY_RESULT": "2026-11-15: 양쪽 연결 읽기 4회 BLOCKED_AUTH, E2E EVIDENCE_MISSING",
+    "PASS_GATE": "OPEN / UNVERIFIED / EVIDENCE_MISSING",
+    "PASS_EVIDENCE": "2026-11-16 두 연결 codex_status+runner_health 직접 읽기 4회 사용자 승인 요구; gpt191 main latest commit 029249e55b1f631b4f1981cbd227929892eb9a80, 2026-10-24 UTC; Runner/E2E PASS 아님",
+    "CURRENT_STATUS": "GitHub read PASS; 191 Runtime/Runner BLOCKED_AUTH; 공개 HTTP 검증 미실행, 장애 확정 불가",
+    "RETURN_TO": "191 읽기 정상화 후 공개 HTTPS E2E → 검증되면 JARVIS Worker 실제 호출",
+    "STOP_DOING": "배포 장애와 무관한 FreeLang/FX/AFJ/AFL-DB/Agent Memory/voice SDK 확장을 선행조건으로 삼지 않음",
+    "NEW_BRANCH_RISK": "독립적인 DB 신뢰성·언어 작업을 현재 Runner 배포 게이트의 필수 선행과제로 혼동하는 위험",
+    "TODAY_ONE_JOB": "191 Coding 비대화형 runner_health 읽기 승인 차단을 해소하여 Runner 검증 경로를 복구한다"
+  },
+  "reported_pass_gate_closed": false,
+  "operations_scope": "reports/jarvis new MD/JSON + README list only",
+  "safe_public_record": true
+}
