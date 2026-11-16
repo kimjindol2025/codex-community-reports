@@ -1,0 +1,94 @@
+{
+  "date_kst": "2026-11-17",
+  "checked_at_kst": "2026-11-17T00:50:29+09:00",
+  "comparison_start_kst": "2026-11-16T00:09:20+09:00",
+  "status": "AUTH_RECOVERED_PUBLIC_E2E_OPEN",
+  "notification_relevant_change": true,
+  "external_radar": {
+    "status": "NO_CHANGE",
+    "scope": "7 official GitHub Releases latest publication timestamps; LiveKit Wake Word/OpenAI Realtime all changes not exhaustively checked",
+    "feeds": [
+      {
+        "project": "LiveKit Agents",
+        "tag": "livekit-agents@1.8.12",
+        "published_at_utc": "2026-11-13T17:37:40Z",
+        "url": "https://github.com/livekit/agents/releases"
+      },
+      {
+        "project": "Pipecat",
+        "tag": "v1.16.0",
+        "published_at_utc": "2026-11-12T00:45:03Z",
+        "url": "https://github.com/pipecat-ai/pipecat/releases"
+      },
+      {
+        "project": "LangGraph",
+        "tag": "langgraph==1.2.22",
+        "published_at_utc": "2026-11-14T01:43:55Z",
+        "url": "https://github.com/langchain-ai/langgraph/releases"
+      },
+      {
+        "project": "Home Assistant Core",
+        "tag": "2026.11.1",
+        "published_at_utc": "2026-11-09T18:52:28Z",
+        "url": "https://github.com/home-assistant/core/releases"
+      },
+      {
+        "project": "MCP Servers",
+        "tag": "v2.4.0",
+        "published_at_utc": "2026-11-11T07:07:16Z",
+        "url": "https://github.com/modelcontextprotocol/servers/releases"
+      },
+      {
+        "project": "OpenAI Agents Python",
+        "tag": "v0.24.0-alpha.7",
+        "published_at_utc": "2026-11-08T07:05:11Z",
+        "url": "https://github.com/openai/openai-agents-python/releases"
+      },
+      {
+        "project": "Leon",
+        "tag": "tcp-server_v2.0.0",
+        "published_at_utc": "2026-02-19T09:08:01Z",
+        "url": "https://github.com/leon-ai/leon/releases"
+      }
+    ]
+  },
+  "site_access": {
+    "github": "PASS_READ_WRITE_AUTHORIZED",
+    "mcp_191_auth": "PASS",
+    "mcp_191_codex_ready": true,
+    "mcp_191_runner_health": "ok",
+    "mcp_191_runner_registered_tools": "6/6",
+    "hello_world_task": "stopped",
+    "public_https_e2e": "FAIL_DNS / HTTP_000 / EVIDENCE_MISSING",
+    "observed_at_kst": "2026-11-17T00:48:28+09:00",
+    "runner_logs": "read; historical preview ready, initial local connection refusals; not current PASS",
+    "local_git": "main with uncommitted changes; preserved"
+  },
+  "pass_gate": {
+    "authentication_read_gate": "CLOSED",
+    "public_https_e2e_gate": "OPEN",
+    "j_a_r_v_i_s_worker_gate": "UNVERIFIED",
+    "evidence_required": "independent HTTP 200 and actual HTML body"
+  },
+  "source_urls": {
+    "previous_report": "https://github.com/kimjindol2025/codex-community-reports/blob/main/reports/jarvis/2026-11-16.md",
+    "public_test_url": "https://p8f14de66d9c2.gpt.akl.kr/"
+  },
+  "fields": {
+    "PARENT_GOAL": "GPT·191 Runner·JARVIS Worker를 연결하여 실제 업무를 수행하는 JARVIS 구축. 이전 작업 보고서와 부합; 원본 최초 상위 목표의 독립 검증은 UNVERIFIED.",
+    "CURRENT_WORK": "Hello World 공개 HTTPS 최소 배포 E2E: HTTP 200과 실제 HTML 본문을 독립 검증.",
+    "BLOCKER": "기존 Hello World Runner task가 STOPPED. 공개 호스트 DNS 해석 실패로 HTTP 000; 외부 접속 경로 검증 불가.",
+    "WHY_WE_CAME_HERE": "기존 502/404를 애플리케이션·Runner·DNS/프록시 문제로 분리하기 위해 최소 Hello World E2E 검증에 진입(이전 보고서 근거, 최초 지시 원본 UNVERIFIED).",
+    "YESTERDAY_RESULT": "2026-11-16 00:09 보고서: 191 읽기 BLOCKED_AUTH. 같은 날 09:08 전후 사용자가 계정 재연결했고 후속 실측에서 Codex READY, Runner health OK, 기존 앱 STOPPED.",
+    "PASS_GATE": "191 인증/Runner 읽기 GATE_CLOSED (직접 응답 증거); 공개 HTTPS E2E OPEN / EVIDENCE_MISSING (최종 상위 게이트 닫지 않음).",
+    "PASS_EVIDENCE": "2026-11-17 00:48~00:50 KST 직접 호출: codex_status authenticated=true/ready=true; Runner 도구 6/6; runner_health.status=ok; runner_status.status=stopped. runner_logs는 과거 preview ready 기록과 초기 localhost 연결 실패를 포함하며 현재 가동 PASS를 의미하지 않음. 웹 및 curl 별도 확인에서 공개 URL DNS 해석 불가, HTTP 000. E2E PASS 로그/커밋 없음.",
+    "CURRENT_STATUS": "191 Coding MCP 실시간 읽기 PASS, Runner 서비스 health OK, 특정 Hello World task STOPPED. 공개 HTTPS E2E 미검증. gpt191 로컬 main 작업 트리에 미커밋 파일 존재하며 보존함.",
+    "RETURN_TO": "Hello World의 공개 HTTPS E2E 게이트가 검증되면 상위 JARVIS Worker 실제 호출 연결로 복귀.",
+    "STOP_DOING": "현재 공개 E2E 게이트와 직접 관계가 검증되지 않은 FreeLang/FX 문법, AFJ/AFL-DB 기능, Agent Memory, 신규 음성 SDK 개발을 필수 선행조건으로 삼지 않음.",
+    "NEW_BRANCH_RISK": "FreeLang/AFJ의 독립 프로젝트와 신규 AI OS/음성 기술을 현재 HTTPS E2E 해결의 필수 blocker로 오인하면 원래 JARVIS Worker 연결이 지연됨.",
+    "TODAY_ONE_JOB": "기존 Hello World 공개 HTTPS 경로에서 HTTP 200 및 실제 HTML 본문이 확인되는 독립 E2E 증거 한 건 확보."
+  },
+  "reported_pass_gate_closed": false,
+  "safe_public_record": true,
+  "operations_scope": "reports/jarvis new MD/JSON + README list only; no 191 source/deploy changes"
+}
