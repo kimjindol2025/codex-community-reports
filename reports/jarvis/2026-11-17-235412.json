@@ -1,0 +1,124 @@
+{
+  "date_kst": "2026-11-17",
+  "checked_at_kst": "2026-11-17T23:54:12+09:00",
+  "compare_to": "reports/jarvis/2026-11-17.md",
+  "status": "EXTERNAL_UPDATE_AUTH_READ_CLOSED_PUBLIC_E2E_OPEN",
+  "external_radar": {
+    "status": "IMPORTANT_CHANGE",
+    "items": [
+      {
+        "project": "Home Assistant Core",
+        "tag": "2026.11.2",
+        "published_utc": "2026-11-16T20:03:59Z",
+        "url": "https://github.com/home-assistant/core/releases/tag/2026.11.2",
+        "details": "Alexa Devices에서 통합 재로드 뒤 마지막 음성 명령이 다시 재생되는 문제 수정; MQTT 비활성 엔터티의 중복 ID로 인한 재로드 루프 및 재로드 후 unsubscribe callback 수정.",
+        "value": "JARVIS가 Home Assistant/음성·MQTT 설비 제어를 연결할 때 명령 재실행 방지·이벤트 재구독 회귀 기준으로 유용.",
+        "risk": "BIGWASH에 해당 통합 설치 여부는 UNVERIFIED. 즉시 업그레이드하지 말고 관련 통합에서만 회귀 검사."
+      },
+      {
+        "project": "OpenAI Agents Python",
+        "tag": "v0.24.0-alpha.8",
+        "published_utc": "2026-11-16T04:39:19Z",
+        "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.8",
+        "details": "관리형 Python 함수 도구 승인·거부, 재개 가능한 일부 보류 도구 요청/승인, Session 기반 Realtime 음성(WebSocket/WebRTC/SIP), 커스텀 모델 클라이언트 제공.",
+        "value": "JARVIS Worker 실행 승인, 재시작 후 미완료 작업 복원 및 음성 Worker 경계 설계에 참고.",
+        "risk": "사전 릴리스(alpha), 현장 도입 여부 UNVERIFIED; 체크포인트 복구 범위와 승인 재사용 경계를 검증해야 함. 게시 시각은 이전 00:50 보고 이전이며 당시 레이더에 누락된 릴리스로 이번 실행에서 보완."
+      }
+    ],
+    "checked_releases": [
+      {
+        "project": "LiveKit Agents",
+        "tag": "livekit-agents@1.8.12",
+        "published_at_utc": "2026-11-13T17:37:40Z",
+        "url": "https://github.com/livekit/agents/releases"
+      },
+      {
+        "project": "Pipecat",
+        "tag": "v1.16.0",
+        "published_at_utc": "2026-11-12T00:45:03Z",
+        "url": "https://github.com/pipecat-ai/pipecat/releases"
+      },
+      {
+        "project": "LangGraph",
+        "tag": "1.2.22",
+        "published_at_utc": "2026-11-14T01:43:55Z",
+        "url": "https://github.com/langchain-ai/langgraph/releases"
+      },
+      {
+        "project": "Home Assistant Core",
+        "tag": "2026.11.2",
+        "published_at_utc": "2026-11-16T20:03:59Z",
+        "url": "https://github.com/home-assistant/core/releases"
+      },
+      {
+        "project": "MCP Servers",
+        "tag": "v2.4.0",
+        "published_at_utc": "2026-11-11T07:07:16Z",
+        "url": "https://github.com/modelcontextprotocol/servers/releases"
+      },
+      {
+        "project": "OpenAI Agents Python",
+        "tag": "v0.24.0-alpha.8",
+        "published_at_utc": "2026-11-16T04:39:19Z",
+        "url": "https://github.com/openai/openai-agents-python/releases"
+      },
+      {
+        "project": "Leon",
+        "tag": "tcp-server_v2.0.0",
+        "published_at_utc": "2026-02-19T09:08:01Z",
+        "url": "https://github.com/leon-ai/leon/releases"
+      }
+    ],
+    "coverage_limit": "7 official GitHub Releases lists only; not all upstream docs/commits/security advisories"
+  },
+  "observations": {
+    "checked_at_kst": "2026-11-17T23:53:13+09:00",
+    "coding_auth": "PASS",
+    "codex_ready": true,
+    "runner_health": "ok",
+    "runner_registered_tools": "6/6",
+    "hello_world_task": "stopped",
+    "public_url": "https://p8f14de66d9c2.gpt.akl.kr/",
+    "dns": "FAIL",
+    "curl_exit_code": 6,
+    "http_code": "000",
+    "html_body": "EVIDENCE_MISSING",
+    "git_state": "main; multiple uncommitted changes preserved",
+    "operational_changes": false
+  },
+  "pass_gate": {
+    "mcp_read": "CLOSED",
+    "public_https_e2e": "OPEN",
+    "worker_business_execution": "UNVERIFIED",
+    "required": "external HTTP 200 + actual HTML body"
+  },
+  "fields": {
+    "PARENT_GOAL": "GPT·191 Runner·JARVIS Worker가 실제 업무를 수행하는 JARVIS 구축. 이전 사용자 지시·보고서에 부합하지만 최초 목표 원문에 대한 독립 현장 검증은 UNVERIFIED.",
+    "CURRENT_WORK": "기존 Hello World의 공개 HTTPS 최소 E2E를 검증하는 중.",
+    "BLOCKER": "공개 테스트 호스트 DNS 이름 해석 실패(curl exit 6, HTTP 000)와 개별 Hello World Runner task STOPPED. Runner 서비스 전체의 장애로 확장 해석 금지.",
+    "WHY_WE_CAME_HERE": "과거 HTTP 502/404 실패 원인이 코드, Runner, DNS/프록시 중 어디인지 분리하기 위해 최소 Hello World 공개 검증을 시작함(이전 기록에 근거, 최초 지시 원문은 UNVERIFIED).",
+    "YESTERDAY_RESULT": "2026-11-16 초기 보고의 BLOCKED_AUTH 이후 계정 재연결로 191 인증·Runner 읽기 복구됨. 2026-11-17 00:50 KST 기존 JARVIS 보고서에 AUTH_RECOVERED/E2E_OPEN으로 기록.",
+    "PASS_GATE": "191 인증/Runner 읽기: CLOSED(이번 실행 직접 조회). 공개 HTTPS E2E: OPEN / EVIDENCE_MISSING. JARVIS Worker 실제 업무 실행: UNVERIFIED.",
+    "PASS_EVIDENCE": "2026-11-17 23:53 KST 191 codex_status authenticated=true, ready=true, 등록 Runner 도구 6/6; runner_health=ok; 특정 Hello World runner_status=stopped. 공개 호스트: curl exit 6, HTTP 000, HTML 본문 없음. 공개 HTTP 200/실제 HTML 증거 부재.",
+    "CURRENT_STATUS": "191 MCP와 Runner 서비스 응답 정상, 예전 Hello World 개별 태스크 정지. 별도 명령에서 공개 도메인 DNS 실패. 191 저장소 main에는 미커밋 변경 다수 존재하며 보존; 테스트 실행/배포 변경 없음.",
+    "RETURN_TO": "공개 HTTPS E2E에서 HTTP 200+실제 HTML 응답을 검증한 후 상위 JARVIS Worker 실제 호출 연결.",
+    "STOP_DOING": "현재 공개 호스트/DNS/Runner 문제의 직접 원인으로 입증되지 않은 FreeLang/FX·AFJ/AFL-DB 새 기능, Agent Memory, 음성 SDK 도입을 필수 선행 작업으로 추가하지 않음.",
+    "NEW_BRANCH_RISK": "191 내부 기능·Agent Memory 확장과 SDK 신규 도입을 Hello World 공개 E2E의 원인 해결과 혼동할 위험. 이들은 별도 장기 목표일 수 있으나 현재 blocker의 근거가 아님.",
+    "TODAY_ONE_JOB": "기존 Hello World 공개 호스트의 DNS 이름 해석 실패를 해결해 정상 조회되도록 복구한다."
+  },
+  "source_urls": [
+    "https://github.com/livekit/agents/releases",
+    "https://github.com/pipecat-ai/pipecat/releases",
+    "https://github.com/langchain-ai/langgraph/releases",
+    "https://github.com/home-assistant/core/releases",
+    "https://github.com/modelcontextprotocol/servers/releases",
+    "https://github.com/openai/openai-agents-python/releases",
+    "https://github.com/leon-ai/leon/releases"
+  ],
+  "storage": {
+    "expected_path_md": "reports/jarvis/2026-11-17-235412.md",
+    "expected_path_json": "reports/jarvis/2026-11-17-235412.json",
+    "existing_same_day_preserved": true,
+    "write_verification": "performed after creation; not asserted by source file"
+  }
+}
