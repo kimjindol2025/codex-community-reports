@@ -1,0 +1,107 @@
+{
+  "date_kst": "2026-11-19",
+  "report_type": "BIGWASH_JARVIS_MORNING_RADAR",
+  "status": "EXTERNAL_UPDATE_AND_BLOCKER_UNVERIFIED",
+  "external_radar": [
+    {
+      "product": "MCP Reference Servers",
+      "version": "v2.5.0",
+      "published_utc": "2026-11-18T09:13:14Z",
+      "url": "https://github.com/modelcontextprotocol/servers/releases/tag/v2.5.0",
+      "change": "공식 보안 수정 8건: mcp-server-git의 Git 설정 기반 명령 실행/작업 트리 밖 파일 열람 위험, filesystem의 경로 점검 후 심볼릭 링크 교체를 통한 목록 노출, everything의 NAT64 경유 사설망 접근 등",
+      "relevance": "JARVIS·191의 Git/파일 도구 권한 경계",
+      "fixed_versions": {
+        "mcp-server-git": "2026.11.18",
+        "@modelcontextprotocol/server-filesystem": "2.4.0",
+        "@modelcontextprotocol/server-everything": "2.3.1"
+      },
+      "risk": "설치 여부·버전 UNVERIFIED. Windows 목록 고정 및 Git --repository 재검사 등 잔여 한계. 과거 2026.x 날짜형 npm 버전은 SemVer 2.4.0으로 자동 업그레이드되지 않으므로 명시 설치 필요. 실제 변경 미실시."
+    },
+    {
+      "product": "OpenAI Agents SDK Python",
+      "version": "v0.25.0",
+      "published_utc": "2026-11-18T00:22:25Z",
+      "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.25.0",
+      "change": "중첩 ToolContext 승인 결정의 재개 후 보존, 선택적 handoff 오류 복구, MCP v2 Streamable HTTP 동시 요청, 세션 어댑터 유틸리티",
+      "relevance": "JARVIS Worker 실행 승인·중단 후 재개 경계 및 Agent Workspace 상태 처리",
+      "risk": "현장 채택 여부 UNVERIFIED. Runloop sandbox provider 제거가 마이그레이션 포인트; 중복 실행/승인 재사용 회귀 검증 전 운영 도입 보류."
+    }
+  ],
+  "release_scope": [
+    "leon-ai/leon",
+    "home-assistant/core",
+    "livekit/agents",
+    "pipecat-ai/pipecat",
+    "langchain-ai/langgraph",
+    "modelcontextprotocol/servers",
+    "openai/openai-agents-python"
+  ],
+  "recovery": {
+    "PARENT_GOAL": "GPT·191 Runner·JARVIS Worker를 연결해 JARVIS가 실제 업무를 수행하도록 하는 것. 이전 사용자 대화/보관 기록과 일치하지만 최초 상위 기획서 원문은 UNVERIFIED.",
+    "CURRENT_WORK": "기존 Hello World 공개 HTTPS E2E를 독립 검증하는 작업.",
+    "BLOCKER": "기존 공개 호스트 DNS 이름 해석 실패(exit 6, HTTP 000), 191 Coding 읽기 호출은 비대화형 승인 요구로 접근 차단. 개별 Runner의 최신 상태는 UNVERIFIED.",
+    "WHY_WE_CAME_HERE": "과거 502/404 배포 장애를 코드/Runner/DNS·프록시 중 어디에서 발생했는지 분리하기 위해 최소 Hello World부터 검증.",
+    "YESTERDAY_RESULT": "2026-11-18 JARVIS 일일 MD/JSON은 보관 폴더에서 발견되지 않음(EVIDENCE_MISSING; 작업 미수행으로 단정할 수 없음). 마지막 확인 가능한 11/17 야간 보고는 인증/Runner 읽기 PASS, 공개 DNS 실패·개별 앱 STOPPED.",
+    "PASS_GATE": "PUBLIC_HTTPS_E2E=OPEN/EVIDENCE_MISSING. 191_READ=BLOCKED_INTERACTIVE_APPROVAL(이번 실행); 이전 11/17의 READY는 현재 CLOSED 증거로 재사용하지 않음. JARVIS_WORKER=UNVERIFIED.",
+    "PASS_EVIDENCE": "2026-11-19 KST: 외부 getent ahosts 비어 있음, curl exit 6 'Could not resolve host', HTTP 000, HTML 본문 없음; 웹 조회도 접근 실패. 191 codex_status/runner_health/runner_status/project_git_status 4개 읽기 시도 모두 'User input required ... non-interactive mode'. GitHub repo main/AGENTS/README/reports 목록은 직접 읽음.",
+    "CURRENT_STATUS": "공개 테스트 DNS 미해결(이번 실행 관찰); 191 도구는 비대화형 승인 필요로 실시간 상태 확인 차단, 서비스 전체 장애는 미확정. GitHub 보관 저장소 읽기·쓰기 권한 확인. 테스트/배포/운영 변경 없음.",
+    "RETURN_TO": "기존 Hello World 공개 HTTPS에서 HTTP 200과 실제 HTML 본문을 검증한 뒤 JARVIS Worker의 업무 실행 연결로 돌아감.",
+    "STOP_DOING": "DNS/공개 E2E의 실제 원인으로 입증되지 않은 FreeLang·FX·AFJ·AFL-DB 새 문법/엔진 기능, Agent Memory 및 새 음성 SDK 도입을 이 게이트의 필수 선행조건으로 추가하지 않음.",
+    "NEW_BRANCH_RISK": "WordPress FreeLang 이관(B07)·AFJ 상용 안정성은 별도 유효 목표일 수 있지만 현재 JARVIS 공개 E2E 차단과 인과관계가 확인되지 않음. 이를 무증거 선행조건으로 연결하면 복귀 지연.",
+    "TODAY_ONE_JOB": "기존 Hello World 공개 호스트(p8f14de66d9c2.gpt.akl.kr)의 DNS 이름 해석 실패를 복구해 외부 DNS 조회 성공 증거를 확보한다."
+  },
+  "evidence": [
+    {
+      "source": "external_dns_and_https",
+      "url": "https://p8f14de66d9c2.gpt.akl.kr/",
+      "status": "FAIL_DNS",
+      "dns": "NO_RECORD_RESOLVED_BY_TEST",
+      "curl_exit_code": 6,
+      "http_code": "000",
+      "html": "EVIDENCE_MISSING",
+      "observed_date_kst": "2026-11-19"
+    },
+    {
+      "source": "191_coding_read_tools",
+      "methods": [
+        "codex_status",
+        "runner_health",
+        "runner_status",
+        "project_git_status"
+      ],
+      "attempts": 4,
+      "status": "BLOCKED_INTERACTIVE_APPROVAL",
+      "message": "User input required but current turn is running in a non-interactive mode",
+      "observed_date_kst": "2026-11-19"
+    },
+    {
+      "source": "GitHub",
+      "url": "https://github.com/kimjindol2025/codex-community-reports",
+      "status": "READ_OK",
+      "observed": [
+        "AGENTS.md",
+        "README.md",
+        "main branch",
+        "reports/jarvis directory"
+      ],
+      "missing_for_date": [
+        "2026-11-18.md",
+        "2026-11-18.json",
+        "2026-11-19.md",
+        "2026-11-19.json"
+      ]
+    },
+    {
+      "source": "last_archived_jarvis_report",
+      "url": "https://github.com/kimjindol2025/codex-community-reports/blob/main/reports/jarvis/2026-11-17-235412.md",
+      "status": "HISTORICAL_ONLY_NOT_CURRENT_PASS"
+    }
+  ],
+  "field_count": 12,
+  "today_one_job_count": 1,
+  "parent_goal_document_status": "UNVERIFIED",
+  "site_e2e_gate": "OPEN_EVIDENCE_MISSING",
+  "deployment_changed": false,
+  "product_code_changed": false,
+  "report_remote_verification": "PENDING_WRITE_AND_READBACK"
+}
