@@ -70,3 +70,5 @@ JARVIS 외부 기술 레이더와 작업 복귀(PARENT_GOAL, PASS_GATE, TODAY_ON
 - [2026-11-17 JARVIS 인증 복구·공개 E2E OPEN](reports/jarvis/2026-11-17.md) · [검증 JSON](reports/jarvis/2026-11-17.json)
 
 - [2026-11-17 23:54 JARVIS 외부 업데이트·E2E 복귀](reports/jarvis/2026-11-17-235412.md) · [검증 JSON](reports/jarvis/2026-11-17-235412.json)
+
+- [2026-11-19 JARVIS MCP 보안·작업 복귀 레이더](reports/jarvis/2026-11-19.md) · [검증 JSON](reports/jarvis/2026-11-19.json)
