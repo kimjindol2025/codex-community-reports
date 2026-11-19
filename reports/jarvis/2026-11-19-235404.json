@@ -1,0 +1,114 @@
+{
+  "date_kst": "2026-11-19",
+  "report_type": "BIGWASH_JARVIS_MORNING_RADAR_EXTRA_RUN",
+  "report_suffix": "235404",
+  "status": "NEW_EXTERNAL_UPDATE_AND_PUBLIC_E2E_UNVERIFIED",
+  "classification": "EXTERNAL_UPDATE",
+  "external_radar": [
+    {
+      "component": "LiveKit Agents",
+      "version": "livekit-agents@1.8.13",
+      "published_at_utc": "2026-11-18T21:41:53Z",
+      "published_at_kst": "2026-11-19 06:41:53 KST",
+      "url": "https://github.com/livekit/agents/releases/tag/livekit-agents%401.8.13",
+      "changes": "LiveKit Inference의 STT/TTS/일부 실시간 세션을 게이트웨이 드레인 중 다른 게이트웨이로 인계; GPT Live 응답/턴 처리와 연결 복구 개선",
+      "relevance": "JARVIS 음성 Worker의 연결 교체와 음성 명령 누락 방지",
+      "migration": "GPT Live inference HTTP 거절 예외가 APIConnectionError에서 APIStatusError로 변경; Slng 플러그인 제거, Boson AI 패키지 이름 변경, Gladia 에너지 필터 제거. 실제 설치 여부 UNVERIFIED."
+    },
+    {
+      "component": "LangGraph",
+      "version": "1.2.23 (prebuilt 1.1.3)",
+      "published_at_utc": "2026-11-19T05:33:06Z",
+      "published_at_kst": "2026-11-19 14:33:06 KST",
+      "url": "https://github.com/langchain-ai/langgraph/releases/tag/1.2.23",
+      "changes": "Send로 분배한 도구 호출에도 일반 edge 경로와 같은 상태를 전달; prebuilt 도구 래퍼의 state override 전달 문제 수정",
+      "relevance": "JARVIS Agent Workspace의 분기된 도구 실행에서 올바른 상태·승인 문맥 유지",
+      "migration": "Send-dispatched tool 및 tool wrapper를 사용하는지 UNVERIFIED. 도입 전 상태 전달 회귀 테스트 필요."
+    }
+  ],
+  "release_scope": [
+    "leon-ai/leon",
+    "home-assistant/core",
+    "livekit/agents",
+    "pipecat-ai/pipecat",
+    "langchain-ai/langgraph",
+    "modelcontextprotocol/servers",
+    "openai/openai-agents-python"
+  ],
+  "recovery": {
+    "PARENT_GOAL": "GPT·191 Runner·JARVIS Worker를 연결하여 JARVIS가 실제 업무를 수행하도록 만드는 구조. 최근 작업 기록에 따른 재구성, 최초 기획서 원본 UNVERIFIED.",
+    "CURRENT_WORK": "기존 Hello World 공개 HTTPS E2E 독립 검증.",
+    "BLOCKER": "공개 테스트 도메인 DNS 이름 해석 실패(curl 6, HTTP 000), 191 Coding 조회 4건 비대화형 승인 차단. 서비스 전체 장애 여부 미확정.",
+    "WHY_WE_CAME_HERE": "기존 502/404 장애의 원인을 코드·Runner·DNS/프록시로 분리하고 JARVIS Worker 호출 경로를 검증하기 위해 최소 Hello World 배포부터 확인.",
+    "YESTERDAY_RESULT": "2026-11-18 JARVIS MD/JSON 파일 저장소에서 미발견(EVIDENCE_MISSING). 마지막 조회 가능한 11/17 보고서에서 인증/Runner 응답과 공개 DNS 실패가 기록됨. 해당 보고는 오늘의 실시간 PASS 증거가 아님.",
+    "PASS_GATE": "PUBLIC_HTTPS_E2E=OPEN/EVIDENCE_MISSING; 191_READ=BLOCKED_INTERACTIVE_APPROVAL(이번 실행); JARVIS_WORKER=UNVERIFIED.",
+    "PASS_EVIDENCE": "2026-11-19 23:5x KST 별도 실행환경 DNS getaddrinfo Temporary failure, curl exit=6 HTTP=000, HTML 미수집. 191 codex_status/runner_health/runner_status/project_git_status 모두 non-interactive User input required. GitHub AGENTS.md·README.md·reports 목록·당일 파일 실조회.",
+    "CURRENT_STATUS": "공개 E2E 미검증, 191 현재 직접 읽기 차단. GitHub 아카이브 main 브랜치 및 쓰기 권한 확인. 실행 소스·서비스 설정·배포 미변경.",
+    "RETURN_TO": "Hello World 공개 HTTPS의 HTTP 200+실제 HTML 본문 검증 뒤 JARVIS Worker 업무 실행 연결로 복귀.",
+    "STOP_DOING": "DNS/E2E 실패 원인과 직접 연결되지 않은 새 FreeLang 문법·FX 최적화·AFJ/AFL-DB 확장·새 음성 SDK 도입을 현 게이트의 필수 선행조건으로 만들지 않음.",
+    "NEW_BRANCH_RISK": "WordPress FreeLang 이관·AFJ 데이터 무결성·Agent Memory 고도화는 별도 유효 목표지만 현재 공개 배포 장애의 원인으로 입증되지 않음. 연동 없이 선행 작업으로 확장하면 복귀 지연.",
+    "TODAY_ONE_JOB": "기존 Hello World 공개 호스트의 DNS 이름 해석을 복구하여 외부 DNS 조회 성공 증거 한 건 확보."
+  },
+  "field_count": 12,
+  "today_one_job_count": 1,
+  "evidence": [
+    {
+      "source": "GitHub_official_releases_API",
+      "status": "READ_OK",
+      "versions": [
+        "livekit-agents@1.8.13",
+        "langgraph==1.2.23",
+        "prebuilt==1.1.3"
+      ],
+      "verified_from": "2026-11-19 KST",
+      "urls": [
+        "https://github.com/livekit/agents/releases/tag/livekit-agents%401.8.13",
+        "https://github.com/langchain-ai/langgraph/releases/tag/1.2.23"
+      ]
+    },
+    {
+      "source": "external_dns_https",
+      "url": "https://p8f14de66d9c2.gpt.akl.kr/",
+      "status": "FAIL_DNS",
+      "dns": "Temporary failure in name resolution",
+      "curl_exit_code": 6,
+      "http_code": "000",
+      "html": "EVIDENCE_MISSING",
+      "date_kst": "2026-11-19"
+    },
+    {
+      "source": "191_coding_read_tools",
+      "methods": [
+        "codex_status",
+        "runner_health",
+        "runner_status",
+        "project_git_status"
+      ],
+      "attempts": 4,
+      "status": "BLOCKED_INTERACTIVE_APPROVAL",
+      "message": "User input required but current turn is running in a non-interactive mode",
+      "date_kst": "2026-11-19"
+    },
+    {
+      "source": "GitHub_archive_repository",
+      "url": "https://github.com/kimjindol2025/codex-community-reports",
+      "status": "READ_OK",
+      "read": [
+        "AGENTS.md",
+        "README.md",
+        "reports/",
+        "reports/jarvis/",
+        "reports/jarvis/2026-11-19.md",
+        "reports/jarvis/2026-11-19.json"
+      ],
+      "note": "2026-11-18.md not found; cannot conclude automation did not run"
+    }
+  ],
+  "parent_goal_original_status": "UNVERIFIED",
+  "public_e2e_gate": "OPEN_EVIDENCE_MISSING",
+  "worker_status": "UNVERIFIED",
+  "product_code_changed": false,
+  "service_deployment_changed": false,
+  "original_daily_report_overwritten": false,
+  "remote_verification": "TO_BE_CHECKED_BY_READBACK"
+}
