@@ -74,3 +74,4 @@ JARVIS 외부 기술 레이더와 작업 복귀(PARENT_GOAL, PASS_GATE, TODAY_ON
 - [2026-11-19 JARVIS MCP 보안·작업 복귀 레이더](reports/jarvis/2026-11-19.md) · [검증 JSON](reports/jarvis/2026-11-19.json)
 
 - [2026-11-19 23:54 JARVIS LiveKit·LangGraph 추가 레이더](reports/jarvis/2026-11-19-235404.md) · [검증 JSON](reports/jarvis/2026-11-19-235404.json)
+- [2026-11-21 JARVIS LangGraph·복귀 레이더](reports/jarvis/2026-11-21.md) · [검증 JSON](reports/jarvis/2026-11-21.json)
