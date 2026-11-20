@@ -1,0 +1,107 @@
+{
+  "date_kst": "2026-11-21",
+  "report_type": "BIGWASH_JARVIS_MORNING_RADAR",
+  "recorded_kst": "2026-11-21 ~00:12–00:15 KST",
+  "status": "NEW_EXTERNAL_UPDATE",
+  "external_changes": [
+    {
+      "product": "LangGraph",
+      "version": "1.2.24",
+      "published_utc": "2026-11-20T01:10:26Z",
+      "published_kst": "2026-11-20T10:10:26+09:00",
+      "source_url": "https://github.com/langchain-ai/langgraph/releases/tag/1.2.24",
+      "changes": [
+        "fix REMOVE_ALL_MESSAGES in _messages_delta_reducer",
+        "fix None checkpoints in DeltaChannel"
+      ],
+      "application_value": "Agent Workspace/Memory DeltaChannel checkpoint and message-delete regression",
+      "installation_status": "UNVERIFIED",
+      "production_change": false
+    }
+  ],
+  "fields": {
+    "PARENT_GOAL": "GPT·191 Runner·JARVIS Worker를 연결하여 JARVIS가 실제 업무를 수행하는 구조. 과거 작업 보고와 부합하지만 원래 상위 기획서 직접 검증은 UNVERIFIED.",
+    "CURRENT_WORK": "기존 Hello World 공개 HTTPS E2E 검증 경로. 최근 별개 사용자 보고로 FreeLang/AFJ v2 격리 작업 A~D 진행; JARVIS 공개 배포 blocker와 직접 연결된 증거는 없음.",
+    "BLOCKER": "기존 공개 테스트 호스트 DNS 이름 해석 실패. 191 Coding 비대화형 읽기 승인 요구로 실시간 Runner 상태 조회 불가.",
+    "WHY_WE_CAME_HERE": "기존 502/404 배포 오류를 최소 Hello World로 재현하여 코드·Runner·DNS/프록시 중 차단 지점을 분리하고 JARVIS Worker 실제 호출로 복귀하기 위함(과거 보고에 근거).",
+    "YESTERDAY_RESULT": "2026-11-20 JARVIS 일일 MD/JSON은 원격 폴더에서 발견되지 않음(EVIDENCE_MISSING; 실행하지 않았다는 의미 아님). 11/20 FreeLang/AFJ 격리 작업 A~D 완료는 사용자 제공 작업 보고이며 원본 커밋·테스트 로그 직접 확인 불가.",
+    "PASS_GATE": "PUBLIC_HTTPS_E2E=OPEN/EVIDENCE_MISSING; 191_REALTIME_READ=BLOCKED_INTERACTIVE_APPROVAL; JARVIS_WORKER=UNVERIFIED; 과거 인증 READY는 현재 PASS로 승격하지 않음.",
+    "PASS_EVIDENCE": "2026-11-21 00:14:50 KST 컨테이너 DNS getaddrinfo gaierror Temporary failure; 독립 curl exit=6, HTTP 000, HTML 미수집. 191 codex_status/runner_health/runner_status/project_git_status 각 1회 모두 비대화형 승인 필요 오류. GitHub 공식 릴리스와 보고서 저장소 파일 직접 조회.",
+    "CURRENT_STATUS": "공개 DNS/HTTPS E2E OPEN. 운영 시스템 전체 중단 여부 미확정. 191 연결은 권한 승인 때문에 상태 확인 불가이며 인증 실패로 확정할 수 없음. GitHub 보관 저장소 main/AGENTS/README/폴더 직접 열람 PASS.",
+    "RETURN_TO": "기존 Hello World에서 공개 HTTP 200과 실제 HTML 본문 확인 후, JARVIS Worker의 실제 업무 호출 경로로 복귀.",
+    "STOP_DOING": "공개 DNS/E2E 문제의 원인이라는 증거 없이 새로운 FreeLang/FX 문법·AFJ/AFL-DB 확장·Agent Memory 기능·음성 SDK를 필수 선행 작업으로 추가하지 않기.",
+    "NEW_BRANCH_RISK": "11/20 AFJ v2 격리 작업은 DB 안정성이라는 별도 유효 목표일 수 있으나 JARVIS 공개 배포 문제를 해결한다고 입증되지 않음. WordPress/기타 개발도 같은 분기 위험.",
+    "TODAY_ONE_JOB": "기존 Hello World 공개 호스트의 DNS 이름 해석을 복구하여 외부 DNS 조회 성공 증거 한 건 확보."
+  },
+  "evidence": {
+    "github_archive": {
+      "access": "READ_OK",
+      "repo": "kimjindol2025/codex-community-reports",
+      "branch": "main",
+      "agents_md": "READ_OK",
+      "readme_md": "READ_OK",
+      "reports_folders": "READ_OK",
+      "previous_day_md": "NOT_FOUND",
+      "previous_day_json": "NOT_FOUND",
+      "target_md_preflight": "NOT_FOUND",
+      "target_json_preflight": "NOT_FOUND"
+    },
+    "github_official_releases": {
+      "access": "READ_OK",
+      "scope": [
+        "langchain-ai/langgraph",
+        "livekit/agents",
+        "pipecat-ai/pipecat",
+        "openai/openai-agents-python",
+        "home-assistant/core",
+        "modelcontextprotocol/servers",
+        "leon-ai/leon"
+      ],
+      "source_urls": [
+        "https://github.com/langchain-ai/langgraph/releases/tag/1.2.24",
+        "https://github.com/livekit/agents/releases",
+        "https://github.com/pipecat-ai/pipecat/releases",
+        "https://github.com/openai/openai-agents-python/releases",
+        "https://github.com/home-assistant/core/releases",
+        "https://github.com/modelcontextprotocol/servers/releases",
+        "https://github.com/leon-ai/leon/releases"
+      ],
+      "caveat": "Releases API top results only; not exhaustive security, docs, wakeword commits"
+    },
+    "public_https": {
+      "host": "p8f14de66d9c2.gpt.akl.kr",
+      "observed_kst": "2026-11-21T00:14:50+09:00",
+      "dns": "FAIL_TEMPORARY_RESOLUTION",
+      "curl_exit_code": 6,
+      "http_code": 0,
+      "html_content": "EVIDENCE_MISSING",
+      "overall_service_health": "UNVERIFIED"
+    },
+    "coding191": {
+      "calls": [
+        "codex_status",
+        "runner_health",
+        "runner_status",
+        "project_git_status"
+      ],
+      "call_count": 4,
+      "result": "BLOCKED_INTERACTIVE_APPROVAL",
+      "error_category": "User input required in non-interactive mode",
+      "runner_health": "UNVERIFIED",
+      "authenticated_state": "UNVERIFIED"
+    },
+    "free_lang_afj": {
+      "date": "2026-11-20",
+      "source": "user-provided report in conversation",
+      "reported_progress": "isolated worktree A-D complete",
+      "commit_test_raw": "EVIDENCE_MISSING",
+      "relationship_to_jarvis_dns_blocker": "UNVERIFIED"
+    },
+    "jarvis_worker": {
+      "real_execution": "UNVERIFIED",
+      "pass_log": "EVIDENCE_MISSING"
+    }
+  },
+  "changes_to_production": false,
+  "archive_operations_authorized_only": true
+}
