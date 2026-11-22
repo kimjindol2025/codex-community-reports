@@ -1,0 +1,129 @@
+{
+  "date_kst": "2026-11-23",
+  "checked_at_kst": "2026-11-23T00:19:04+09:00",
+  "status": "RETURN_SIGNAL",
+  "radar_status": "NO_CHANGE",
+  "radar_since_kst": "2026-11-22T00:02:00+09:00",
+  "radar_scope": "Official GitHub release collection for 7 repositories plus LiveKit wake word path sampled commits; releases/pages not an exhaustive security audit.",
+  "radar_latest_checked": [
+    {
+      "project": "Leon",
+      "tag": "tcp-server_v2.0.0",
+      "published_utc": "2026-02-19T09:08:01Z",
+      "url": "https://github.com/leon-ai/leon/releases"
+    },
+    {
+      "project": "Home Assistant Core/Assist",
+      "tag": "2026.11.2",
+      "published_utc": "2026-11-16T20:03:59Z",
+      "url": "https://github.com/home-assistant/core/releases"
+    },
+    {
+      "project": "LiveKit Agents",
+      "tag": "livekit-agents@1.8.13",
+      "published_utc": "2026-11-18T21:41:53Z",
+      "url": "https://github.com/livekit/agents/releases"
+    },
+    {
+      "project": "LiveKit wake-word related path sample",
+      "tag": "commit sample 9ce5a1e1",
+      "published_utc": "2026-11-18T21:36:01Z",
+      "url": "https://github.com/livekit/agents/commits/main/"
+    },
+    {
+      "project": "Pipecat",
+      "tag": "v1.16.0",
+      "published_utc": "2026-11-12T00:45:03Z",
+      "url": "https://github.com/pipecat-ai/pipecat/releases"
+    },
+    {
+      "project": "LangGraph",
+      "tag": "1.2.24",
+      "published_utc": "2026-11-20T01:10:26Z",
+      "url": "https://github.com/langchain-ai/langgraph/releases"
+    },
+    {
+      "project": "MCP Reference Servers",
+      "tag": "v2.5.0",
+      "published_utc": "2026-11-18T09:13:14Z",
+      "url": "https://github.com/modelcontextprotocol/servers/releases"
+    },
+    {
+      "project": "OpenAI Agents SDK",
+      "tag": "v1.0.0-alpha.1",
+      "published_utc": "2026-11-20T20:51:28Z",
+      "url": "https://github.com/openai/openai-agents-python/releases"
+    }
+  ],
+  "return_fields": {
+    "PARENT_GOAL": "2026-11-22 사용자 확정: 웹에서 JARVIS와 대화하면 JARVIS가 지시를 기억하고 실제 서버 에이전트에게 위임·협업 요청하며 질문/진행/결과를 같은 대화로 되돌리는 업무 실행 체계. 최초 기획서 원문은 UNVERIFIED.",
+    "CURRENT_WORK": "shared-agent-manager 웹 대화·대화 연속성·Codex App Server 연동의 실제 서버-에이전트 실행 E2E 검증 준비. 이전 Hello World 공개 HTTPS 테스트는 별도 하위 검증이며 현재 유일한 핵심 작업인지 재평가 필요.",
+    "BLOCKER": "웹 JARVIS 지시 → 실제 서버 Codex 에이전트 실행 → 동일 대화 결과 반환의 원본 실행 로그/테스트 Evidence 부재. shared-agent-manager 작업본은 현재 191 Coding의 허용 경로 밖이어서 직접 열람 불가.",
+    "WHY_WE_CAME_HERE": "사용자 지시를 대화로 받아 에이전트에게 위임하고 결과를 받는 상위 목표를 검증하기 위해. 종전 Hello World/DNS 조사는 배포 실패(502/404)를 분리하기 위한 것이며 새 작업의 필수 선행조건이라는 증거 없음.",
+    "YESTERDAY_RESULT": "2026-11-22 사용자와의 프로젝트 대화에서 shared-agent-manager 대화/후속지시/Codex 브리지 구현 및 격리·모의 연결 테스트 10건 PASS가 보고됨(원본 테스트 로그는 이 실행에서 UNVERIFIED). 실제 웹 AI 왕복·서버 에이전트 실행은 미검증; 이전 2026-11-22 GitHub 레이더에는 DNS 실패 및 191 읽기 차단 기록.",
+    "PASS_GATE": "LIVE_JARVIS_SERVER_AGENT_ROUNDTRIP=OPEN/EVIDENCE_MISSING; 191_SERVER_CODEX_READINESS=PASS(한 연결에서 직접 호출); 191_RUNNER_HEALTH=OK(한 연결에서 직접 호출); PREVIOUS_HELLO_WORLD_PUBLIC_DNS=FAIL(현재 컨테이너); WORKTREE_TEST_10_CASES=UNVERIFIED.",
+    "PASS_EVIDENCE": "2026-11-23 KST 실제 191 Server 연결 codex_status ready=true/authenticated=true; runner_health status=ok (2026-11-22T15:17:08.527Z). 191 Coding 두 별도 연결은 비대화형 승인 요구로 읽기 차단. 작업본 경로 접근 제한 확인. 2026-11-23 00:19 KST 과거 Hello World DNS getent exit 2, curl exit 6, HTTP 000. 실제 JARVIS 위임+실행+동일 대화 응답 로그 EVIDENCE_MISSING.",
+    "CURRENT_STATUS": "191 서버 상태 조회 가능(연결별 승인 상이), Runner Health OK. 이전 공개 테스트 DNS 실패 지속. 그러나 11/22 새 JARVIS Agent Manager 상위 목표에 대해 실제 Worker 왕복은 미증명.",
+    "RETURN_TO": "JARVIS 웹 대화가 실제 191 서버 에이전트와 협업해 사용자 지시를 수행하고 같은 대화에 결과를 반환하는 상위 업무 흐름.",
+    "STOP_DOING": "실제 위임 경로 의존성을 입증하지 못한 Hello World DNS 해결만을 모든 JARVIS 작업의 선행조건으로 유지하거나 FreeLang/FX/AFJ/AFL-DB 신규 기능을 덧붙이지 않음.",
+    "NEW_BRANCH_RISK": "과거 배포 DNS 문제를 최신 승인 목표보다 상위에 놓는 초점 이탈. FreeLang/DB/음성 SDK/메모리 확장이 실제 에이전트 위임 blocker와 직접 관계 있음은 UNVERIFIED.",
+    "TODAY_ONE_JOB": "shared-agent-manager 웹 JARVIS 대화에서 지시 1건을 실제 191 서버 Codex 에이전트에 위임하고 동일 대화로 결과를 받는 단일 E2E 테스트의 원본 증거를 확보한다."
+  },
+  "verification": {
+    "github_report_repo": "kimjindol2025/codex-community-reports",
+    "github_repo_default_branch": "main",
+    "github_repo_rules_and_readme_read": true,
+    "original_reports_untouched": true,
+    "runner_health": {
+      "status": "PASS",
+      "value": "ok",
+      "observed_timestamp_utc": "2026-11-22T15:17:08.527Z",
+      "scope": "one authorized 191 Server connection"
+    },
+    "codex_readiness": {
+      "status": "PASS",
+      "value": "ready, authenticated",
+      "scope": "one authorized 191 Server connection"
+    },
+    "other_191_links": {
+      "status": "BLOCKED_INTERACTIVE_APPROVAL",
+      "count": 2
+    },
+    "old_public_hello_world_dns": {
+      "status": "FAIL",
+      "getent_exit_code": 2,
+      "curl_exit_code": 6,
+      "http_code": 0,
+      "observed_at_kst": "2026-11-23T00:19:04+09:00"
+    },
+    "shared_agent_manager_worktree": {
+      "status": "EVIDENCE_MISSING",
+      "reason": "Not exposed by available approved read path."
+    },
+    "claimed_simulation_tests": {
+      "status": "UNVERIFIED",
+      "reported_pass_count": 10,
+      "source": "2026-11-22 prior user work conversation; original logs not accessed"
+    },
+    "live_agent_roundtrip": {
+      "status": "EVIDENCE_MISSING"
+    },
+    "updated_original_goal": {
+      "status": "USER_CONFIRMED_2026-11-22",
+      "source": "recent user work conversation"
+    },
+    "deployment_changes": false,
+    "product_code_changes": false
+  },
+  "source_urls": [
+    "https://github.com/kimjindol2025/codex-community-reports/blob/main/reports/jarvis/2026-11-22.md",
+    "https://github.com/leon-ai/leon/releases",
+    "https://github.com/home-assistant/core/releases",
+    "https://github.com/livekit/agents/releases",
+    "https://github.com/livekit/agents/commits/main/",
+    "https://github.com/pipecat-ai/pipecat/releases",
+    "https://github.com/langchain-ai/langgraph/releases",
+    "https://github.com/modelcontextprotocol/servers/releases",
+    "https://github.com/openai/openai-agents-python/releases"
+  ]
+}
