@@ -77,3 +77,4 @@ JARVIS 외부 기술 레이더와 작업 복귀(PARENT_GOAL, PASS_GATE, TODAY_ON
 - [2026-11-21 JARVIS LangGraph·복귀 레이더](reports/jarvis/2026-11-21.md) · [검증 JSON](reports/jarvis/2026-11-21.json)
 
 - [2026-11-22 JARVIS CodexProvider·공개 E2E 복귀](reports/jarvis/2026-11-22.md) · [검증 JSON](reports/jarvis/2026-11-22.json)
+- [2026-11-24 JARVIS Pipecat·Codex 실행 차단 복귀](reports/jarvis/2026-11-24.md) · [검증 JSON](reports/jarvis/2026-11-24.json)
