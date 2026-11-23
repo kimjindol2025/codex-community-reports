@@ -1,0 +1,93 @@
+{
+  "date_kst": "2026-11-24",
+  "run_observed_at_kst": "2026-11-24T00:26:02+09:00",
+  "notification_signal": "WORK_RETURN_BLOCKER_IDENTIFIED_AND_RADAR_UPDATE",
+  "radar": {
+    "status": "SIGNIFICANT_CHANGE",
+    "item": "Pipecat v1.17.0",
+    "published_utc": "2026-11-22T23:54:45Z",
+    "published_kst": "2026-11-23T08:54:45+09:00",
+    "source": "https://github.com/pipecat-ai/pipecat/releases/tag/v1.17.0",
+    "summary": "비차단 비동기 도구 작업의 user_waiting 프레임과 WaitReassuranceLLMExtension, native SIPTransport/전화 통화 처리, AWS Transcribe 언어 자동 식별이 추가됨.",
+    "impact": "향후 JARVIS 음성 대화에서 위임 작업이 오래 걸릴 때 침묵/대기와 실제 유휴를 구분하고 전화 연결·한국어/영어 전환을 설계하는 데 가치가 있음.",
+    "integration": "후속 음성/전화 계층 및 delegated-work 상태 표시. 현재 웹 Codex thread/start blocker의 선행조건 아님.",
+    "risks": "SIP 자격 증명·NAT/STUN/TURN·통화 개인정보/추적 로그와 기존 음성 플러그인 호환 검증 필요. 현재 설치/사용 여부 UNVERIFIED; 자동 업그레이드 금지."
+  },
+  "radar_scope": {
+    "source_type": "GitHub official releases API",
+    "repositories": [
+      "leon-ai/leon",
+      "home-assistant/core",
+      "livekit/agents",
+      "pipecat-ai/pipecat",
+      "langchain-ai/langgraph",
+      "modelcontextprotocol/servers",
+      "openai/openai-agents-python"
+    ],
+    "limit_per_repo": 5,
+    "complete_commit_audit": false
+  },
+  "work_return": {
+    "PARENT_GOAL": "사용자 2026-11-23 PRD 확인: 웹에서 대표가 JARVIS에 지시하면 총괄 AI가 실제 서버 에이전트(Codex 우선)에게 업무를 위임하고 같은 대화에서 질문·진행·결과를 돌려받는 실행 체계. PRD.md 원본 직접 읽음.",
+    "CURRENT_WORK": "191 shared-agent-manager: 웹 대화 → AFJ 저장 → 서버 Codex bridge 실행 및 결과 회신 E2E. 실제 coordinator→worker 위임은 별도 미완료.",
+    "BLOCKER": "2026-11-23 host SERVER-RESULT.md에서 Codex thread/start의 bwrap filesystem deny-mount 타깃 처리 호환성 오류가 보고됨. initialize는 됐으나 실제 스레드 시작이 막힘. 보안 거부 정책을 완화하는 우회는 금지.",
+    "WHY_WE_CAME_HERE": "JARVIS가 지시를 저장·표시하는 데 그치지 않고 실제 에이전트 실행 결과를 같은 대화로 회수해야 하기 때문. 과거 Hello World 공개 DNS는 현재 이 blocker와 직접적인 필수 의존관계 미입증.",
+    "YESTERDAY_RESULT": "11월 23일 서버 측 SERVER-RESULT.md: 개발 웹 로그인/지시 저장/received 표시 PASS 보고, 실제 Codex thread/start FAIL/BLOCKED. Front build PASS(비차단 경고 16건), 개발 AFJ health HTTP 200 보고. 이 실행에서는 해당 host 명령을 재실행하지 않음.",
+    "PASS_GATE": "BRIDGE_MOCK_TEST=CLOSED(14/14 PASS, 191 task lastExecution 직접 열람); LIVE_CODEX_THREAD_START=OPEN/FAIL(호스트 보고); LIVE_JARVIS_RESULT_ROUNDTRIP=OPEN/EVIDENCE_MISSING; COORDINATOR_TO_WORKER=OPEN/EVIDENCE_MISSING.",
+    "PASS_EVIDENCE": "191 coding_task_status 7e1b1bd7… 마지막 node:test 실행 e674e81b… exit 0, pass 14, fail 0, skip 0 직접 조회. 191 공동 작업 SERVER-RESULT.md SHA-256=1b14e48a61d0b9a7d97fc3fce4c9ed9c01962baac7d239485d0ac9eeb997f25c(문서 읽기); RUNNER Health=ok 및 Codex ready/authenticated=true 직접 조회. 실제 모델 실행 성공 원본 로그 없음.",
+    "CURRENT_STATUS": "191_server 계정에서 인증/Runner OK. 두 다른 191 Coding 링크는 비대화형 승인 필요. 공동 작업 폴더 및 PRD/PLAN/SERVER-RESULT 접근 성공. host E2E 차단 원인이 구체적으로 확인됐으나 본 실행에서 재현 명령은 재실행하지 않음. 운영 배포 변경 없음.",
+    "RETURN_TO": "Codex 실행 차단 해소 후 웹 JARVIS 지시→서버 에이전트 실제 수행→같은 대화 결과 회수 검증으로 복귀.",
+    "STOP_DOING": "본 실행 경로와 의존성이 검증되지 않은 FreeLang 문법·FX 최적화·AFJ/AFL-DB 신규 확장, 공개 Hello World DNS만을 최상위 차단으로 강제하는 일.",
+    "NEW_BRANCH_RISK": "실제 blocker는 Codex App Server sandbox 경계인데 언어/DB 개편이나 음성 SDK를 우선하면 하위 기술 분기로 이탈. Pipecat 음성/SIP 신규 기능은 후속 검토 대상이며 현재 thread/start 차단 해결과 무관.",
+    "TODAY_ONE_JOB": "보안 deny 범위를 유지하면서 Codex thread/start를 막는 bwrap 대상 마운트 호환성 오류를 격리 테스트 환경에서 수정한다."
+  },
+  "verification": {
+    "overall_live_e2e": "OPEN/EVIDENCE_MISSING",
+    "model_execution": "BLOCKED_HOST_REPORTED",
+    "host_report_replay": false,
+    "repository_source_edit": false,
+    "production_deployment": false,
+    "observations": [
+      {
+        "kind": "DIRECT",
+        "source": "191_server codex_status",
+        "result": "ready/authenticated=true"
+      },
+      {
+        "kind": "DIRECT",
+        "source": "191_server runner_health",
+        "result": "ok"
+      },
+      {
+        "kind": "DIRECT",
+        "source": "191 coding_task_status",
+        "task_id": "7e1b1bd7-0b65-43dd-8470-924fe28072d4",
+        "execution_id": "e674e81b-b642-4290-be53-b96aa6fb0ab7",
+        "result": "synthetic 14 PASS / 0 FAIL / exit 0"
+      },
+      {
+        "kind": "DOCUMENT_READ_HOST_REPORTED",
+        "source": "SERVER-RESULT.md",
+        "sha256": "1b14e48a61d0b9a7d97fc3fce4c9ed9c01962baac7d239485d0ac9eeb997f25c",
+        "result": "Codex thread/start FAIL; bwrap filesystem deny mount incompatibility",
+        "host_log_independently_replayed": false
+      },
+      {
+        "kind": "DIRECT",
+        "source": "two other 191 Coding connections",
+        "result": "noninteractive approval required"
+      }
+    ]
+  },
+  "source_urls": [
+    "https://github.com/pipecat-ai/pipecat/releases/tag/v1.17.0",
+    "https://github.com/kimjindol2025/codex-community-reports/blob/main/reports/jarvis/2026-11-23.md",
+    "https://github.com/leon-ai/leon/releases",
+    "https://github.com/home-assistant/core/releases",
+    "https://github.com/livekit/agents/releases",
+    "https://github.com/pipecat-ai/pipecat/releases",
+    "https://github.com/langchain-ai/langgraph/releases",
+    "https://github.com/modelcontextprotocol/servers/releases",
+    "https://github.com/openai/openai-agents-python/releases"
+  ]
+}
