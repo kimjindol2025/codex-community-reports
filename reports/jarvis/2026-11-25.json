@@ -1,0 +1,96 @@
+{
+  "date_kst": "2026-11-25",
+  "classification": "EXTERNAL_UPDATE",
+  "return_signal": "UNCHANGED_LAST_REPORTED_BLOCKER",
+  "fields": {
+    "PARENT_GOAL": "PRD v1.0(2026-11-23) 직접 재열람: 웹 JARVIS가 실제 서버 에이전트에게 업무를 배정하고 진행·질문·결과를 동일 대화에서 회수. 총괄 AI와 작업 에이전트는 역할/세션이 구분되어야 함.",
+    "CURRENT_WORK": "shared-agent-manager의 실제 Codex 실행/회신 검증.",
+    "BLOCKER": "마지막 호스트 보고(11월 23일): Codex thread/start의 bwrap 파일시스템 deny 대상 마운트 호환성 오류. 오늘 호스트 명령 재실행 없음. 현재 재현 여부 UNVERIFIED.",
+    "WHY_WE_CAME_HERE": "실제 AI 실행 없이 저장/수신만 성공하는 흐름을 제품 인수 기준으로 끌어올리기 위해.",
+    "YESTERDAY_RESULT": "11월 24일 원격 보관 보고서와 공동 작업본 재읽기. 모의 브리지 14/14 PASS, 호스트 실제 thread/start FAIL 보고. 오늘 읽은 해당 보고 파일의 SHA-256은 전날과 동일.",
+    "PASS_GATE": "모의 브리지 CLOSED(기록 14/14); LIVE_CODEX_THREAD_START OPEN(마지막 호스트 보고 FAIL, 현재 재실행 EVIDENCE_MISSING); LIVE_JARVIS_RESULT_ROUNDTRIP 및 COORDINATOR_TO_WORKER OPEN/EVIDENCE_MISSING.",
+    "PASS_EVIDENCE": "191 Codex ready/authenticated=true, Runner health=ok 직접 조회. 기존 모의 시험 exit 0, 14 pass/0 fail/0 skip 직접 재열람(새 실행 아님). PRD 및 SERVER-RESULT 문서 직접 확인. 실제 모델 성공 증거 없음.",
+    "CURRENT_STATUS": "191 읽기 접근 정상. 공동 작업본의 기존 호스트 결과와 시험 기록에 변경 없음. 운영 호스트 재실행·배포 미검증.",
+    "RETURN_TO": "실제 Codex 실행 차단 해소 후 동일 JARVIS 대화로 업무 수행 결과를 회수하는 검증.",
+    "STOP_DOING": "현재 차단과 직접 의존성이 확인되지 않은 언어/DB 기능 추가, 음성 SDK 교체 또는 과거 DNS 장애를 필수 선행 작업으로 강제하는 일.",
+    "NEW_BRANCH_RISK": "11월 24일 신규 상품 발굴 프로젝트의 FX/CRUD 작업이 별도 작업본에 확인됨. JARVIS 실행 차단과 직접 관계는 미입증. 독립 사업 목표일 수 있으므로 강제 중단 대상 아님.",
+    "TODAY_ONE_JOB": "보안 deny 정책을 유지하는 격리 환경에서 Codex thread/start의 bwrap 마운트 호환성 오류를 수정한다."
+  },
+  "radar": [
+    {
+      "project": "OpenAI Agents SDK",
+      "version": "v0.26.0",
+      "published_kst": "2026-11-24T12:15:47+09:00",
+      "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.26.0",
+      "change": "Realtime 응답 종료 시 출력 가드레일 확인, 입력 가드레일 거부 후 대기 도구 중단, 세션 위임 정보 마스킹 유지, Docker 스토리지 권한 제한.",
+      "why": "JARVIS 위임·실행 승인·정보 보호의 회귀 시험 기준으로 활용.",
+      "apply": "총괄 AI/Worker 정책 경계. 설치 및 적용 여부 UNVERIFIED.",
+      "risk": "기존 in-container mount 세션 재사용 불가; 새 세션/지원 마운트 필요. Codex 로컬 이미지에 명시적 참조 승인 필요. 이 SDK 수정이 현재 bwrap 오류를 해결했다는 증거 없음."
+    },
+    {
+      "project": "OpenAI Agents SDK",
+      "version": "v1.0.0-alpha.2",
+      "published_kst": "2026-11-24T05:11:07+09:00",
+      "url": "https://github.com/openai/openai-agents-python/releases/tag/v1.0.0-alpha.2",
+      "change": "Worker 교체 후 대화/미결 승인 재개, 제한적 Codex 명령·편집 승인 복구, 도구 실행 훅.",
+      "why": "JARVIS 업무 담당권·재시작·승인 상태 복구 설계에 직접 참고.",
+      "apply": "Agent Memory/Workspace와 위임 실행 계약. 운영 도입 보류.",
+      "risk": "새 체크포인트 형식(1.24)을 alpha.1이 읽지 못하므로 읽기 측 선행 갱신 필요. 동일 권한·작업 상태 및 단일 기록자 보장 필요. 알파."
+    },
+    {
+      "project": "Home Assistant Core",
+      "version": "2026.11.3",
+      "published_kst": "2026-11-24T05:48:39+09:00",
+      "url": "https://github.com/home-assistant/core/releases/tag/2026.11.3",
+      "change": "RESTful Command 헤더 값 로깅 제거, 일부 장치 자격증명 진단 정보 마스킹.",
+      "why": "현장 설비 제어 API의 인증정보 노출 방지 기준.",
+      "apply": "향후 JARVIS 설비 연동 및 로그 정책; 설치 여부 UNVERIFIED.",
+      "risk": "해당 연동 사용 시 이전 로그 노출 가능성 검토. 현재 Codex blocker와 직접 관련 없음."
+    }
+  ],
+  "evidence": {
+    "observed_at_kst": "2026-11-25T00:27:24+09:00 (Runner observation)",
+    "access": "191 읽기 정상; PRD, 서버 결과 문서, 공동 작업 상태 및 작업 목록 직접 조회. 실제 호스트 명령은 재실행하지 않음.",
+    "prd": {
+      "date": "2026-11-23",
+      "sha256": "450d3df337c318c7d7b3c053e61a3b30e9f72c6a4ea66bccb6c5fc26c786f8ea",
+      "status": "DIRECT_READ"
+    },
+    "server_report": {
+      "date": "2026-11-23",
+      "sha256": "1b14e48a61d0b9a7d97fc3fce4c9ed9c01962baac7d239485d0ac9eeb997f25c",
+      "status": "DIRECT_READ_HOST_RESULT_REPORTED",
+      "thread_start": "FAIL_REPORTED"
+    },
+    "mock_test": {
+      "exit": 0,
+      "pass": 14,
+      "fail": 0,
+      "skip": 0,
+      "status": "DIRECT_READ_PRIOR_EXECUTION"
+    },
+    "readiness": {
+      "codex_ready": true,
+      "authenticated": true,
+      "runner_health": "ok"
+    },
+    "live_e2e": "EVIDENCE_MISSING",
+    "task_list": {
+      "count": 57,
+      "independent_product_work": "observed",
+      "relation_to_jarvis": "UNVERIFIED"
+    }
+  },
+  "scope": "11월 24일 보고 이후 공식 GitHub releases 최근 최대 5개씩 7개 저장소 직접 조회. MCP specification 별도 조회는 응답 형식 불일치로 검증 불가. 웹 검색으로 Agents 릴리스 교차 확인. Wake Word 및 Realtime 별도 문서 전체 변경·보안 권고 전수 검토는 미실시. 중요 업데이트 3건, 그 밖의 확인한 릴리스 목록은 신규 중요 변경 없음. 설치 여부 및 적용 효과 미검증.",
+  "sources": [
+    "https://github.com/leon-ai/leon/releases",
+    "https://github.com/home-assistant/core/releases",
+    "https://github.com/livekit/agents/releases",
+    "https://github.com/pipecat-ai/pipecat/releases",
+    "https://github.com/langchain-ai/langgraph/releases",
+    "https://github.com/modelcontextprotocol/servers/releases",
+    "https://github.com/openai/openai-agents-python/releases",
+    "https://github.com/kimjindol2025/codex-community-reports/blob/main/reports/jarvis/2026-11-24.md"
+  ],
+  "acceptance": "기존 deny 권한을 그대로 유지한 격리 시험에서 실제 thread/start 성공 증거 확보. 이후 왕복과 총괄-작업 에이전트 위임은 별도 게이트로 유지."
+}
