@@ -1,0 +1,84 @@
+{
+  "date": "2026-11-28",
+  "checked_kst": "2026-11-28T00:15:13+09:00",
+  "status": "EVIDENCE_MISSING",
+  "external_radar": [
+    {
+      "date": "2026-11-20",
+      "type": "이전 발표 신규 확인",
+      "title": "OpenAI Agents API: 시간 인식과 비동기 입력",
+      "summary": "공식 예제에서 실험적 시간 인식과 비동기 함수 도구를 사용해 답변 대기 중에도 에이전트가 작업을 이어갈 수 있다.",
+      "importance": "총괄 AI가 외부 입력 대기 중 멈추지 않는 설계에 참고.",
+      "location": "JARVIS Orchestrator의 대기 상태 및 이벤트 입력 계약",
+      "risk": "Agents API 접근 필요, 실험적 시간 인식. 현재 ChatGPT 대화의 자동 재개나 자체 서버 Codex 연속 실행을 보장하지 않는다.",
+      "url": "https://developers.openai.com/blog/time-awareness-and-async-input-for-personal-agents"
+    },
+    {
+      "date": "2026-11-24",
+      "type": "이전 발표 신규 확인",
+      "title": "OpenAI Codex 운영 모니터링 설계",
+      "summary": "운영 경보를 기점으로 읽기 전용 관측 자료를 조사하고 근거 기반 변경안을 제안하며 사람 승인 후 복구를 검증하는 공식 예제.",
+      "importance": "실행 에이전트와 독립 검수 에이전트의 역할 및 승인 경계를 명확히 할 수 있다.",
+      "location": "JARVIS 이벤트 수신·검수·운영 변경 승인",
+      "risk": "가이드이지 현재 자동 실행 기능의 구현 증거가 아니다. 운영 변경 권한은 별도 승인.",
+      "url": "https://developers.openai.com/blog/production-monitoring-with-codex"
+    }
+  ],
+  "external_scope": "공식 릴리스 목록 8곳 및 Wakeword 문서, API 변경 이력, MCP 권고 목록 확인. 새 Home Assistant 2026.12.0b2(11월 27일 KST)는 베타 장치·자동화 수정 중심으로 현재 연속 업무와 직접 연결되지 않아 중요 항목 제외. 모든 보안 권고 및 설치 버전 전수 대조 아님. 신규 기술 적용 없음.",
+  "field_access": {
+    "status": "BLOCKED",
+    "connections_attempted": 3,
+    "read_attempts": 9,
+    "reason": "비대화형 승인 필요",
+    "live_tests_run": 0,
+    "previous_report_verified_remote": true
+  },
+  "evidence": {
+    "previous_report": {
+      "url": "https://github.com/kimjindol2025/codex-community-reports/blob/main/reports/jarvis/2026-11-26-233415.md",
+      "blob_sha": "4e72f0f1b58817b27e1f43ea9248db15f3d4c28e",
+      "status": "HISTORICAL_REPORT_ONLY",
+      "tests": 115,
+      "pass": 92,
+      "fail": 21,
+      "skip": 2,
+      "additional_pass": 5,
+      "applied": false
+    },
+    "missing_date": "2026-11-27",
+    "live_roundtrip": "EVIDENCE_MISSING",
+    "automatic_continuation": "EVIDENCE_MISSING"
+  },
+  "return_fields": {
+    "PARENT_GOAL": "JARVIS 총괄 AI가 서버 에이전트에 업무를 위임하고 결과를 검증하며 사용자 재입력 없이 다음 업무를 이어서 수행. 최근 사용자 목표 및 11월 26일 보관 보고와 일치. 원본 PRD 이번 재검증은 UNVERIFIED.",
+    "CURRENT_WORK": "Codex 완료 이벤트 기반 자동 후속 실행의 운영 인수 시험.",
+    "BLOCKER": "운영 E2E 증거 미확보. 이번 191 읽기는 비대화형 승인 요구로 차단되어 실제 기술적 장애는 UNVERIFIED.",
+    "WHY_WE_CAME_HERE": "서버 업무 결과를 보존하고 완료 시 총괄 AI가 다음 업무를 이어서 진행하도록 하기 위해.",
+    "YESTERDAY_RESULT": "11월 27일 JARVIS MD/JSON 파일 미발견. 실행 여부 확인 불가. 마지막 보관 11월 26일 야간 보고에는 복구 후보 추가 5건 PASS, 전체 92/115 PASS·21 FAIL·2 SKIP, 운영 미적용으로 기록.",
+    "PASS_GATE": "UNVERIFIED / EVIDENCE_MISSING — 실제 완료 이벤트→후속 지시→실제 인수 및 결과 연결 증거 없음. 기존 격리 시험 결과는 역사적 기록으로만 유지.",
+    "PASS_EVIDENCE": "11월 26일 야간 공개 보고서 원격 재열람 성공; 당시 시험 기록은 이번 원본 로그 재검증이 아닌 보관 보고의 내용. 이번 191 상태·Runner·작업 목록 3개 연결 각 3건(총 9건) 읽기 승인 차단.",
+    "CURRENT_STATUS": "현장 조회 BLOCKED; 운영 상태·최신 커밋·실제 연속 실행 UNVERIFIED. GitHub 보관 접근 정상. 11월 27일 일일 기록 부재.",
+    "RETURN_TO": "실제 JARVIS–Codex 연속 업무 인수 시험.",
+    "STOP_DOING": "과거 DNS/bwrap 장애를 재현 없이 현재 원인으로 단정하거나 독립적인 언어/DB 확장을 필수 선행으로 추가하는 일.",
+    "NEW_BRANCH_RISK": "FreeLang/FX/AFJ/AFL-DB 및 신규 에이전트 개발의 최신 관계는 UNVERIFIED. 제품 단독 시험을 자동 협업 성공으로 혼동하지 않음.",
+    "TODAY_ONE_JOB": "실제 첫 Codex 업무 완료 이벤트로 사용자 재입력 없이 다음 업무가 발행·인수되어 결과가 기록되는 연속 실행 E2E 증거 1건 확보."
+  },
+  "sources": [
+    "https://github.com/leon-ai/leon/releases",
+    "https://github.com/home-assistant/core/releases",
+    "https://github.com/livekit/agents/releases",
+    "https://docs.livekit.io/agents/multimodality/audio/wakeword/",
+    "https://github.com/pipecat-ai/pipecat/releases",
+    "https://github.com/langchain-ai/langgraph/releases",
+    "https://github.com/modelcontextprotocol/servers/releases",
+    "https://github.com/modelcontextprotocol/modelcontextprotocol/releases",
+    "https://github.com/modelcontextprotocol/servers/security/advisories",
+    "https://github.com/modelcontextprotocol/typescript-sdk/security/advisories",
+    "https://github.com/openai/openai-agents-python/releases",
+    "https://developers.openai.com/api/docs/changelog",
+    "https://developers.openai.com/blog/time-awareness-and-async-input-for-personal-agents",
+    "https://developers.openai.com/blog/production-monitoring-with-codex",
+    "https://github.com/kimjindol2025/codex-community-reports/blob/main/reports/jarvis/2026-11-26-233415.md"
+  ],
+  "changes": "보고서 전용 두 파일 외 변경 없음."
+}
