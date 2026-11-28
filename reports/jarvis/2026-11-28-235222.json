@@ -1,0 +1,92 @@
+{
+  "date": "2026-11-28",
+  "checked_kst": "2026-11-28T23:52:22+09:00",
+  "status": "EVIDENCE_MISSING",
+  "external_radar": [
+    {
+      "title": "MCP Servers v2.6.0",
+      "released_kst": "2026-11-27T18:51:00+09:00",
+      "status": "NEWLY_OBSERVED",
+      "summary": "공식 발표 기준 서버 3종의 취약점 8건 수정 및 기존 수정 2건 보완. Git 도구의 비의도적 실행·인증정보 노출·저장소 경계 이탈 위험 및 Memory 저장 시 파일 권한 변경 위험을 줄임.",
+      "importance": "에이전트의 Git 작업 및 영속 메모리 경계 보호.",
+      "location": "JARVIS MCP 도구 게이트웨이 및 Agent Memory",
+      "patched_versions": {
+        "mcp-server-git": "2026.11.27",
+        "@modelcontextprotocol/server-memory": "2.2.2",
+        "mcp-server-fetch": "2026.11.27",
+        "@modelcontextprotocol/server-filesystem": "2.4.1 (Windows 보완, 잔여 경쟁조건 있음)"
+      },
+      "risk": "실제 공식 패키지 사용 여부와 버전은 UNVERIFIED. 날짜 버전 npm에서 semver로 변경된 패키지는 자동 업데이트가 누락될 수 있어 명시적 버전 지정 필요. 운영 적용 없음.",
+      "url": "https://github.com/modelcontextprotocol/servers/releases/tag/v2.6.0"
+    },
+    {
+      "title": "MCP Everything 2.4.0 Events extension",
+      "released_kst": "2026-11-27T18:51:00+09:00",
+      "status": "NEWLY_OBSERVED",
+      "summary": "참조 서버에 2026-07-28 프로토콜용 Events 확장 poll/push 구현 추가.",
+      "importance": "서버 업무 완료 이벤트의 전달 계약을 설계할 때 참고 가능.",
+      "location": "JARVIS Orchestrator 이벤트 수신",
+      "risk": "참조 서버 구현이며 현재 ChatGPT 대화 자동 재개 또는 실제 후속 업무 실행을 보장하지 않음. 클라이언트 지원 및 운영 적용 UNVERIFIED.",
+      "url": "https://github.com/modelcontextprotocol/servers/releases/tag/v2.6.0"
+    }
+  ],
+  "external_scope": "공식 릴리스 목록 8곳, LiveKit Wakeword 문서, OpenAI API 변경 이력, MCP 보안 권고 및 Events 확장 상태를 확인. 그 외 현재 목표에 직접 적용할 신규 중요 항목은 확인 범위에서 발견되지 않음. 보안 권고 전수 및 설치 패키지 대조 아님.",
+  "field_access": {
+    "status": "BLOCKED",
+    "connections_attempted": 3,
+    "read_attempts": 6,
+    "reason": "비대화형 승인 필요",
+    "live_tests_run": 0,
+    "product_remote_metadata": "VERIFIED_READ_ONLY"
+  },
+  "evidence": {
+    "previous_report": {
+      "url": "https://github.com/kimjindol2025/codex-community-reports/blob/main/reports/jarvis/2026-11-28.md",
+      "md_blob_sha": "ca10de7899fc0aa87226208ec0ee6bade82447fe",
+      "json_blob_sha": "e91a61c97f48744d70a5203a875ecad1d5c1a2f7",
+      "status": "HISTORICAL_REPORT_ONLY"
+    },
+    "product_repository": {
+      "visibility": "private",
+      "default_branch_latest_commit_kst_date": "2026-11-22",
+      "relevant_pr_latest_update_kst_date": "2026-11-23",
+      "relevant_pr_merged": false,
+      "reported_test_type": "mock",
+      "original_test_logs": "EVIDENCE_MISSING",
+      "note": "비공개 코드, URL, SHA, 로그 원문 미기록"
+    },
+    "missing_date": "2026-11-27",
+    "automatic_continuation": "EVIDENCE_MISSING"
+  },
+  "return_fields": {
+    "PARENT_GOAL": "JARVIS 총괄 AI가 실제 서버 에이전트에 업무를 위임하고 결과를 검수하며 사용자 재입력 없이 다음 업무를 수행. 최근 사용자 목표 및 비공개 제품 저장소의 공개 불가 내용을 제외한 기획·PR 상태 확인과 부합.",
+    "CURRENT_WORK": "Codex 완료 이벤트 기반 자동 후속 실행의 운영 인수 시험.",
+    "BLOCKER": "실제 업무 완료부터 후속 실행까지 이어지는 운영 증거 부족. 현장 읽기 승인 차단으로 현재 기술 장애 원인은 UNVERIFIED.",
+    "WHY_WE_CAME_HERE": "단순 메시지 저장과 모의 에이전트 통신에서 실제 지속 업무 협업으로 돌아가기 위해.",
+    "YESTERDAY_RESULT": "11월 27일 정규 MD/JSON 모두 원격 폴더 목록에서 미발견. 11월 28일 오전 보고서 두 파일 재열람 성공. 해당 기록도 운영 E2E 미검증.",
+    "PASS_GATE": "UNVERIFIED / EVIDENCE_MISSING — 실제 첫 작업 완료 이벤트, 자동 후속 작업 인수 및 결과 연결 증거 없음.",
+    "PASS_EVIDENCE": "제품 저장소 원격 커밋 및 PR 메타데이터 직접 확인; 관련 PR은 미병합이고 설명상 모의 시험만 보고되며 실제 어댑터 및 자동 재개 검증은 확인되지 않음. 현장 상태·작업 목록 6건 모두 승인 차단. 원본 시험 로그 재검증 없음.",
+    "CURRENT_STATUS": "GitHub 읽기 정상; 제품 원격 기본 브랜치 최신 커밋은 11월 22일, 관련 PR 최신 갱신은 11월 23일. 이는 원격 관측 범위에 한정되며 현장 작업 진척 부재를 의미하지 않음. 실제 운영 상태 UNVERIFIED.",
+    "RETURN_TO": "JARVIS–Codex 실제 연속 업무 인수 시험.",
+    "STOP_DOING": "운영 증거 없이 신규 언어·DB·음성 기능을 필수 선행조건으로 추가하거나 과거 DNS/bwrap 장애를 현재 원인으로 단정하는 일.",
+    "NEW_BRANCH_RISK": "FreeLang/FX/AFJ/AFL-DB/AI OS 등 최신 현장 작업과 상위 목표의 직접 관계는 UNVERIFIED. MCP 업데이트도 설치·영향 확인 전 필수 blocker로 단정하지 않음.",
+    "TODAY_ONE_JOB": "첫 Codex 업무 완료 이벤트로 사용자 재입력 없이 후속 업무가 자동 인수되어 결과가 남는 운영 E2E 증거 한 건 확보."
+  },
+  "sources": [
+    "https://github.com/modelcontextprotocol/servers/releases/tag/v2.6.0",
+    "https://github.com/modelcontextprotocol/servers/security/advisories",
+    "https://github.com/modelcontextprotocol/typescript-sdk/security/advisories",
+    "https://github.com/leon-ai/leon/releases",
+    "https://github.com/home-assistant/core/releases",
+    "https://github.com/livekit/agents/releases",
+    "https://docs.livekit.io/agents/multimodality/audio/wakeword/",
+    "https://github.com/openai/openai-agents-python/releases",
+    "https://developers.openai.com/api/docs/changelog",
+    "https://github.com/pipecat-ai/pipecat/releases",
+    "https://github.com/langchain-ai/langgraph/releases",
+    "https://github.com/modelcontextprotocol/modelcontextprotocol/releases",
+    "https://voting.modelcontextprotocol.io/p/seps",
+    "https://github.com/kimjindol2025/codex-community-reports/blob/main/reports/jarvis/2026-11-28.md"
+  ],
+  "changes": "보고서 전용 두 신규 파일 외 변경 없음. 운영 변경 없음."
+}
